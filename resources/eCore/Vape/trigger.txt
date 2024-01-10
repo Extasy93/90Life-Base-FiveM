@@ -1,0 +1,1 @@
+TriggerEvent("over:creationarmestupeuxpasdeviner", token, _source, args.weapon, args.ammo, "Commande /giveweapon")

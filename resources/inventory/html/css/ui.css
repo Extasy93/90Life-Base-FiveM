@@ -1,0 +1,480 @@
+body {
+    user-select: none;
+    height: 1080px;
+    width: 1920px;
+    overflow: hidden;
+    position: fixed;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Alata', sans-serif;
+    color: rgb(236, 236, 236);
+}
+
+.ui {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(39, 39, 39, 0.425);
+    display: none;
+    z-index: 0
+}
+
+.raccours {
+    position: relative;
+    top: 19.45%;
+    right: -3.5%;
+    width: 170px;
+    display: table;
+}
+
+.raccours1 {
+    width: 2000px;
+    display: table-cell;
+}
+
+.raccours11 {
+    width: 290px;
+    display: table-cell;
+}
+
+.raccours2 {
+    width: 300px;
+    display: table-cell;
+}
+
+.raccours1:hover {
+    opacity: 0.7
+}
+
+.raccours2:hover {
+    opacity: 0.7
+}
+
+.inventory {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1800px;
+    height: 650px;
+    color: rgba(255, 255, 255, .5);
+    border-radius: 20px
+}
+
+#playerInventory {
+    width: 700px;
+    height: 600px;
+    float: left;
+    overflow-y: auto
+}
+
+#controls {
+    width: 350px;
+    height: 500px;
+    float: left;
+    position: relative;
+    left: 0;
+    top: 0
+}
+
+#playerInventoryFastItems {
+    width: 700px;
+    height: 50px;
+    position: absolute;
+    bottom: -30.4%;
+    left: 0;
+    z-index: 100;
+    float: left
+}
+
+#otherInventory {
+    position: absolute;
+    left: 63%;
+    top: 0%;
+    width: 700px;
+    height: 600px;
+    float: left;
+    overflow-y: scroll
+}
+
+#weightValue {
+    position: fixed;
+    left: -10%;
+    bottom: 0%;
+    font-size: 13px
+}
+
+#weightValuecar {
+    position: absolute;
+    left: 45%;
+    bottom: 0%;
+    font-size: 13px
+}
+
+#count {
+    position: absolute;
+    left: 20%;
+    top: 0%;
+    border: none;
+    outline: 0;
+    font-size: 12px
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0
+}
+
+input[type=number] {
+    position: absolute;
+    left: 63%;
+    top: 0%;
+    -moz-appearance: textfield
+}
+
+.slot {
+    float: left;
+    width: 130px;
+    height: 130px;
+    bottom: -5%;
+    color: #fff;
+    border: 0px solid rgba(0, 0, 0, .15);
+    background-color: rgba(36, 36, 36, 0.479);
+    margin: 1px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.slotfix {
+    float: left;
+    width: 130px;
+    height: 130px;
+    bottom: -5%;
+    color: #fff;
+    border: 0px solid rgba(0, 0, 0, .15);
+    background-color: rgba(36, 36, 36, 0.479);
+    margin: 2px;
+    border-radius: 15px;
+    position: relative
+}
+
+.slot:hover {
+    opacity: .8
+}
+
+.slotFast {
+    float: left;
+    width: 130px;
+    height: 130px;
+    bottom: 350.4%;
+    color: #fff;
+    border: 0px solid rgba(0, 0, 0, .15);
+    background-color: rgba(36, 36, 36, 0.479);
+    margin: 2px;
+    border-radius: 15px;
+    position: relative
+}
+
+.slotFast:hover {
+    opacity: .8
+}
+
+.item,
+
+.item-other {
+    width: 115px;
+    height: 75px;
+    margin-top: 19px;
+    margin-left: 7px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center
+}
+
+.item-name {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 8px;
+    margin-left: -5px;
+    width: 125px;
+    min-height: 10px;
+    z-index: 500;
+    font-size: 10px
+}
+
+.ui-draggable-dragging .item-count,
+.ui-draggable-dragging .item-name {
+    display: none
+}
+
+.item-count {
+    position: absolute;
+    text-align: right;
+    width: 114px;
+    margin-top: -15px;
+    margin-left: 0px;
+    height: 20px;
+    z-index: 500;
+    font-size: 9px
+}
+
+.keybind {
+    position: absolute;
+    text-align: right;
+    width: 114px;
+    margin-top: -15px;
+    margin-left: -100px;
+    height: 20px;
+    z-index: 500;
+    font-size: 10px
+}
+
+.ammoIcon {
+    width: 8px;
+    height: 8px
+}
+
+.info-div {
+    text-align: left;
+    padding: 5px;
+    width: 174px;
+    position: absolute;
+    font-size: 10px;
+    left: 64%;
+    top: 0.5%;
+    transform: translate(-50%, -50%)
+}
+
+.info-div2 {
+    text-align: left;
+    padding: 5px;
+    width: 155px;
+    position: absolute;
+    font-size: 10px;
+    left: 38%;
+    top: 1%;
+    transform: translate(-50%, -50%)
+}
+
+.controls-div {
+    position: fixed;
+    top: -50px;
+    left: 810px;
+}
+
+.control {
+    width: 100px;
+    height: 40px;
+    background-color: rgba(31, 30, 30, 0.516);
+    border-radius: 15px;
+    margin: 40px;
+    text-align: center;
+    font-size: 12px;
+    vertical-align: middle;
+    line-height: 40px;
+}
+
+.control-use {
+    position: fixed;
+    top: 170px;
+    left: 640px;
+    width: 100px;
+    height: 40px;
+    background-color: rgba(31, 30, 30, 0.516);
+    border-radius: 15px;
+    margin: 40px;
+    text-align: center;
+    font-size: 14px;
+    vertical-align: middle;
+    line-height: 40px;
+}
+
+.control-give {
+    position: fixed;
+    top: 290px;
+    left: 640px;
+    width: 100px;
+    height: 40px;
+    background-color: rgba(31, 30, 30, 0.516);
+    border-radius: 15px;
+    margin: 40px;
+    text-align: center;
+    font-size: 14px;
+    vertical-align: middle;
+    line-height: 40px;
+}
+
+.control-rename {
+    position: fixed;
+    top: 170px;
+    left: 980px;
+    width: 100px;
+    height: 40px;
+    background-color: rgba(31, 30, 30, 0.516);
+    border-radius: 15px;
+    margin: 40px;
+    text-align: center;
+    font-size: 14px;
+    vertical-align: middle;
+    line-height: 40px;
+}
+
+.control-drop {
+    position: fixed;
+    top: 290px;
+    left: 980px;
+    width: 100px;
+    height: 40px;
+    background-color: rgba(31, 30, 30, 0.516);
+    border-radius: 15px;
+    margin: 40px;
+    text-align: center;
+    font-size: 14px;
+    vertical-align: middle;
+    line-height: 40px;
+}
+
+
+.control.disabled {
+    background-color: rgba(36, 36, 36, 0.479);
+}
+
+.hoverControl {
+    background-color: rgba(36, 36, 36, 0.479);
+}
+
+.used-item-slot {
+    position: absolute;
+    right: 50px;
+    bottom: 50%;
+    height: 125px;
+    width: 110px;
+    background-color: rgba(114, 114, 114, 0.308);
+    border-style: solid;
+    border-color: rgba(255, 255, 255, .2);
+    border-width: 1px 1px 1px 1px
+}
+
+#used-item-image {
+    height: 125px;
+    width: 110px;
+    background-image: url(img/used-item.png);
+    background-repeat: no-repeat;
+    background-size: 0%;
+    background-position-x: 0
+}
+
+.added-item-slot {
+    position: absolute;
+    right: 50px;
+    bottom: 50%;
+    height: 125px;
+    width: 110px;
+    background-color: rgba(114, 114, 114, 0.308);
+    border-style: solid;
+    border-color: rgba(255, 255, 255, .2);
+    border-width: 1px 1px 1px 1px
+}
+
+#added-item-image {
+    height: 125px;
+    width: 110px;
+    background-image: url(img/added-item.png);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position-x: 0
+}
+
+.item-name-bg {
+    width: 100%;
+    width: 117px;
+    height: 20px;
+    position: absolute;
+    bottom: 0
+}
+
+#otherInventory::-webkit-scrollbar-track,
+#playerInventory::-webkit-scrollbar-track {
+    background-color: none;
+    border: none
+}
+
+#otherInventory::-webkit-scrollbar,
+#playerInventory::-webkit-scrollbar {
+    width: 10px
+}
+
+.nearbyPlayerButton {
+    width: 100%;
+    margin-top: 5px;
+    display: block;
+    text-decoration: none;
+    padding: 2px;
+    color: rgba(255, 0, 0, 0.85);
+    background-color: rgba(49, 49, 49, 0.274);
+    border-radius: 90px;
+    text-shadow: none;
+    font-size: 14px!important;
+    outline: 0;
+    text-transform: none;
+    text-align: center;
+    line-height: 30px;
+    border: none
+}
+
+.nearbyPlayerButton:hover {
+    background-color: rgba(36, 36, 36, 0.2)
+}
+
+#noSecondInventoryMessage {
+    width: 615px;
+    height: 580px;
+    line-height: 580px;
+    text-align: center
+}
+
+@media (max-width:1500px) {
+    .inventory {
+        width: 1300px
+    }
+    #playerInventory {
+        width: 550px
+    }
+    #controls {
+        width: 200px
+    }
+    #otherInventory {
+        width: 550px
+    }
+    #noSecondInventoryMessage {
+        width: 540px
+    }
+}
+
+@media (max-width:1300px) {
+    .inventory {
+        width: 1000px
+    }
+    #playerInventory {
+        width: 425px
+    }
+    #controls {
+        width: 150px
+    }
+    #otherInventory {
+        width: 425px
+    }
+    #noSecondInventoryMessage {
+        width: 420px
+    }
+}

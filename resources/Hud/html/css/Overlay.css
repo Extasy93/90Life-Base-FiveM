@@ -1,0 +1,322 @@
+@font-face {
+  font-family: Lato;
+  src: url(../fonts/LATO-REGULAR.TTF);
+}
+
+@font-face {
+  font-family: Lato-Bold;
+  src: url(../fonts/LATO-BOLD.TTF);
+}
+
+@font-face {
+  font-family: Lato-Black;
+  src: url(../fonts/LATO-BLACK.TTF);
+}
+
+/*-------------------------------------------Global-------------------------------------------*/
+
+* {
+  margin: 0px;
+  padding: 0px;
+  transition: all 0.3s ease-in-out 0s;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  transition: all 0.3s ease-in-out 0s;
+}
+.Main {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  left: 50%;
+  top: 50%;
+}
+#back{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+}
+
+.container {
+	display: block;
+	max-width: 15%;
+	position: fixed;
+	right: -140px;
+	top:5%;
+}
+
+/*-------------------------------------------Top-Right-------------------------------------------*/
+#Top-Right {
+  position: absolute;
+  transform: translate(-100%, -0%);
+  width: 80px;
+  height: 191px;
+  top: 4%;
+  left: 98%;
+}
+#Top-Right-Conetnt {
+  position: absolute;
+  transform: translate(-100%, -0%);
+  width: 100%;
+  height: 100%;
+  left: 100%;
+  top: 0%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: 5px;
+  align-content: flex-end;
+  align-items: flex-end;
+}
+.Top-Right-Box {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  border-radius: 13px;
+}
+.Top-Right-Icon{
+  position: relative;
+  width: 19px;
+  height: 19px;
+}
+
+.Top-Right-logo{
+  position: relative;
+  width: 25px;
+  height: 19px;
+}
+
+.Top-Right-Text {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  color: white;
+  font-family: Lato-bold;
+  font-size: 15px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+#Top-Right-ID{
+  background-image: none;
+}
+#Top-Right-ID-Title{
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  color: rgb(100, 0, 200);
+  font-family: Lato-Black;
+  font-size: 20px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+#Top-Right-Players{
+  background-image: none;
+}
+#Top-Right-Players-Title{
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  color: rgb(100, 0, 200);
+  font-family: Lato-Black;
+  font-size: 230px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+#Top-Right-Logo-Text{
+  font-size: 31px;
+}
+#Top-Right-Logo-Icon {
+  width: 50%;
+  height: auto;
+}
+#Top-Right-Stats {
+  padding: 0px 5px;
+  justify-content: flex-end;
+  background-image: none;
+}
+#Top-Right-Icon-Mic{
+  width: 32px;
+  height: 32px;
+}
+.Mute-Stat{
+  position: absolute;
+  width: 32px;
+  height: 32px;
+}
+#Top-Right-Icon-Mic-UnMute{
+  opacity: 0;
+}
+#Top-Right-Icon-Mic-Mute{
+  opacity: 1;
+}
+#Top-Right-Icon-Radio{
+  width: 32px;
+  height: 32px;
+}
+
+/*-------------------------------------------Bot-Right-------------------------------------------*/
+#Bot-Right {
+  position: absolute;
+  transform: translate(-100%, -100%);
+  width: 128px;
+  height: 62px;
+  left: 98%;
+  top: 22%;
+}
+#Bot-Right-Conetnt {
+  position: absolute;
+  transform: translate(-100%, -100%);
+  width: 100%;
+  height: 100%;
+  left: 100%;
+  top: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  gap: 5px;
+  align-content: flex-end;
+  align-items: center;
+}
+.Bot-Right-Icon{
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+.Mute-Stat{
+  position: absolute;
+  width: 32px;
+  height: 32px;
+}
+#Bot-Right-Icon-Mic-UnMute{
+  opacity: 0;
+}
+#Bot-Right-Icon-Mic-Mute{
+  opacity: 1;
+}
+#Bot-Right-Icon-Radio{
+  width: 32px;
+  height: 32px;
+}
+.Bot-Right-Dot{
+  position: relative;
+  width: 7px;
+  height: 7px;
+}
+.Dot{
+  width: 8px;
+  height: 8px;
+}
+.Dot-Stroke {
+  fill: rgb(100, 0, 200);
+  stroke: rgba(255, 255, 255, 0);
+  stroke-linejoin: round;
+  stroke-width: 30px;
+}
+/*-------------------------------------------Top-Left-------------------------------------------*/
+#Top-Left {
+  position: absolute;
+  transform: translate(-0%, -0%);
+  width: fit-content;
+  height: fit-content;
+  top: 1.5%;
+  left: 1%;
+}
+#Top-Left-Conetnt {
+  position: absolute;
+  transform: translate(-0%, -0%);
+  width: fit-content;
+  height: fit-content;
+  left: 0%;
+  top: 0%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  gap: 5px;
+  align-content: flex-end;
+  align-items: center;
+}
+
+.Top-Left-Icon {
+  position: relative;
+  width: 18px;
+}
+.Top-Left-Text {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  color: white;
+  font-family: Lato-Black;
+  font-size: 15px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.Top-Left-Icon2 {
+  position: relative;
+  width: 34px;
+}
+
+#Top-Left-Clock2 {
+  position: absolute;
+  transform: translate(0%, 100%);
+  width: fit-content;
+  height: fit-content;
+  left: 0%;
+  top: 10%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  gap: 5px;
+  align-content: flex-end;
+  align-items: center;
+}
+
+.Top-Left-Clock {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  color: white;
+  font-family: Lato-Black;
+  font-size: 15px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}

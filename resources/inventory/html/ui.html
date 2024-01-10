@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Inventaire OneLife</title>
+    <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/ui.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body>
+
+    <script src="js/config.js"></script>
+    <script src="locales/fr.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/inventory.js"></script>
+    
+    <script>
+        $(function() {
+            $("#dialog").dialog({
+                autoOpen: false,
+                clickOutside: true
+            });
+        });
+    </script>
+
+    <div class="ui">
+
+        <div class="inventory">
+            <div id="weight" class="text-xs self-end"></div>
+            <div id="playerInventory">
+            </div>
+
+            <div id="playerInventoryFastItems">
+            </div>
+
+            <div id="controls">
+                <div class="weight-div"></div>
+                <div class="controls-div">
+                    <input type="number" class="control" id="count" value="1">
+                    <div class="control-use" id="use"></div>
+                    <div class="control-rename" id="rename"></div>
+                    <div class="control-give" id="give"></div>
+                    <div class="control-drop" id="drop"></div>
+
+                    <div id="controlrename">
+
+                    </div>
+                </div class="controltodown">
+            </div>
+
+            <div id="otherInventory">
+                <div id="noSecondInventoryMessage">
+                </div>
+            </div>
+            <div style="width: 100%;bottom: 0;top: auto;">
+                <!--                 <li><a <i class="info-div3"></i> Armes</a></li>
+                <li><a <i class="info-div4"></i> Inventaire</a></li> -->
+                <span align="left" class="info-div2" style="float: left;"></span>
+                <span align="right" class="info-div" style="float: right;"></span>
+            </div>
+
+        </div>
+
+        <div class="raccours">
+            <div class="raccours1">Sac à dos</div>
+            <div class="raccours11">|</div>
+            <div class="raccours2">Vêtement</div>
+
+        </div>
+
+    </div>
+
+    <div id="dialog">
+        <div id="nearPlayers">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="IconContainer">
+        <div id="HealthIndicator" class="BaseCircle">
+          <i id="hp-icon" class="fas fa-heart"></i>
+        </div>
+        <div id="ArmorIndicator" class="BaseCircle">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <div id="HungerIndicator" class="BaseCircle">
+          <i id="HungerIcon" class="fas fa-hamburger"></i>
+        </div>
+        <div id="ThirstIndicator" class="BaseCircle">
+          <i id="ThirstIcon" class="fas fa-tint"></i>
+        </div>
+        <div id="StressIndicator" class="BaseCircle">
+          <i id="StressIcon" class="fas fa-brain"></i>
+        </div>
+        <div id="OxygenIndicator" class="BaseCircle">
+          <i id="OxygenIcon" class="fas fa-lungs"></i>
+        </div>  
+    </div>  
+
+</body>
+
+<script>
+    $(document).ready(function() {
+
+        $("#use").html(invLocale.useItem);
+        $("#rename").html(invLocale.renameItem);
+        $("#give").html(invLocale.giveItem);
+        $("#drop").html(invLocale.dropItem);
+        $("#test").html(invLocale.testbutton);
+        $("#noSecondInventoryMessage").html(invLocale.secondInventoryNotAvailable);
+    });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/0.6.1/progressbar.min.js" integrity="sha512-7IoDEsIJGxz/gNyJY/0LRtS45wDSvPFXGPuC7Fo4YueWMNOmWKMAllEqo2Im3pgOjeEwsOoieyliRgdkZnY0ow==" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+<style>
+    body {
+        height: 1080px;
+        width: 1920px;
+        overflow: hidden;
+        position: fixed;
+    }
+</style>
+
+</html>
