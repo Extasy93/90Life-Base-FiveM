@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CVehicleModelInfoVariation>
+  <variationData>
+     <Item>
+      <modelName>packard48</modelName>
+      <colors>
+        <Item>
+          <indices content="char_array"> <!-- Lowell Gray Metallic -->
+            156
+            156
+            3
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!-- Packard Blue Metallic -->
+            61
+            61
+            3
+            156
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!-- Egyptian Sand -->
+            173
+            173
+            3
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!-- Serpentine Green Metallic -->
+            56
+            56
+            116
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!-- Serpentine Green Metallic / Golden Green -->
+            56
+            183
+            116
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!-- Cavalier Maroon Metallic -->
+            167
+            167
+            3
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!-- Golden Green Metallic -->
+            183
+            183
+            3
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!-- Golden Green Metallic / Serpentine Green -->
+            183
+            56
+            3
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!-- Agate Blue Metallic -->
+            235
+            235
+            194
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!-- Agate Blue Metallic / Egyptian Sand -->
+            235
+            173
+            194
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!-- Egyptian Sand / Agate Blue -->
+            173
+            235
+            3
+            156
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!-- Lexington Green Metallic -->
+            232
+            232
+            50
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!-- Lexington Green Metallic / Egyptian Sand -->
+            232
+            173
+            50
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!-- Egyptian Sand / Lexington Green -->
+            173
+            232
+            3
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!-- Sardonyx Brown Metallic -->
+            187
+            187
+            3
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!-- Sardonyx Brown Metallic / Egyptian Sand -->
+            187
+            173
+            3
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!--  Egyptian Sand / Sardonyx Brown -->
+            173
+            187
+            3
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!-- Aztec Brown -->
+            93
+            93
+            95
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!-- Aztec Brown / Egyptian Sand -->
+            93
+            173
+            95
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!-- Egyptian Sand / Aztec Brown -->
+            173
+            93
+            95
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!-- Arizona Beige -->
+            106
+            106
+            0
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!-- Black -->
+            0
+            0
+            0
+          </indices>
+        </Item>
+      </colors>
+      <kits>
+        <Item>0_default_modkit</Item>
+      </kits>
+      <windowsWithExposedEdges />
+      <plateProbabilities>
+        <Probabilities>
+          <Item>
+            <Name>Yellow Plate</Name>
+            <Value value="100" />
+          </Item>
+        </Probabilities>
+      </plateProbabilities>
+      <lightSettings value="2" />
+      <sirenSettings value="0" />
+    </Item>
+     <Item>
+      <modelName>packard48w</modelName>
+      <colors>
+        <Item>
+          <indices content="char_array"> <!-- Black -->
+            0
+            0
+            0
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!-- Lowell Gray Metallic -->
+            156
+            156
+            3
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!-- Packard Blue Metallic -->
+            61
+            61
+            3
+            156
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!-- Egyptian Sand -->
+            173
+            173
+            3
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!-- Serpentine Green Metallic -->
+            56
+            56
+            116
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!-- Cavalier Maroon Metallic -->
+            167
+            167
+            3
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!-- Golden Green Metallic -->
+            183
+            183
+            3
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!-- Agate Blue Metallic -->
+            235
+            235
+            194
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!-- Lexington Green Metallic -->
+            232
+            232
+            50
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!-- Sardonyx Brown Metallic -->
+            187
+            187
+            3
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!-- Aztec Brown -->
+            93
+            93
+            95
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array"> <!-- Arizona Beige -->
+            106
+            106
+            0
+          </indices>
+        </Item>
+      </colors>
+      <kits>
+        <Item>0_default_modkit</Item>
+      </kits>
+      <windowsWithExposedEdges />
+      <plateProbabilities>
+        <Probabilities>
+          <Item>
+            <Name>Yellow Plate</Name>
+            <Value value="100" />
+          </Item>
+        </Probabilities>
+      </plateProbabilities>
+      <lightSettings value="2" />
+      <sirenSettings value="0" />
+    </Item>
+  </variationData>
+</CVehicleModelInfoVariation>

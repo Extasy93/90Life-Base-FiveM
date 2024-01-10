@@ -1,0 +1,2094 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CScenarioPointManifest>
+  <VersionNumber value="0" />
+  <RegionDefs>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Alamo_Sea</Name>
+      <AABB>
+        <min x="-263.914642" y="3471.966064" z="-8.140715" w="0.000000" />
+        <max x="2485.837402" y="4725.285156" z="229.560028" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/ALAMO_VIEW</Name>
+      <AABB>
+        <min x="-1897.872559" y="3101.516113" z="33.580364" w="0.000000" />
+        <max x="-129.617599" y="4324.243164" z="488.082611" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/ALIEN_CAMP</Name>
+      <AABB>
+        <min x="2073.047363" y="3523.482178" z="30.508766" w="0.000000" />
+        <max x="2849.520752" y="4371.533203" z="101.107513" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/ALTA</Name>
+      <AABB>
+        <min x="-178.785828" y="-544.882935" z="33.415531" w="0.000000" />
+        <max x="458.016571" y="-166.666626" z="73.743134" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/ALTRUIST_CAMP</Name>
+      <AABB>
+        <min x="-1820.771240" y="4394.978027" z="1.394959" w="0.000000" />
+        <max x="-118.427521" y="5197.094727" z="296.834991" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/BANNING</Name>
+      <AABB>
+        <min x="-648.017578" y="-2338.249268" z="4.371068" w="0.000000" />
+        <max x="582.782166" y="-1421.210693" z="24.825378" w="0.000000" />
+      </AABB>
+    </Item>
+	<Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/beach</Name>
+      <AABB>
+        <min x="6908.075" y="-1398.224" z="7.042839" w="0.000000" />
+        <max x="7352.846" y="-484.8049" z="11.1644" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Bolingbroke_Penitentiary</Name>
+      <AABB>
+        <min x="1265.647949" y="2346.002197" z="36.563549" w="0.000000" />
+        <max x="1955.373779" y="2837.939941" z="72.651123" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Braddock_Tunnel</Name>
+      <AABB>
+        <min x="1717.125610" y="5006.278320" z="40.381882" w="0.000000" />
+        <max x="3175.365723" y="6303.642090" z="365.208282" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/BURTON</Name>
+      <AABB>
+        <min x="-698.495911" y="-391.634583" z="8.149755" w="0.000000" />
+        <max x="-78.050491" y="66.827354" z="58.138271" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Cape_Catfish</Name>
+      <AABB>
+        <min x="2656.586914" y="4033.157227" z="-15.593271" w="0.000000" />
+        <max x="4325.312500" y="5173.010742" z="773.003052" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Cassidy_Creek</Name>
+      <AABB>
+        <min x="-1794.839722" y="3988.455811" z="1.380629" w="0.000000" />
+        <max x="-753.953979" y="4521.581543" z="174.844162" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Cemetery</Name>
+      <AABB>
+        <min x="3237.073486" y="-4674.096191" z="113.103004" w="0.000000" />
+        <max x="3270.320801" y="-4590.177734" z="118.089928" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Chamberlain_Hills</Name>
+      <AABB>
+        <min x="-312.484467" y="-1803.673340" z="28.210840" w="0.000000" />
+        <max x="-45.992424" y="-1399.186279" z="36.637005" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/CHUMASH</Name>
+      <AABB>
+        <min x="-3471.876221" y="135.860397" z="-3.722460" w="0.000000" />
+        <max x="-2879.227783" y="1020.824036" z="30.597679" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/CHUMASH_HILLS</Name>
+      <AABB>
+        <min x="-3289.538818" y="210.075928" z="3.603236" w="0.000000" />
+        <max x="-1485.734253" y="2307.284912" z="332.438293" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Chumash_Plaza</Name>
+      <AABB>
+        <min x="-3558.529297" y="654.387512" z="-39.084782" w="0.000000" />
+        <max x="-2967.117920" y="1635.081055" z="20.299068" w="0.000000" />
+      </AABB>
+    </Item>
+	<Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/club</Name>
+      <AABB>
+        <min x="7157.03700000" y="175.71190000" z="-31.05689000" w="0.000000" />
+        <max x="7292.80900000" y="308.80100000" z="55.81441000" w="0.000000" />
+      </AABB>
+    </Item>
+	<Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Cluckin_Bell</Name>
+      <AABB>
+        <min x="-454.328979" y="5989.870117" z="29.890108" w="0.000000" />
+        <max x="75.625282" y="6630.451660" z="34.505962" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Country_Club</Name>
+      <AABB>
+        <min x="-3217.533936" y="-269.748138" z="-16.155531" w="0.000000" />
+        <max x="-2848.051025" y="223.006653" z="15.117844" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/COUNTRYSIDE</Name>
+      <AABB>
+        <min x="260.952820" y="2294.435303" z="39.507088" w="0.000000" />
+        <max x="2222.735840" y="3145.078857" z="92.641037" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Countryside_Construction</Name>
+      <AABB>
+        <min x="630.590759" y="1600.441040" z="40.014812" w="0.000000" />
+        <max x="1396.524536" y="2671.979248" z="198.203690" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Countryside_NE</Name>
+      <AABB>
+        <min x="577.941650" y="-2190.842285" z="1.645161" w="0.000000" />
+        <max x="2970.658203" y="6642.504395" z="355.739288" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Countryside_NW</Name>
+      <AABB>
+        <min x="-2901.226318" y="4269.687988" z="-47.305195" w="0.000000" />
+        <max x="559.466187" y="6417.740723" z="422.899292" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Countryside_SE</Name>
+      <AABB>
+        <min x="466.064789" y="1552.554810" z="31.079447" w="0.000000" />
+        <max x="3289.206299" y="4034.634766" z="252.600128" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Countryside_SW</Name>
+      <AABB>
+        <min x="-3224.803955" y="792.816406" z="8.899463" w="0.000000" />
+        <max x="345.709351" y="4405.324219" z="353.010193" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/CYPRESS_FLATS</Name>
+      <AABB>
+        <min x="648.193787" y="-2562.159424" z="7.814811" w="0.000000" />
+        <max x="1139.046265" y="-1649.131714" z="56.133560" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/DAVIS</Name>
+      <AABB>
+        <min x="-84.010269" y="-2013.476074" z="17.227312" w="0.000000" />
+        <max x="556.216309" y="-1333.499023" z="36.792946" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Davis_Megamall</Name>
+      <AABB>
+        <min x="-144.012909" y="-2055.681396" z="13.032787" w="0.000000" />
+        <max x="198.575638" y="-1535.491699" z="29.484264" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/DEL_PERRO</Name>
+      <AABB>
+        <min x="-1943.877197" y="-814.483582" z="10.369469" w="0.000000" />
+        <max x="-1316.902100" y="-275.972412" z="48.203320" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Del_Perro_Beach</Name>
+      <AABB>
+        <min x="-2527.195801" y="-1151.337769" z="-4.916913" w="0.000000" />
+        <max x="-1420.404541" y="-465.814514" z="22.164921" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Del_Perro_Carpark</Name>
+      <AABB>
+        <min x="-1924.626221" y="-1181.379883" z="1.104083" w="0.000000" />
+        <max x="-1286.043945" y="-674.513367" z="23.161423" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Del_Perro_Metro</Name>
+      <AABB>
+        <min x="-1523.256348" y="-532.420471" z="13.131980" w="0.000000" />
+        <max x="-1325.611084" y="-417.133209" z="80.127296" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Del_Perro_Shops</Name>
+      <AABB>
+        <min x="-1566.884521" y="-889.527161" z="10.311445" w="0.000000" />
+        <max x="-1141.441406" y="-451.332397" z="34.650848" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Docklands</Name>
+      <AABB>
+        <min x="-1068.220093" y="-3903.220459" z="-7.652750" w="0.000000" />
+        <max x="475.057892" y="-1470.169434" z="5.050188" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Donkey_Punch_Family_Farm</Name>
+      <AABB>
+        <min x="-20.467091" y="6357.703613" z="-16.937775" w="0.000000" />
+        <max x="512.357422" y="7592.418945" z="31.626133" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Downtown</Name>
+      <AABB>
+        <min x="-861.851013" y="-1466.204956" z="27.785320" w="0.000000" />
+        <max x="465.692200" y="-328.093109" z="345.991669" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Downtown_Construction_Site</Name>
+      <AABB>
+        <min x="-368.869568" y="-1183.928833" z="17.638474" w="0.000000" />
+        <max x="46.451359" y="-781.737549" z="107.848366" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Downtown_Vinewood</Name>
+      <AABB>
+        <min x="-32.659054" y="-73.183502" z="66.640793" w="0.000000" />
+        <max x="528.913879" y="486.046936" z="136.541473" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/EAST_LOS_SANTOS</Name>
+      <AABB>
+        <min x="529.287781" y="-1639.780518" z="8.708453" w="0.000000" />
+        <max x="1483.912964" y="-164.793243" z="217.603500" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/East_LS_Hills</Name>
+      <AABB>
+        <min x="1346.064697" y="-2869.022705" z="-33.332294" w="0.000000" />
+        <max x="3197.265381" y="984.675049" z="364.771820" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/EAST_VINEWOOD</Name>
+      <AABB>
+        <min x="642.812866" y="-570.237000" z="1.061654" w="0.000000" />
+        <max x="1271.997314" y="43.137375" z="82.930351" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/ECLIPSE</Name>
+      <AABB>
+        <min x="-836.465515" y="118.145401" z="57.088448" w="0.000000" />
+        <max x="105.929085" y="446.543488" z="112.997742" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/El_Burro_Heights</Name>
+      <AABB>
+        <min x="856.313049" y="-2907.549561" z="-1.712338" w="0.000000" />
+        <max x="1914.641724" y="-1524.520386" z="115.833328" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/ELYSIAN_ISLAND</Name>
+      <AABB>
+        <min x="-51.135551" y="-3512.338135" z="0.000000" w="0.000000" />
+        <max x="754.220459" y="-2382.122559" z="16.092546" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Farmers_Market</Name>
+      <AABB>
+        <min x="1597.726563" y="4479.911133" z="32.938988" w="0.000000" />
+        <max x="2009.455200" y="5223.769531" z="99.496101" w="0.000000" />
+      </AABB>
+    </Item>
+	<Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/golf</Name>
+      <AABB>
+        <min x="6527.261" y="123.0075" z="6.583619" w="0.000000" />
+        <max x="6917.983" y="898.7075" z="21.02065" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/GOVERNMENT_FACILITY</Name>
+      <AABB>
+        <min x="2386.979248" y="-1002.365234" z="-22.668282" w="0.000000" />
+        <max x="3466.868652" y="909.782593" z="108.113541" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Grande_Senora_Desert</Name>
+      <AABB>
+        <min x="-35.629486" y="2637.461914" z="32.918247" w="0.000000" />
+        <max x="2519.433350" y="3682.173584" z="1297.146973" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Grapeseed</Name>
+      <AABB>
+        <min x="1706.635864" y="4599.765625" z="30.019876" w="0.000000" />
+        <max x="2763.135254" y="5211.926270" z="63.686481" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Great_Ocean_Highway</Name>
+      <AABB>
+        <min x="-3606.276611" y="316.006683" z="-49.196339" w="0.000000" />
+        <max x="-951.807617" y="5502.881348" z="1139.830200" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/GWC_and_Golfing_Society</Name>
+      <AABB>
+        <min x="-1455.237671" y="-173.067139" z="36.579308" w="0.000000" />
+        <max x="-875.990662" y="251.703033" z="72.400055" w="0.000000" />
+      </AABB>
+    </Item>
+	<Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/haiti</Name>
+      <AABB>
+        <min x="5701.782" y="384.0651" z="9.388087" w="0.000000" />
+        <max x="6003.375" y="538.4809" z="14.27718" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Harmony</Name>
+      <AABB>
+        <min x="148.193695" y="2337.540283" z="39.937950" w="0.000000" />
+        <max x="713.426636" y="2813.584717" z="62.608120" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/HAWICK</Name>
+      <AABB>
+        <min x="-120.713852" y="-270.189453" z="46.301151" w="0.000000" />
+        <max x="565.542603" y="42.469872" z="87.474220" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Hookies_Diner</Name>
+      <AABB>
+        <min x="-2468.612061" y="4023.591309" z="-16.840187" w="0.000000" />
+        <max x="-1962.587769" y="4668.716309" z="62.695293" w="0.000000" />
+      </AABB>
+    </Item>
+	<Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/hotel</Name>
+      <AABB>
+        <min x="6747.49100000" y="-1204.27600000" z="-303.71990000" w="0.000000" />
+        <max x="7190.46200000" y="-745.83710000" z="221.92960000" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Humane_Plant</Name>
+      <AABB>
+        <min x="3210.283691" y="3322.355957" z="-24.679739" w="0.000000" />
+        <max x="4391.342773" y="4242.523438" z="239.325577" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Kortz_Museum</Name>
+      <AABB>
+        <min x="-2589.396729" y="106.356781" z="89.869095" w="0.000000" />
+        <max x="-1896.566650" y="837.545776" z="282.665588" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/LA_MESA</Name>
+      <AABB>
+        <min x="537.961792" y="-1685.770264" z="21.145758" w="0.000000" />
+        <max x="1072.229248" y="-927.233887" z="36.948208" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Lago_Zancudo</Name>
+      <AABB>
+        <min x="-2863.733643" y="2176.593750" z="-5.340501" w="0.000000" />
+        <max x="-1161.288696" y="2923.763428" z="84.469910" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Lighthouse</Name>
+      <AABB>
+        <min x="2726.644287" y="5011.442871" z="-65.302109" w="0.000000" />
+        <max x="3744.211670" y="6580.374023" z="243.812805" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/LITTLE_SEOUL</Name>
+      <AABB>
+        <min x="-800.000549" y="-1271.190918" z="8.146142" w="0.000000" />
+        <max x="-378.243622" y="-761.667969" z="40.060921" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/LITTLE_SEOUL_APARTMENTS</Name>
+      <AABB>
+        <min x="-913.892090" y="-1116.244995" z="10.882827" w="0.000000" />
+        <max x="-597.760620" y="-770.691650" z="32.943108" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Little_Seoul_Metro</Name>
+      <AABB>
+        <min x="-756.170532" y="-840.651001" z="9.895612" w="0.000000" />
+        <max x="-400.735870" y="-532.909424" z="225.441498" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/LITTLE_SEOUL_PARK</Name>
+      <AABB>
+        <min x="-1067.390381" y="-898.959106" z="14.620404" w="0.000000" />
+        <max x="-746.412109" y="-574.902710" z="29.314234" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/LOS_PUERTA</Name>
+      <AABB>
+        <min x="-844.048706" y="-1899.777344" z="0.600355" w="0.000000" />
+        <max x="-220.245544" y="-1221.422485" z="31.088289" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Los_Santos_Freeway</Name>
+      <AABB>
+        <min x="409.606781" y="-703.415222" z="-3.984543" w="0.000000" />
+        <max x="1904.087280" y="1462.527466" z="238.197006" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Los_Santos_International_Airport</Name>
+      <AABB>
+        <min x="-2122.563477" y="-3835.212402" z="-25.161648" w="0.000000" />
+        <max x="-280.506226" y="-1775.216919" z="218.030914" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Lost_MC</Name>
+      <AABB>
+        <min x="872.887146" y="-222.692017" z="72.963074" w="0.000000" />
+        <max x="1067.007690" y="-11.794739" z="73.888054" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/LSIA_Carpark1</Name>
+      <AABB>
+        <min x="-1055.968018" y="-2648.039307" z="12.756560" w="0.000000" />
+        <max x="-898.663940" y="-2398.693848" z="38.040039" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/LSIA_Carpark2</Name>
+      <AABB>
+        <min x="-968.220947" y="-2714.946777" z="12.953111" w="0.000000" />
+        <max x="-814.476929" y="-2591.736816" z="37.822845" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/LSIA_Terminal</Name>
+      <AABB>
+        <min x="-1366.842163" y="-2809.983154" z="-9.323433" w="0.000000" />
+        <max x="-567.036438" y="-1829.410645" z="19.708353" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Marina_Drive</Name>
+      <AABB>
+        <min x="287.343201" y="3429.514404" z="30.673141" w="0.000000" />
+        <max x="1579.067749" y="3764.343994" z="49.958244" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/MARLOWE_DRIVE</Name>
+      <AABB>
+        <min x="-1455.035156" y="533.839172" z="165.029526" w="0.000000" />
+        <max x="392.066223" y="1173.532349" z="350.000000" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/MARLOWE_VALLEY</Name>
+      <AABB>
+        <min x="-2159.055908" y="1759.793823" z="12.120811" w="0.000000" />
+        <max x="-1197.027344" y="2360.853271" z="215.421478" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Military_Base</Name>
+      <AABB>
+        <min x="-3533.733154" y="2691.686279" z="-93.703957" w="0.000000" />
+        <max x="-1507.552002" y="3854.941162" z="100.450470" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/MirrorPark</Name>
+      <AABB>
+        <min x="821.480530" y="-888.889709" z="52.884468" w="0.000000" />
+        <max x="1326.666260" y="-339.107025" z="68.835579" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/MISSION_ROW</Name>
+      <AABB>
+        <min x="196.448761" y="-1183.968018" z="-100.230240" w="0.000000" />
+        <max x="534.549927" y="-899.635681" z="42.691742" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Morningwood</Name>
+      <AABB>
+        <min x="-1617.075195" y="-509.894135" z="15.859696" w="0.000000" />
+        <max x="-1198.957520" y="-61.833649" z="53.429104" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/MountChiliad</Name>
+      <AABB>
+        <min x="149.037491" y="4255.192871" z="21.014334" w="0.000000" />
+        <max x="2557.941895" y="6465.692871" z="784.333435" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/MountJosiah</Name>
+      <AABB>
+        <min x="-458.776459" y="4470.506348" z="75.830070" w="0.000000" />
+        <max x="509.870392" y="5983.986816" z="796.914734" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Movie_Studios</Name>
+      <AABB>
+        <min x="-1288.321045" y="-697.925903" z="24.901291" w="0.000000" />
+        <max x="-935.503845" y="-364.109009" z="40.357937" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Murietta_Heights</Name>
+      <AABB>
+        <min x="740.520386" y="-1965.231812" z="25.415449" w="0.000000" />
+        <max x="2001.034546" y="-825.533386" z="1156.792236" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/NG_Planes</Name>
+      <AABB>
+        <min x="-3176.192627" y="1624.981689" z="31.806177" w="0.000000" />
+        <max x="2857.987061" y="4260.424316" z="1759.472534" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/NG_Planes_City</Name>
+      <AABB>
+        <min x="-657.230286" y="-1275.488647" z="3.167814" w="0.000000" />
+        <max x="3127.670898" y="1504.907471" z="1031.061035" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/NG_Planes_North</Name>
+      <AABB>
+        <min x="-5556.777832" y="4293.448242" z="40.060547" w="0.000000" />
+        <max x="3826.536865" y="7778.120605" z="1865.783203" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/NG_Planes_South</Name>
+      <AABB>
+        <min x="-2537.096924" y="-3394.168945" z="12.944436" w="0.000000" />
+        <max x="1943.447632" y="-1388.858521" z="1031.245483" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/NorthCountrysideBeach</Name>
+      <AABB>
+        <min x="33.412582" y="6397.948730" z="-31.470619" w="0.000000" />
+        <max x="1417.284058" y="7328.284668" z="116.457581" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Observatory</Name>
+      <AABB>
+        <min x="-1042.315552" y="900.921875" z="196.981628" w="0.000000" />
+        <max x="292.798767" y="1969.234985" z="398.752045" w="0.000000" />
+      </AABB>
+    </Item>
+	<Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/oceandn</Name>
+      <AABB>
+        <min x="7042.004" y="-165.1738" z="8.000119" w="0.000000" />
+        <max x="7284.927" y="398.6858" z="32.69817" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/PACIFIC_BLUFFS</Name>
+      <AABB>
+        <min x="-2687.568848" y="-585.526733" z="7.001978" w="0.000000" />
+        <max x="-1471.193726" y="230.468109" z="149.994995" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/PALA_SPRINGS</Name>
+      <AABB>
+        <min x="-1059.598633" y="5356.062988" z="-4.559760" w="0.000000" />
+        <max x="-299.076080" y="6423.360840" z="82.064232" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/PALETO_BAY</Name>
+      <AABB>
+        <min x="-1155.828857" y="6058.338379" z="-131.419052" w="0.000000" />
+        <max x="367.537048" y="6967.368164" z="39.498615" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Pier</Name>
+      <AABB>
+        <min x="-2049.713623" y="-1424.127075" z="-8.133315" w="0.000000" />
+        <max x="-1455.591797" y="-772.031494" z="22.752562" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Pillbox_Hill</Name>
+      <AABB>
+        <min x="-266.560364" y="-1138.272949" z="8.148654" w="0.000000" />
+        <max x="405.295288" y="-423.221100" z="178.174805" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Pork_Whistle_Farm</Name>
+      <AABB>
+        <min x="-929.212708" y="1675.570068" z="27.708403" w="0.000000" />
+        <max x="697.645081" y="2998.518555" z="243.498184" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/PORT_OF_SOUTH_LOS_SANTOS</Name>
+      <AABB>
+        <min x="-569.608032" y="-2891.862061" z="-16.484100" w="0.000000" />
+        <max x="205.522369" y="-2247.172852" z="24.632345" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/PowerPlant</Name>
+      <AABB>
+        <min x="2461.446045" y="764.839661" z="-20.002199" w="0.000000" />
+        <max x="3524.562256" y="2417.232422" z="160.537231" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Procopio_Beach</Name>
+      <AABB>
+        <min x="1299.791138" y="6248.521973" z="-42.864201" w="0.000000" />
+        <max x="2854.077148" y="7022.290039" z="151.923279" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Prologue</Name>
+      <AABB>
+        <min x="1434.954102" y="-5391.274414" z="112.843666" w="0.000000" />
+        <max x="5314.653320" y="-3452.595215" z="1265.059692" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/PUERTO_DEL_SOL</Name>
+      <AABB>
+        <min x="-1119.595703" y="-1621.338867" z="0.600091" w="0.000000" />
+        <max x="-498.561523" y="-915.719727" z="21.378313" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Race_Course</Name>
+      <AABB>
+        <min x="845.567749" y="-97.221756" z="65.969940" w="0.000000" />
+        <max x="1546.339233" y="538.229980" z="223.196259" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/RANCHO</Name>
+      <AABB>
+        <min x="172.660629" y="-2128.927002" z="14.219439" w="0.000000" />
+        <max x="605.991516" y="-1564.915283" z="32.447197" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Raton_Canyon</Name>
+      <AABB>
+        <min x="-2467.012939" y="4140.378906" z="-35.103966" w="0.000000" />
+        <max x="-50.762161" y="5621.170410" z="312.504883" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/RESERVOIR</Name>
+      <AABB>
+        <min x="1198.448486" y="-995.671143" z="50.114952" w="0.000000" />
+        <max x="2519.459717" y="1989.944824" z="292.227356" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Richman</Name>
+      <AABB>
+        <min x="-1856.601318" y="-208.768982" z="51.162380" w="0.000000" />
+        <max x="-1073.108521" y="504.166901" z="111.888451" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Richman_Glen</Name>
+      <AABB>
+        <min x="-2068.361816" y="176.771378" z="80.883095" w="0.000000" />
+        <max x="-1313.174194" y="1549.967529" z="198.456299" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Rockford_East</Name>
+      <AABB>
+        <min x="-885.010986" y="-505.690155" z="28.256475" w="0.000000" />
+        <max x="-262.755005" y="-51.087387" z="58.144154" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Rockford_Hills</Name>
+      <AABB>
+        <min x="-1423.686279" y="-483.952087" z="9.055300" w="0.000000" />
+        <max x="-290.115204" y="437.264557" z="222.268173" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Rockford_West</Name>
+      <AABB>
+        <min x="-1394.994141" y="-484.260193" z="13.131745" w="0.000000" />
+        <max x="-753.305786" y="203.412201" z="163.264297" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Route68</Name>
+      <AABB>
+        <min x="699.815857" y="2531.636719" z="36.282841" w="0.000000" />
+        <max x="1557.167358" y="2876.481934" z="261.243927" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/SanAndreas_Coast</Name>
+      <AABB>
+        <min x="-3131.399414" y="-623.852783" z="-11.873729" w="0.000000" />
+        <max x="-2038.021118" y="328.122650" z="183.690750" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/SanChianski</Name>
+      <AABB>
+        <min x="3377.126709" y="2997.312500" z="-26.774433" w="0.000000" />
+        <max x="4163.516113" y="3358.868408" z="197.661163" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/SANDY_SHORES</Name>
+      <AABB>
+        <min x="1454.687866" y="3512.443359" z="30.355076" w="0.000000" />
+        <max x="2098.311035" y="4049.150146" z="43.436783" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Sandy_Shores_Airfield</Name>
+      <AABB>
+        <min x="622.954590" y="2770.269043" z="36.411549" w="0.000000" />
+        <max x="1857.551880" y="3406.670898" z="173.499557" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Sawmill</Name>
+      <AABB>
+        <min x="-1336.166626" y="4926.039063" z="0.968599" w="0.000000" />
+        <max x="-382.923157" y="5684.781738" z="193.543350" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Senora_Freeway</Name>
+      <AABB>
+        <min x="1952.862915" y="310.544006" z="-14.549580" w="0.000000" />
+        <max x="4082.903564" y="5786.009766" z="1164.536987" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Senora_Hills</Name>
+      <AABB>
+        <min x="256.134277" y="3193.925049" z="32.025852" w="0.000000" />
+        <max x="1734.626221" y="3800.666504" z="98.753838" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Senora_Quarry</Name>
+      <AABB>
+        <min x="2506.991699" y="2251.167236" z="-35.811268" w="0.000000" />
+        <max x="3793.753662" y="3153.565186" z="878.495300" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Slab_City</Name>
+      <AABB>
+        <min x="-64.429573" y="3433.467285" z="30.315386" w="0.000000" />
+        <max x="118.157211" y="3768.179932" z="55.207306" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/SOUTH_LOS_SANTOS</Name>
+      <AABB>
+        <min x="-357.913910" y="-2032.667847" z="22.028835" w="0.000000" />
+        <max x="557.494812" y="-1133.558594" z="94.121132" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/SOUTH_VESPUCCI</Name>
+      <AABB>
+        <min x="-1936.640869" y="-1983.201904" z="-6.601417" w="0.000000" />
+        <max x="-661.264404" y="-1248.895630" z="18.777792" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Stables</Name>
+      <AABB>
+        <min x="936.054688" y="773.381287" z="85.833366" w="0.000000" />
+        <max x="1658.386597" y="1666.678223" z="269.285187" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/STADIUM</Name>
+      <AABB>
+        <min x="-636.189575" y="-2168.302734" z="4.411820" w="0.000000" />
+        <max x="-20.536335" y="-1532.333740" z="29.823576" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Stilt_Houses</Name>
+      <AABB>
+        <min x="-1201.182617" y="570.741699" z="132.343994" w="0.000000" />
+        <max x="-101.421234" y="1018.020203" z="236.644577" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/STRAWBERRY</Name>
+      <AABB>
+        <min x="-214.572540" y="-1579.776489" z="28.057289" w="0.000000" />
+        <max x="487.721893" y="-1191.120117" z="45.509510" w="0.000000" />
+      </AABB>
+    </Item>
+	<Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/stripclb</Name>
+      <AABB>
+        <min x="6813.927" y="-1147.057" z="8.523705" w="0.000000" />
+        <max x="6832.706" y="-1138.562" z="9.542478" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/TERMINAL</Name>
+      <AABB>
+        <min x="684.854675" y="-3517.552979" z="-26.533613" w="0.000000" />
+        <max x="2009.606201" y="-2848.816895" z="24.287872" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/TEXTILE_CITY</Name>
+      <AABB>
+        <min x="233.551575" y="-965.646606" z="-4.047320" w="0.000000" />
+        <max x="585.663086" y="-442.986328" z="39.901142" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/ULSA</Name>
+      <AABB>
+        <min x="-2036.793945" y="86.435898" z="56.732338" w="0.000000" />
+        <max x="-1464.568481" y="416.568146" z="92.787514" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/UnNamed</Name>
+      <AABB>
+        <min x="-937.611694" y="-2367.347656" z="-13.646090" w="0.000000" />
+        <max x="-860.685852" y="-2256.934570" z="6.147654" w="0.000000" />
+      </AABB>
+    </Item>
+	<Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/vcdowntown</Name>
+      <AABB>
+        <min x="5842.562" y="933.5909" z="9.044645" w="0.000000" />
+        <max x="6224.434" y="1372.876" z="95.71498" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/VESPUCCI</Name>
+      <AABB>
+        <min x="-1381.738403" y="-1585.871948" z="1.108786" w="0.000000" />
+        <max x="-621.106140" y="-755.992188" z="117.920250" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Vespucci_Beach</Name>
+      <AABB>
+        <min x="-2209.890625" y="-1893.060303" z="-15.226812" w="0.000000" />
+        <max x="-1093.646118" y="-427.156616" z="75.000000" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Vespucci_Beach_North</Name>
+      <AABB>
+        <min x="-1647.423096" y="-1719.213989" z="-0.759512" w="0.000000" />
+        <max x="-1163.417969" y="-881.971802" z="12.018473" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Vespucci_Beach_South</Name>
+      <AABB>
+        <min x="-1485.857666" y="-1848.110596" z="-1.312500" w="0.000000" />
+        <max x="-1098.224365" y="-1012.206665" z="14.615701" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/VESPUCCI_CANALS</Name>
+      <AABB>
+        <min x="-1252.764038" y="-1271.433350" z="-1.655198" w="0.000000" />
+        <max x="-711.580933" y="-778.175598" z="18.441330" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Vespucci_Coast</Name>
+      <AABB>
+        <min x="-3446.095703" y="-1315.257935" z="-22.541439" w="0.000000" />
+        <max x="-665.938599" y="1570.649658" z="1049.401367" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/VESPUCCI_POLICE_DEPT</Name>
+      <AABB>
+        <min x="-1284.769409" y="-1014.561340" z="1.130753" w="0.000000" />
+        <max x="-881.926453" y="-549.287537" z="36.675480" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/VINEWOOD</Name>
+      <AABB>
+        <min x="-652.626465" y="-184.019409" z="57.064980" w="0.000000" />
+        <max x="547.643188" y="355.810150" z="162.038925" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/VINEWOOD_HILLS</Name>
+      <AABB>
+        <min x="-1498.374390" y="440.248840" z="86.110825" w="0.000000" />
+        <max x="408.163025" y="1148.400879" z="242.119019" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/VINEWOOD_PARK</Name>
+      <AABB>
+        <min x="69.891891" y="462.887146" z="117.856224" w="0.000000" />
+        <max x="1224.861084" y="1790.675415" z="363.078247" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/VinewoodHills_East</Name>
+      <AABB>
+        <min x="-937.688232" y="273.586456" z="92.414604" w="0.000000" />
+        <max x="460.648834" y="1499.320557" z="307.640320" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/VinewoodHills_West</Name>
+      <AABB>
+        <min x="-1729.318481" y="359.197479" z="69.677002" w="0.000000" />
+        <max x="-636.212952" y="935.375549" z="202.610611" w="0.000000" />
+      </AABB>
+    </Item>
+	<Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/washintn</Name>
+      <AABB>
+        <min x="6582.995" y="-1253.601" z="8.350866" w="0.000000" />
+        <max x="6714.276" y="-672.042" z="11.3147" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/WEST_VINEWOOD</Name>
+      <AABB>
+        <min x="-729.641235" y="-84.686951" z="36.982025" w="0.000000" />
+        <max x="144.638855" y="251.434586" z="112.504005" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Windfarm</Name>
+      <AABB>
+        <min x="1832.025269" y="312.199341" z="18.180422" w="0.000000" />
+        <max x="2681.227539" y="2836.153809" z="228.642807" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Wreck</Name>
+      <AABB>
+        <min x="3014.196533" y="-371.036285" z="-30.185551" w="0.000000" />
+        <max x="3471.292725" y="-31.369833" z="4.530613" w="0.000000" />
+      </AABB>
+    </Item>
+    <Item type="CScenarioPointRegionDef">
+      <Name>platform:/levels/gta5/scenario/Zancudo_River</Name>
+      <AABB>
+        <min x="-1393.113159" y="2442.435791" z="0.042026" w="0.000000" />
+        <max x="393.339783" y="3415.464844" z="114.201355" w="0.000000" />
+      </AABB>
+    </Item>
+  </RegionDefs>
+  <Groups>
+    <Item type="CScenarioPointGroup">
+      <Name>agency_heist_peds</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>alamo_planes</Name>
+      <EnabledByDefault value="true" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>ammunation</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>armenian_cats</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>army_guard</Name>
+      <EnabledByDefault value="true" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>attract_pap</Name>
+      <EnabledByDefault value="true" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>blimp</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>canyoncliffs</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>canyoncliffs_start</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>car_wash</Name>
+      <EnabledByDefault value="true" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>chinese2_hillbillies</Name>
+      <EnabledByDefault value="true" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>chinese2_lunch</Name>
+      <EnabledByDefault value="true" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>chumash_14_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>chumash_14_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>chumash_14_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>chumash_14_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>chumash_14_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>chumash_14_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>chumash_14_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>chumash_14_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>cinema_downtown</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>cinema_morningwood</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>cinema_textile</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>city_banks</Name>
+      <EnabledByDefault value="true" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>clothes_shop</Name>
+      <EnabledByDefault value="true" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>countryside_banks</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>dealership</Name>
+      <EnabledByDefault value="true" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>del_perro_16_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>del_perro_16_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>del_perro_16_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>del_perro_16_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>del_perro_16_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>del_perro_16_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>del_perro_16_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>del_perro_16_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>downtownalley_33_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>downtownalley_33_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>downtownalley_33_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>downtownalley_33_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>downtownalley_33_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>downtownalley_33_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>downtownalley_33_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>downtownalley_33_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>e_canals_22_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>e_canals_22_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>e_canals_22_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>e_canals_22_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>e_cypress_05_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>e_cypress_05_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>e_cypress_05_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>e_cypress_05_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>e_hollywood_39_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>e_hollywood_39_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>e_hollywood_39_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>e_hollywood_39_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>e_paletobay_10_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>e_paletobay_10_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>e_paletobay_10_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>e_paletobay_10_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>e_puerto_26_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>e_puerto_26_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>e_puerto_26_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>e_puerto_26_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>e_sandyshores_12_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>e_sandyshores_12_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>e_sandyshores_12_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>e_sandyshores_12_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>e_silverlake_40_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>e_silverlake_40_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>e_silverlake_40_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>e_silverlake_40_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>eastls_bmx</Name>
+      <EnabledByDefault value="true" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>eastls_chopshop_35_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>eastls_chopshop_35_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>eastls_chopshop_35_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>eastls_skatepark_36_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>eastls_skatepark_36_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>eastls_skatepark_36_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>eastls_skatepark_36_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>eclipse_32_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>eclipse_32_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>eclipse_32_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>eclipse_32_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>ecofriendly</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>ecofriendly_start</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>elburro_shed_38_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>elburro_shed_38_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>elburro_shed_38_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>elburro_shed_38_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>elburro_wreck_37_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>elburro_wreck_37_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>elburro_wreck_37_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>elburro_wreck_37_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>fib_airport</Name>
+      <EnabledByDefault value="true" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>fib_group_1</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>fib_group_2</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>fort_zancudo_guards</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>gentry_mannor</Name>
+      <EnabledByDefault value="true" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>grapeseed_planes</Name>
+      <EnabledByDefault value="true" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>grapeseedairstrip_07_security</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>guards_at_prison</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>harmony_chopshop_13_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>harmony_chopshop_13_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>harmony_chopshop_13_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>harmony_chopshop_13_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>kortz_security</Name>
+      <EnabledByDefault value="true" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>lakesidesplash</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>lakesidesplash_start</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>lost_bikers</Name>
+      <EnabledByDefault value="true" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>lost_hangout</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>lsa_planes</Name>
+      <EnabledByDefault value="true" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>mid_seoul_24_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>mid_seoul_24_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>mid_seoul_24_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>mid_seoul_24_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>minewardspiral</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>minewardspiral_start</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>mirrorpark_41_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>mirrorpark_41_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>mirrorpark_41_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>mirrorpark_41_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>morningwood_17_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>morningwood_17_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>morningwood_17_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>morningwood_17_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>movie_studio_security</Name>
+      <EnabledByDefault value="true" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>mp_police</Name>
+      <EnabledByDefault value="true" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>mp_police2</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>n_w_hollywood_31_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>n_w_hollywood_31_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>n_w_hollywood_31_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>n_w_hollywood_31_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>new group</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>new group 1</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>new group 2</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>ng_planes</Name>
+      <EnabledByDefault value="true" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>observatory_bikers</Name>
+      <EnabledByDefault value="true" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>oceanhighway_15_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>oceanhighway_15_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>oceanhighway_15_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>oceanhighway_15_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>paleto_bank</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>paleto_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>pershing_04_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>pershing_04_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>pershing_04_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>pershing_04_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>pier_18_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>pier_18_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>pier_18_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>pier_18_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>plane_wreck</Name>
+      <EnabledByDefault value="true" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>plane_wreck_dog</Name>
+      <EnabledByDefault value="true" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>police_at_court</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>police_peds_city</Name>
+      <EnabledByDefault value="true" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>police_pound1</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>police_pound2</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>police_pound3</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>police_pound4</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>police_pound5</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>polo_goon</Name>
+      <EnabledByDefault value="true" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>prison_towers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>prison_transport</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>quarry</Name>
+      <EnabledByDefault value="true" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>racecourse_06_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>racecourse_06_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>racecourse_06_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>racecourse_06_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>rampage1</Name>
+      <EnabledByDefault value="true" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>ridgerun</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>ridgerun_start</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>s_sanpedro_28_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>s_sanpedro_28_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>s_sanpedro_28_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>s_sanpedro_28_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>s_seoul_27_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>s_seoul_27_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>s_seoul_27_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>s_seoul_27_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>sandy_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>sandy_planes</Name>
+      <EnabledByDefault value="true" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>sanpedrogarage_30_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>sanpedrogarage_30_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>sanpedrogarage_30_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>sanpedrogarage_30_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>scrap_security</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>scrapyard_29_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>scrapyard_29_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>scrapyard_29_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>scrapyard_29_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>senoraairstrip_08_security</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>seoulpark_23_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>seoulpark_23_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>seoulpark_23_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>seoulpark_23_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>sew_machine</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>solomon_gate</Name>
+      <EnabledByDefault value="true" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>strawberryclub_34_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>strawberryclub_34_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>strawberryclub_34_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>strawberryclub_34_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>triathlon_1</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>triathlon_1_start</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>triathlon_2</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>triathlon_2_start</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>triathlon_3</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>triathlon_3_start</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>vagos_hangout</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>valleytrail</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>valleytrail_start</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>vangelico</Name>
+      <EnabledByDefault value="true" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>vespucci_20_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>vespucci_20_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>vespucci_20_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>vespucci_20_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>vespuccibeach_19_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>vespuccibeach_19_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>vespuccibeach_19_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>vespuccibeach_19_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>w_canals_21_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>w_canals_21_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>w_canals_21_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>w_canals_21_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>w_paletobay_09_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>w_paletobay_09_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>w_paletobay_09_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>w_paletobay_09_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>w_puerto_25_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>w_puerto_25_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>w_puerto_25_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>w_puerto_25_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>w_sandyshores_11_bikers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>w_sandyshores_11_cops</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>w_sandyshores_11_hookers</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>w_sandyshores_11_vagos</Name>
+      <EnabledByDefault value="false" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>watersports</Name>
+      <EnabledByDefault value="true" />
+    </Item>
+    <Item type="CScenarioPointGroup">
+      <Name>yellowjackinn</Name>
+      <EnabledByDefault value="true" />
+    </Item>
+  </Groups>
+  <InteriorNames>
+    <Item>ap1_01_b_lsiaterm_subway</Item>
+    <Item>ap1_03_lisapark_subway</Item>
+    <Item>bh1_rd2_portola_subway</Item>
+    <Item>bt1_04_burton_subway</Item>
+    <Item>bt1_04_carpark</Item>
+	<Item>club</Item>
+    <Item>dt1_02_carpark</Item>
+    <Item>dt1_03_carpark</Item>
+    <Item>dt1_05_carpark</Item>
+    <Item>kt1_03_carpark_int</Item>
+    <Item>kt1_04_roadtunnel_int</Item>
+    <Item>kt1_09_seoul_subway</Item>
+    <Item>metro_30</Item>
+    <Item>metro_newwalk1</Item>
+    <Item>metro_newwalk2</Item>
+    <Item>metro_newwalk3</Item>
+    <Item>metro_newwalk4</Item>
+    <Item>metro_newwalk5</Item>
+    <Item>metro_newwalk6</Item>
+    <Item>metro_station_3</Item>
+    <Item>metro_station_3_portola</Item>
+    <Item>metro_station_3_seoul</Item>
+    <Item>metro_t_end</Item>
+    <Item>metro_t_end_30</Item>
+    <Item>metro_t_stair</Item>
+    <Item>metro_topen_step</Item>
+    <Item>po1_08_warehouseint1</Item>
+    <Item>sm_15_delperro_subway</Item>
+	<Item>stripclb</Item>
+    <Item>v_31_newtun2</Item>
+    <Item>v_31_newtun3</Item>
+    <Item>v_31_newtun4</Item>
+    <Item>v_31_newtunnel1</Item>
+    <Item>v_31_tun_01</Item>
+    <Item>v_31_tun_02</Item>
+    <Item>v_31_tun_03</Item>
+    <Item>v_31_tun_04</Item>
+    <Item>v_31_tun_05</Item>
+    <Item>v_31_tun_06</Item>
+    <Item>v_31_tun_07</Item>
+    <Item>v_31_tun_08</Item>
+    <Item>v_31_tun_09</Item>
+    <Item>v_31_tun_10</Item>
+    <Item>v_70_bikerbar</Item>
+    <Item>v_apart_midspaz</Item>
+    <Item>v_apartment_high</Item>
+    <Item>v_bahama</Item>
+    <Item>v_bank</Item>
+    <Item>v_bank4</Item>
+    <Item>v_barbers</Item>
+    <Item>v_carmod2</Item>
+    <Item>v_carmod3</Item>
+    <Item>v_carshowroom</Item>
+    <Item>v_cinema</Item>
+    <Item>v_clotheshi</Item>
+    <Item>v_clotheslo</Item>
+    <Item>v_clothesmid</Item>
+    <Item>v_factory1</Item>
+    <Item>v_factory2</Item>
+    <Item>v_factory4</Item>
+    <Item>v_fib01</Item>
+    <Item>v_firedept</Item>
+    <Item>v_gasstation</Item>
+    <Item>v_gen_liquor</Item>
+    <Item>v_genbank</Item>
+    <Item>v_gun</Item>
+    <Item>v_gun2</Item>
+    <Item>v_hanger</Item>
+    <Item>v_hicksbar</Item>
+    <Item>v_jewel2</Item>
+    <Item>v_methlab</Item>
+    <Item>v_office_lobby</Item>
+    <Item>v_policehub</Item>
+    <Item>v_rockclub</Item>
+    <Item>v_sheriff</Item>
+    <Item>v_sheriff2</Item>
+    <Item>v_shop_247</Item>
+    <Item>v_stadium</Item>
+    <Item>v_strip3</Item>
+    <Item>v_studio_lo</Item>
+    <Item>v_sweat</Item>
+    <Item>v_tattoo</Item>
+    <Item>v_tower</Item>
+    <Item>v_trailer</Item>
+    <Item>v_trevors</Item>
+    <Item>vbca_tunnel2</Item>
+  </InteriorNames>
+</CScenarioPointManifest>
