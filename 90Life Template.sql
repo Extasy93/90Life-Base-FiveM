@@ -1,203 +1,299 @@
--- phpMyAdmin SQL Dump
--- version 4.6.6deb5ubuntu0.5
--- https://www.phpmyadmin.net/
---
--- Client :  localhost:3306
--- Généré le :  Ven 26 Novembre 2021 à 11:32
--- Version du serveur :  5.7.36-0ubuntu0.18.04.1
--- Version de PHP :  7.2.24-0ubuntu0.18.04.10
+CREATE DATABASE IF NOT EXISTS `90Life` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
+USE `90Life`;
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Base de données :  `umbrella`
---
-
--- --------------------------------------------------------
-
---
--- Structure de la table `addon_account`
---
-
-CREATE TABLE `addon_account` (
-  `id` int(11) NOT NULL DEFAULT '0',
-  `name` varchar(60) COLLATE utf8mb4_bin NOT NULL,
-  `label` varchar(255) COLLATE utf8mb4_bin NOT NULL,
-  `shared` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
-
---
--- Contenu de la table `addon_account`
---
-
-INSERT INTO `addon_account` (`id`, `name`, `label`, `shared`) VALUES
-(0, 'society_bahamas', 'Bahamas', 1),
-(1, 'caution', 'Caution', 0),
-(2, 'property_black_money', 'Argent Sale Propriété', 0),
-(3, 'society_ambulance', 'ambulance', 1),
-(4, 'society_avocat', 'Avocat', 1),
-(5, 'society_cardealer', 'Concessionnaire', 1),
-(6, 'society_journaliste', 'journaliste', 1),
-(7, 'society_mechanic', 'Mécano', 1),
-(8, 'society_police', 'Police', 1),
-(9, 'society_AgentImmo', 'Agent immobilier', 1),
-(10, 'society_tabac', 'Tabac', 1),
-(11, 'society_taxi', 'Taxi', 1),
-(12, 'society_unicorn', 'Unicorn', 1),
-(13, 'society_weedshop', 'weedman', 1),
-(14, 'society_vigneron', 'vigneron', 1),
-(15, 'society_label', 'label', 1),
-(16, 'society_northmecano', 'NorthMecano', 1),
-(17, 'property_black_money', 'Argent Sale Propriété', 0),
-(18, 'society_bcso', 'BCSO', 0),
-(19, 'society_Abatteur', 'Abatteur', 0),
-(20, 'society_gouv', 'Gouvernement', 1),
-(21, 'society_yellow', 'Yellow Jack', 1);
-
--- --------------------------------------------------------
-
---
--- Structure de la table `addon_account_data`
---
-
-CREATE TABLE `addon_account_data` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `addon_account_data` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `account_name` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
   `money` double NOT NULL,
-  `owner` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+  `owner` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `owner` (`owner`(191)),
+  KEY `account_name` (`account_name`(191)),
+  KEY `id` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=798 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
---
--- Contenu de la table `addon_account_data`
---
+INSERT INTO `addon_account_data` (`id`,`account_name`,`money`,`owner`) VALUES
+	(1, 'society_ambulance', 18150, NULL),
+	(2, 'society_avocat', 20000, NULL),
+	(4, 'society_gouv', 15000, NULL),
+	(5, 'society_vccustoms', 124392, NULL),
+	(6, 'society_vcpd', 184110, NULL),
+	(7, 'society_AgentImmo', 15000.5, NULL),
+	(8, 'society_tabac', 159295, NULL),
+	(9, 'society_taxi', 1800, NULL),
+	(10, 'society_malibu', 19010, NULL),
+	(11, 'society_weedshop', 92962, NULL),
+	(12, 'society_label', 15000, NULL),
+	(13, 'society_weazelnews', 8500, NULL),
+	(14, 'society_frontpage', 148207, NULL),
+	(15, 'society_pizza', 15000, NULL),
+	(16, 'society_boatshop', 0, NULL),
+	(17, 'society_bikeshop', 15000, NULL),
+	(18, 'society_greasychopper', 107870, NULL),
+	(20, 'society_oceanview', 102056, NULL),
+	(79, 'society_blackdisciples', 0, NULL),
+	(89, 'society_vicelord', 0, NULL),
+	(263, 'society_cabrones', 0, NULL),
+	(286, 'society_diaz', 267000, NULL),
+	(287, 'society_bd', 15474, NULL),
+	(288, 'society_chollos', 26000, NULL),
+	(289, 'society_haitiens', 5000, NULL),
+	(429, 'society_vicecitybikers', 0, NULL),
+	(448, 'society_cityhall', 15000, NULL),
+	(461, 'society_Ocean Hill', 0, NULL),
+	(462, 'society_jamaican', 0, NULL),
+	(479, 'society_cribs', 1201, NULL),
+	(540, 'society_icecream', 612334, NULL),
+	(599, 'society_robina', 87365, NULL),
+	(658, 'society_mob', 0, NULL),
+	(721, 'society_msb', 0, NULL);
 
-INSERT INTO `addon_account_data` (`id`, `account_name`, `money`, `owner`) VALUES
-(0, 'society_Abatteur', 50000, NULL),
-(1, 'society_northmecano', 50000, NULL),
-(2, 'society_ambulance', 50000, NULL),
-(3, 'society_avocat', 50000, NULL),
-(4, 'society_cardealer', 50000, NULL),
-(5, 'society_gouv', 50000, NULL),
-(6, 'society_journaliste', 50000, NULL),
-(7, 'society_mechanic', 50000, NULL),
-(8, 'society_police', 50000, NULL),
-(9, 'society_AgentImmo', 50000, NULL),
-(10, 'society_tabac', 50000, NULL),
-(11, 'society_taxi', 50000, NULL),
-(12, 'society_unicorn', 50000, NULL),
-(13, 'society_weedshop', 50000, NULL),
-(14, 'society_yellow', 50000, NULL),
-(15, 'society_vigneron', 50000, NULL),
-(16, 'society_label', 50000, NULL),
-(17, 'society_weedman', 50000, NULL),
-(18, 'society_bahamas', 50000, NULL),
-(19, 'society_bcso', 50000, NULL);
 
--- --------------------------------------------------------
-
---
--- Structure de la table `addon_inventory`
---
-
-CREATE TABLE `addon_inventory` (
+CREATE TABLE IF NOT EXISTS `addon_inventory` (
   `name` varchar(60) NOT NULL,
   `label` varchar(100) NOT NULL,
-  `shared` int(11) NOT NULL
+  `shared` int(11) NOT NULL,
+  PRIMARY KEY (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Contenu de la table `addon_inventory`
---
+INSERT INTO `addon_inventory` (`name`,`label`,`shared`) VALUES
+	('property', 'Propriété', 0),
+	('society_AgentImmo', 'Agent Immo', 1),
+	('society_ambulance', 'Ambulance', 1),
+	('society_bd', 'Black Disciples', 1),
+	('society_bikeshop', 'Concessionnaire Moto', 1),
+	('society_boatshop', 'Concessionnaire Bateau', 1),
+	('society_chollos', 'Chollos ', 1),
+	('society_cityhall', 'City Hall (Mairie)', 1),
+	('society_cribs', 'Cribs', 1),
+	('society_diaz', 'diaz', 1),
+	('society_frontpage', 'Front Page', 1),
+	('society_gouv', 'Gouvernement', 1),
+	('society_greasychopper', 'The Greasy Chopper', 1),
+	('society_haitiens', 'Haitiens', 1),
+	('society_icecream', 'Ice Cream', 1),
+	('society_jamaican', 'Jamaican', 1),
+	('society_label', 'label', 1),
+	('society_malibu', 'Malibu', 1),
+	('society_mob', 'Mob ', 1),
+	('society_msb', '26msb', 1),
+	('society_Ocean Hill', 'oceanhill', 1),
+	('society_oceanview', 'Ocean View', 1),
+	('society_pizza', 'The Well Stacked Pizza', 1),
+	('society_robina', "Robina's Café", 1),
+	('society_tabac', 'Tabac', 1),
+	('society_taxi', 'Taxi', 1),
+	('society_vance', 'vance', 1),
+	('society_vccustoms', 'Vice CIty Customs', 1),
+	('society_vcpd', 'VCPD', 1),
+	('society_vicecitybikers', 'Vice City Bikers', 1),
+	('society_vicelord', 'vicelord', 1),
+	('society_weazelnews', 'Weazel News', 1),
+	('society_weedshop', 'weedshop', 1);
 
-INSERT INTO `addon_inventory` (`name`, `label`, `shared`) VALUES
-('property', 'Propriété', 0),
-('society_Abatteur', 'Abatteur', 1),
-('society_AgentImmo', 'Agent Immo', 1),
-('society_ambulance', 'Ambulance', 1),
-('society_avocat', 'Avocat', 1),
-('society_bahamas', 'bahamas', 1),
-('society_bahamas_fridge', 'bahamas (frigo)', 1),
-('society_bahama_mamas', 'Bahama Mamas', 1),
-('society_bahama_mamas_fridge', 'Bahama Mamas (frigo)', 1),
-('society_bcso', 'BCSO', 1),
-('society_cardealer', 'Concesionnaire', 1),
-('society_gouv', 'Gouvernement', 1),
-('society_label', 'label', 1),
-('society_mechanic', 'Mécano', 1),
-('society_northmecano', 'NorthMecano', 1),
-('society_police', 'Police', 1),
-('society_tabac', 'Tabac', 1),
-('society_taxi', 'Taxi', 1),
-('society_unicorn', 'unicorn', 1),
-('society_unicorn_fridge', 'Unicorn (frigo)', 1),
-('society_vigneron', 'vigneron', 1),
-('society_weedshop', 'weed', 1),
-('society_yellow', 'yellow', 1),
-('society_yellow_fridge', 'yellow (frigo)', 1);
 
--- --------------------------------------------------------
-
---
--- Structure de la table `addon_inventory_items`
---
-
-CREATE TABLE `addon_inventory_items` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `addon_inventory_items` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `inventory_name` varchar(100) NOT NULL,
   `name` varchar(100) NOT NULL,
   `count` int(11) NOT NULL,
-  `owner` varchar(60) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `owner` varchar(60) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=184 DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
+INSERT INTO `addon_inventory_items` (`id`,`inventory_name`,`name`,`count`,`owner`) VALUES
+	(12, 'society_weedshop', 'Weed', 448, NULL),
+	(13, 'society_pizza', 'pate', 74, NULL),
+	(14, 'society_weedshop', 'Joint', 115, NULL),
+	(15, 'society_oceanview', 'cabillaud', 40, NULL),
+	(16, 'society_oceanview', 'patate', 317, NULL),
+	(17, 'society_pizza', 'saucetomate', 89, NULL),
+	(18, 'society_pizza', 'jambon', 104, NULL),
+	(19, 'society_pizza', 'pepperoni', 103, NULL),
+	(20, 'society_pizza', 'mozzarella', 92, NULL),
+	(21, 'society_pizza', 'champignon', 109, NULL),
+	(22, 'society_weedshop', 'Weed_traite', 4, NULL),
+	(23, 'society_greasychopper', 'rhum', 71, NULL),
+	(25, 'society_tabac', 'Donut', 22, NULL),
+	(26, 'society_tabac', 'Sprunk', 24, NULL),
+	(27, 'society_tabac', 'Tabac', 2, NULL),
+	(28, 'society_tabac', 'Tabac_traite', 2, NULL),
+	(34, 'society_oceanview', 'frite', 862, NULL),
+	(35, 'society_vccustoms', 'Kit_de_reparation', 344, NULL),
+	(36, 'society_oceanview', 'Baileys', 50, NULL),
+	(37, 'society_oceanview', 'mojito', 31, NULL),
+	(38, 'society_oceanview', 'Chipscrevette', 50, NULL),
+	(39, 'society_oceanview', 'icetea', 49, NULL),
+	(40, 'society_oceanview', 'rhum', 50, NULL),
+	(41, 'society_oceanview', 'Calmarfrit', 38, NULL),
+	(42, 'society_oceanview', 'Whisky', 45, NULL),
+	(43, 'society_oceanview', 'whiskycoca', 50, NULL),
+	(44, 'society_oceanview', 'vodka', 49, NULL),
+	(45, 'society_oceanview', 'vodkafruit', 49, NULL),
+	(46, 'society_oceanview', 'tequila', 49, NULL),
+	(47, 'society_oceanview', 'jagerbomb', 50, NULL),
+	(48, 'society_oceanview', 'vine', 49, NULL),
+	(49, 'society_oceanview', 'Eaudevie', 50, NULL),
+	(50, 'society_oceanview', 'Coca', 21, NULL),
+	(51, 'society_oceanview', 'cacahuète', 47, NULL),
+	(52, 'society_oceanview', 'Gambasbraisees', 48, NULL),
+	(53, 'society_oceanview', 'Steakfrites', 48, NULL),
+	(54, 'society_oceanview', 'vodkaenergy', 50, NULL),
+	(55, 'society_oceanview', 'Gin', 49, NULL),
+	(56, 'society_frontpage', 'Cafe_moulu', 537, NULL),
+	(57, 'society_vccustoms', 'WEAPON_BAT', 0, NULL),
+	(58, 'society_frontpage', 'Grain_cafe', 3, NULL),
+	(59, 'society_frontpage', 'WEAPON_PETROLCAN', 6, NULL),
+	(60, 'society_pizza', 'icetea', 8, NULL),
+	(61, 'society_pizza', 'Coca', 9, NULL),
+	(62, 'society_pizza', 'limonade', 10, NULL),
+	(63, 'society_pizza', 'frite', 13, NULL),
+	(65, 'society_greasychopper', 'vodkafruit', 99, NULL),
+	(66, 'society_greasychopper', 'tequila', 167, NULL),
+	(67, 'society_greasychopper', 'vine', 161, NULL),
+	(68, 'society_greasychopper', 'mojito', 107, NULL),
+	(69, 'society_greasychopper', 'Coca', 148, NULL),
+	(70, 'society_greasychopper', 'icetea', 137, NULL),
+	(71, 'society_greasychopper', 'vodka', 49, NULL),
+	(72, 'society_greasychopper', 'limonade', 149, NULL),
+	(73, 'society_greasychopper', 'Jus_orange', 105, NULL),
+	(74, 'society_greasychopper', 'Biere', 43, NULL),
+	(75, 'society_greasychopper', 'saucisson', 54, NULL),
+	(76, 'society_greasychopper', 'Chips', 46, NULL),
+	(77, 'society_greasychopper', 'Canne_jus', 3, NULL),
+	(78, 'society_greasychopper', 'cacahuète', 50, NULL),
+	(79, 'society_weedshop', 'bandage', 0, NULL),
+	(80, 'society_vcpd', 'WEAPON_PISTOL', 10, NULL),
+	(81, 'society_vccustoms', 'Piece_mechanic', 51, NULL),
+	(82, 'society_vcpd', 'pochon_de_coke', 3, NULL),
+	(83, 'society_vcpd', 'pochon_de_methamphetamine', 1, NULL),
+	(84, 'society_vcpd', 'Weed_traite', 1, NULL),
+	(85, 'society_weedshop', 'WEAPON_PETROLCAN', 0, NULL),
+	(86, 'society_frontpage', 'Cafe', 30, NULL),
+	(87, 'society_frontpage', 'frite', 0, NULL),
+	(88, 'society_frontpage', 'icetea', 9, NULL),
+	(89, 'society_frontpage', 'Steakfrites', 2, NULL),
+	(90, 'society_frontpage', 'vodka', 5, NULL),
+	(91, 'society_frontpage', 'vodkaenergy', 5, NULL),
+	(92, 'society_frontpage', 'vodkafruit', 5, NULL),
+	(93, 'society_oceanview', 'WEAPON_PETROLCAN', 3, NULL),
+	(94, 'society_frontpage', 'hamburger', 0, NULL),
+	(95, 'society_frontpage', 'Donut', 10, NULL),
+	(96, 'society_vcpd', 'WEAPON_COMPACTRIFLE', 3, NULL),
+	(97, 'society_vcpd', 'WEAPON_KNIFE', 1, NULL),
+	(98, 'society_vcpd', 'WEAPON_SNSPISTOL', 1, NULL),
+	(99, 'society_vcpd', 'WEAPON_BAT', 4, NULL),
+	(100, 'society_vcpd', 'WEAPON_HEAVYSHOTGUN', 1, NULL),
+	(101, 'society_vcpd', 'ammo_pistol', 18, NULL),
+	(102, 'society_vcpd', 'WEAPON_PETROLCAN', 3, NULL),
+	(103, 'society_vcpd', 'WEAPON_ASSAULTRIFLE', 1, NULL),
+	(104, 'society_vcpd', 'Joint', 8, NULL),
+	(105, 'society_icecream', 'chips_sel', 0, NULL),
+	(106, 'society_icecream', 'WEAPON_ASSAULTRIFLE', 0, NULL),
+	(107, 'society_greasychopper', 'hotdog', 160, NULL),
+	(108, 'society_greasychopper', 'ribs', 169, NULL),
+	(109, 'society_greasychopper', 'Whisky', 206, NULL),
+	(110, 'society_frontpage', 'Coca', 10, NULL),
+	(111, 'society_frontpage', 'Whisky', 5, NULL),
+	(112, 'society_frontpage', 'whiskycoca', 5, NULL),
+	(113, 'society_frontpage', 'rhum', 5, NULL),
+	(114, 'society_frontpage', 'vine', 5, NULL),
+	(115, 'society_frontpage', 'jagerbomb', 5, NULL),
+	(116, 'society_frontpage', 'tequila', 5, NULL),
+	(117, 'society_frontpage', 'Gin', 5, NULL),
+	(118, 'society_frontpage', 'Jus_orange', 10, NULL),
+	(119, 'society_frontpage', 'water', 10, NULL),
+	(120, 'society_frontpage', 'saucisson', 4, NULL),
+	(121, 'society_frontpage', 'Chipscrevette', 10, NULL),
+	(122, 'society_frontpage', 'Calmarfrit', 10, NULL),
+	(123, 'society_frontpage', 'Gambasbraisees', 10, NULL),
+	(124, 'society_frontpage', 'Champagne', 10, NULL),
+	(125, 'society_frontpage', 'Heineken', 20, NULL),
+	(126, 'society_frontpage', 'Sprunk', 10, NULL),
+	(127, 'society_vcpd', 'WEAPON_NIGHTSTICK', 1, NULL),
+	(128, 'society_vcpd', 'WEAPON_MACHETE', 3, NULL),
+	(129, 'society_icecream', 'Chargeur', 2, NULL),
+	(130, 'society_icecream', 'Tabac', 0, NULL),
+	(131, 'society_malibu', 'Baileys', 0, NULL),
+	(132, 'society_malibu', 'cacahuète', 17, NULL),
+	(133, 'society_malibu', 'Calmarfrit', 14, NULL),
+	(134, 'society_malibu', 'Chipscrevette', 19, NULL),
+	(135, 'society_malibu', 'Coca', 0, NULL),
+	(136, 'society_malibu', 'frite', 4, NULL),
+	(137, 'society_malibu', 'Gambasbraisees', 12, NULL),
+	(138, 'society_malibu', 'Gin', 0, NULL),
+	(139, 'society_malibu', 'mojito', 0, NULL),
+	(140, 'society_malibu', 'rhum', 0, NULL),
+	(141, 'society_malibu', 'vine', 14, NULL),
+	(142, 'society_malibu', 'vodka', 0, NULL),
+	(143, 'society_malibu', 'whiskycoca', 0, NULL),
+	(144, 'society_malibu', 'Jus_orange', 19, NULL),
+	(145, 'society_malibu', 'saucisson', 24, NULL),
+	(146, 'society_malibu', 'Whisky', 1, NULL),
+	(147, 'society_malibu', 'Heineken', 23, NULL),
+	(148, 'society_malibu', 'Sprunk', 12, NULL),
+	(149, 'society_malibu', 'chips_sel', 21, NULL),
+	(150, 'society_robina', 'hamburger', 5, NULL),
+	(151, 'society_vcpd', 'WEAPON_HEAVYPISTOL', 2, NULL),
+	(152, 'society_robina', 'Coca', 5, NULL),
+	(153, 'society_robina', 'frite', 16, NULL),
+	(154, 'society_robina', 'icetea', 3, NULL),
+	(155, 'society_robina', 'Jus_orange', 8, NULL),
+	(156, 'society_robina', 'limonade', 21, NULL),
+	(157, 'society_robina', 'Steakfrites', 5, NULL),
+	(158, 'society_robina', 'water', 0, NULL),
+	(159, 'society_vcpd', 'WEAPON_PUMPSHOTGUN', 3, NULL),
+	(160, 'society_vcpd', 'WEAPON_SMG', 4, NULL),
+	(162, 'society_icecream', 'Creme_glacee', 5497, NULL),
+	(163, 'society_vcpd', 'Bouclier', 1, NULL),
+	(164, 'society_greasychopper', 'water', 110, NULL),
+	(165, 'society_greasychopper', 'hamburger', 156, NULL),
+	(166, 'society_vcpd', 'WEAPON_COMBATPISTOL', 1, NULL),
+	(167, 'society_vccustoms', 'WEAPON_PETROLCAN', 1, NULL),
+	(168, 'society_vcpd', 'WEAPON_SWITCHBLADE', 1, NULL),
+	(169, 'society_vcpd', 'Chargeur', 50, NULL),
+	(170, 'society_vcpd', 'WEAPON_MUSKET', 1, NULL),
+	(171, 'society_icecream', 'Glace_vanille', 8920, NULL),
+	(172, 'society_robina', 'Pain_burger', 1, NULL),
+	(173, 'society_greasychopper', 'Radio', 0, NULL),
+	(174, 'society_weedshop', 'WEAPON_MINISMG', 0, NULL),
+	(175, 'society_weedshop', 'WEAPON_PISTOL', 0, NULL),
+	(176, 'society_vcpd', 'WEAPON_MINISMG', 1, NULL),
+	(177, 'society_greasychopper', 'whiskycoca', 0, NULL),
+	(178, 'society_frontpage', 'Biere', 5, NULL),
+	(179, 'society_frontpage', 'limonade', 4, NULL),
+	(180, 'society_icecream', 'WEAPON_PISTOL', 0, NULL),
+	(181, 'society_robina', 'hotdog', 34, NULL),
+	(182, 'society_taxi', 'WEAPON_PISTOL', 0, NULL),
+	(183, 'society_taxi', 'Heineken', 1, NULL);
 
---
--- Structure de la table `armes`
---
-
-CREATE TABLE `armes` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `armes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `identifier` varchar(255) DEFAULT NULL,
   `nomarmes` varchar(3000) DEFAULT NULL,
   `munitions` int(11) DEFAULT NULL,
   `numero_serie` varchar(255) DEFAULT NULL,
   `components` varchar(255) DEFAULT NULL,
   `createurbase` varchar(255) DEFAULT NULL,
-  `jobdepart` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+  `jobdepart` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=1343 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
--- --------------------------------------------------------
-
---
--- Structure de la table `baninfo`
---
-
-CREATE TABLE `baninfo` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `baninfo` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `license` varchar(50) COLLATE utf8mb4_bin DEFAULT NULL,
   `identifier` varchar(25) COLLATE utf8mb4_bin DEFAULT NULL,
   `liveid` varchar(21) COLLATE utf8mb4_bin DEFAULT NULL,
   `xblid` varchar(21) COLLATE utf8mb4_bin DEFAULT NULL,
   `discord` varchar(30) COLLATE utf8mb4_bin DEFAULT NULL,
   `playerip` varchar(25) COLLATE utf8mb4_bin DEFAULT NULL,
-  `playername` varchar(32) COLLATE utf8mb4_bin DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+  `playername` varchar(32) COLLATE utf8mb4_bin DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
--- --------------------------------------------------------
-
---
--- Structure de la table `banlist`
---
-
-CREATE TABLE `banlist` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `banlist` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `identifier` varchar(25) COLLATE utf8mb4_bin DEFAULT NULL,
   `license` varchar(50) COLLATE utf8mb4_bin DEFAULT NULL,
   `liveid` varchar(21) COLLATE utf8mb4_bin DEFAULT NULL,
@@ -210,469 +306,703 @@ CREATE TABLE `banlist` (
   `timeat` varchar(50) COLLATE utf8mb4_bin NOT NULL,
   `added` datetime DEFAULT CURRENT_TIMESTAMP,
   `expiration` varchar(50) COLLATE utf8mb4_bin NOT NULL,
-  `permanent` int(1) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
+  `permanent` int(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`) USING BTREE,
+  KEY `identifier` (`identifier`,`license`,`liveid`,`xblid`,`discord`) USING BTREE
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
 
--- --------------------------------------------------------
-
---
--- Structure de la table `datastore`
---
-
-CREATE TABLE `datastore` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `datastore` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(60) NOT NULL,
   `label` varchar(100) NOT NULL,
-  `shared` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `shared` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4;
 
---
--- Contenu de la table `datastore`
---
+INSERT INTO `datastore` (`id`,`name`,`label`,`shared`) VALUES
+	(0, 'property', 'Propriété', 0),
+	(1, 'society_ambulance', 'Ambulance', 1),
+	(2, 'society_avocat', 'Avocat', 1),
+	(3, 'society_vccustoms ', 'Vice CIty Customs', 1),
+	(4, 'society_immo', 'Immo', 1),
+	(5, 'society_vcpd', 'VCPD', 1),
+	(6, 'society_tabac', 'Tabac', 1),
+	(7, 'society_taxi', 'Taxi', 1),
+	(8, 'society_malibu', 'Malibu', 1),
+	(9, 'society_weazelnews', 'Weazel News', 1),
+	(10, 'society_weedshop', 'weedshop', 1),
+	(11, 'society_tabac', 'tabac', 1),
+	(12, 'society_label', 'label', 1),
+	(13, 'society_frontpage', 'Front Page', 1),
+	(14, 'society_pizza', 'The Well Stacked Pizza', 1),
+	(15, 'society_boatshop', 'Concessionnaire Bateau', 1),
+	(16, 'society_bikeshop', 'Concessionnaire Moto', 1),
+	(17, 'society_oceanview', 'Ocean View', 1),
+	(20, 'society_greasychopper', 'The Greasy Chopper', 1),
+	(24, 'society_vance', 'vance', 1),
+	(26, 'society_diaz', 'diaz', 1),
+	(27, 'society_bd', 'Black Disciples', 1),
+	(28, 'society_chollos', 'Chollos ', 1),
+	(29, 'society_haitiens', 'Haitiens', 1),
+	(31, 'society_vicecitybikers', 'Vice City Bikers', 1),
+	(32, 'society_cityhall', 'City Hall (Mairie)', 1),
+	(33, 'society_jamaican', 'Jamaican', 1),
+	(34, 'society_Ocean Hill', 'oceanhill', 1),
+	(35, 'society_cribs', 'Cribs', 1),
+	(36, 'society_icecream', 'Ice Cream', 1),
+	(37, 'society_robina', "Robina's Café", 1),
+	(38, 'society_mob', 'Mob ', 1),
+	(39, 'society_msb', '26msb', 1),
+	(40, 'society_vicelord', 'vicelord', 1);
 
-INSERT INTO `datastore` (`id`, `name`, `label`, `shared`) VALUES
-(1, 'user_bags', 'Sac', 0),
-(2, 'user_bracelets', 'Bracelets', 0),
-(3, 'user_chain', 'Chaine', 0),
-(4, 'user_ears', 'Ears', 0),
-(5, 'user_glasses', 'Glasses', 0),
-(6, 'user_helmet', 'Helmet', 0),
-(7, 'user_mask', 'Mask', 0),
-(8, 'user_watches', 'Watches', 0),
-(9, 'property', 'Propriété', 0),
-(10, 'society_ambulance', 'Ambulance', 1),
-(11, 'society_aviator', 'Pilote', 1),
-(12, 'society_avocat', 'Avocat', 1),
-(16, 'society_immo', 'Immo', 1),
-(18, 'society_police', 'Police', 1),
-(22, 'society_tabac', 'Tabac', 1),
-(23, 'society_taxi', 'Taxi', 1),
-(24, 'society_unicorn', 'Unicorn', 1),
-(26, 'society_vigneron', 'Vigneron', 1),
-(36, 'society_weedshop', 'weedman', 1),
-(70, 'society_bahamas', 'bahamas', 1),
-(71, 'society_yellow', 'yellow', 1),
-(75, 'society_tabac', 'tabac', 1),
-(76, 'society_label', 'label', 1),
-(90, 'society_northmecano', 'NorthMecano', 1),
-(99, 'property', 'Propriété', 0),
-(104, 'society_Abatteur', 'Abatteur', 1);
 
--- --------------------------------------------------------
-
---
--- Structure de la table `datastore_data`
---
-
-CREATE TABLE `datastore_data` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `datastore_data` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(60) NOT NULL,
   `owner` varchar(60) DEFAULT NULL,
-  `data` longtext
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `data` longtext,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `index_datastore_data_name_owner` (`name`,`owner`),
+  KEY `index_datastore_data_name` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
+INSERT INTO `datastore_data` (`id`,`name`,`owner`,`data`) VALUES
+	(1, 'society_ambulance', NULL, '{}'),
+	(2, 'society_avocat', NULL, '{}'),
+	(3, 'society_vccustoms ', NULL, '{}'),
+	(4, 'society_immo', NULL, '{}'),
+	(5, 'society_vcpd', NULL, '{}'),
+	(6, 'society_tabac', NULL, '{}'),
+	(7, 'society_taxi', NULL, '{}'),
+	(8, 'society_malibu', NULL, '{}'),
+	(9, 'society_weedshop', NULL, '{}'),
+	(10, 'society_tabac', NULL, '{}'),
+	(11, 'society_label', NULL, '{}'),
+	(12, 'society_weazelnews', NULL, '{}'),
+	(13, 'society_frontpage', NULL, '{}'),
+	(14, 'society_pizza', NULL, '{}'),
+	(15, 'society_boatshop', NULL, '{}'),
+	(16, 'society_bikeshop', NULL, '{}'),
+	(18, 'society_oceanview', NULL, '{}'),
+	(33, 'society_greasychopper', NULL, '{}'),
+	(34, 'society_cityhall', NULL, '{}'),
+	(35, 'society_icecream', '', '{}'),
+	(36, 'society_robina', "Robina's Café", '{}');
 
---
--- Structure de la table `eventsPresets`
---
 
-CREATE TABLE `eventsPresets` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `eventsPresets` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `createdBy` text NOT NULL,
   `label` varchar(50) NOT NULL,
-  `presetInfos` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `presetInfos` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
---
--- Contenu de la table `eventsPresets`
---
+CREATE TABLE IF NOT EXISTS `gangs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `orgName` varchar(50) NOT NULL,
+  `orgLabel` varchar(50) NOT NULL,
+  `society` varchar(50) NOT NULL,
+  `orgBoss` varchar(255) NOT NULL,
+  `orgGarage` varchar(255) NOT NULL,
+  `orgVehicles` longtext NOT NULL,
+  `orgChest` varchar(255) NOT NULL,
+  `orgInventory` longtext NOT NULL,
+  `orgMoney` varchar(255) NOT NULL,
+  `orgGSpawn` varchar(255) NOT NULL,
+  `orgWear` varchar(255) NOT NULL,
+  `orgGDelete` varchar(255) NOT NULL,
+  `orgActivity` varchar(255) NOT NULL DEFAULT 'Aucune',
+  `orgChestCapacity` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO `eventsPresets` (`id`, `createdBy`, `label`, `presetInfos`) VALUES
-(2, 'Extasy', 'Chinatown', '{\"name\":\"Chinatown\",\"vehicleModel\":\"shotaro\",\"message\":\"Un réstaurant chinois dois ce faire livré au plus vite !\",\"rewardType\":1,\"from\":{\"y\":-674.3279418945313,\"z\":28.73404121398925,\"x\":751.04638671875},\"spawns\":[{\"heading\":91.18396759033203,\"pos\":{\"y\":-667.8463134765625,\"z\":27.78842735290527,\"x\":748.0647583007813}}],\"reward\":\"1500\",\"dests\":[{\"y\":-914.8202514648438,\"z\":23.91180419921875,\"x\":-656.7597045898438}]}'),
-(3, 'Extasy', 'Algé', '{\"dests\":[{\"x\":-127.00464630126953,\"y\":2792.32763671875,\"z\":53.10770416259765}],\"name\":\"Algé\",\"spawns\":[{\"pos\":{\"x\":-933.1708984375,\"y\":-2644.6328125,\"z\":39.10507202148437},\"heading\":149.35459899902345}],\"vehicleModel\":\"dominator6\",\"from\":{\"x\":-927.7879028320313,\"y\":-2649.642822265625,\"z\":39.1051025390625},\"reward\":\"5000\",\"message\":\"Une mission pas comme les autres... Attention a la LSPD cette voiture est déclarer volée !\",\"rewardType\":2}'),
-(4, 'Extasy', 'Families', '{\"vehicleModel\":\"chino\",\"name\":\"Families\",\"spawns\":[{\"pos\":{\"y\":-1461.9744873046876,\"x\":-67.66026306152344,\"z\":32.00420379638672},\"heading\":206.74766540527345}],\"message\":\"Efféctuer une mission pour un gang. (25 000$)\",\"reward\":\"25000\",\"dests\":[{\"y\":-1068.026123046875,\"x\":-1211.197509765625,\"z\":8.35049819946289}],\"rewardType\":2,\"from\":{\"y\":-1449.558349609375,\"x\":-64.30872344970703,\"z\":32.52491760253906}}'),
-(5, 'Txsa | Clinton Riggs', 'Cuba', '{\"vehicleModel\":\"dloader\",\"spawns\":[{\"pos\":{\"x\":2818.927490234375,\"z\":2.35310649871826,\"y\":-636.6289672851563},\"heading\":154.7110595703125}],\"message\":\"Une quantitée importante de cocaine a été aperçue échoué sur une plage. Terminez la livraison\",\"rewardType\":2,\"dests\":[{\"x\":1218.165283203125,\"z\":5.80219459533691,\"y\":-3229.192138671875}],\"name\":\"Cuba\",\"from\":{\"x\":2834.804931640625,\"z\":1.81374084949493,\"y\":-636.18603515625},\"reward\":\"25000\"}'),
-(9, 'Extasy', 'GoFast Extasy', '{\"reward\":\"50000\",\"spawns\":[{\"heading\":222.78952026367188,\"pos\":{\"z\":28.67526054382324,\"x\":232.1774444580078,\"y\":-1771.999267578125}}],\"dests\":[{\"z\":48.15181350708008,\"x\":2342.16162109375,\"y\":3052.25537109375}],\"message\":\"Récupérer la voiture et allez jusu\'au point d\'arrivée sans vous faire chopez.  RECOMPENSE: 50 000$\",\"vehicleModel\":\"macla\",\"name\":\"GoFast Extasy\",\"rewardType\":2,\"from\":{\"z\":28.69512557983398,\"x\":227.964599609375,\"y\":-1762.735595703125}}'),
-(10, 'Melvin', 'GoFast', '{\"message\":\"Des véhicules remplis de coke sont stationnés ici. J\'ai besoin que tu me les ramènes !\",\"vehicleModel\":\"t20\",\"from\":{\"x\":-767.2656860351563,\"z\":87.86895751953125,\"y\":366.50531005859377},\"dests\":[{\"x\":-804.7775268554688,\"z\":34.51657104492187,\"y\":5390.888671875},{\"x\":-797.5576782226563,\"z\":34.2715835571289,\"y\":5390.8173828125}],\"name\":\"GoFast\",\"rewardType\":2,\"reward\":\"25000\",\"spawns\":[{\"heading\":358.15484619140627,\"pos\":{\"x\":-770.2265014648438,\"z\":87.87608337402344,\"y\":373.5126647949219}},{\"heading\":178.5658721923828,\"pos\":{\"x\":-773.655029296875,\"z\":87.87611389160156,\"y\":373.5889892578125}},{\"heading\":179.2454376220703,\"pos\":{\"x\":-777.0831298828125,\"z\":87.87611389160156,\"y\":373.6720886230469}}]}'),
-(11, 'Melvin', 'GoFastMoto', '{\"dests\":[{\"y\":6626.55322265625,\"x\":110.72379302978516,\"z\":31.7872314453125}],\"name\":\"GoFastMoto\",\"from\":{\"y\":-1649.3883056640626,\"x\":-631.48095703125,\"z\":25.97494888305664},\"vehicleModel\":\"manchez2\",\"spawns\":[{\"pos\":{\"y\":-1651.568603515625,\"x\":-634.3568725585938,\"z\":25.82507705688476},\"heading\":241.81268310546876},{\"pos\":{\"y\":-1655.7552490234376,\"x\":-636.6971435546875,\"z\":25.82507705688476},\"heading\":241.3411407470703},{\"pos\":{\"y\":-1661.825927734375,\"x\":-627.335205078125,\"z\":25.82507705688476},\"heading\":60.72887420654297},{\"pos\":{\"y\":-1657.665283203125,\"x\":-625.0291137695313,\"z\":25.82507705688476},\"heading\":59.6695556640625}],\"reward\":\"20000\",\"rewardType\":2,\"message\":\"Des petites quantités de drogue sont stockés dans les moto ici. Amenez-les nous le plus rapidement !\"}');
+INSERT INTO `gangs` (`id`,`orgName`,`orgLabel`,`society`,`orgBoss`,`orgGarage`,`orgVehicles`,`orgChest`,`orgInventory`,`orgMoney`,`orgGSpawn`,`orgWear`,`orgGDelete`,`orgActivity`,`orgChestCapacity`) VALUES
+	(43, 'vance', 'vance', 'society_vance', '{"x":2278.671630859375,"y":7071.32275390625,"z":80.22136688232422}', '{"x":2318.897705078125,"y":7102.88818359375,"z":9.07446384429931}', '[{"hash":"sabregt","color":1,"fullCustom":false,"windowsTint":false,"xenonLights":false,"name":"Sabre GT"},{"fullCustom":false,"color":1,"hash":"washington","windowsTint":false,"xenonLights":false,"name":"Washington"},{"fullCustom":false,"color":1,"hash":"btype","windowsTint":false,"xenonLights":false,"name":"Btype"},{"color":1,"fullCustom":false,"hash":"bison","windowsTint":false,"name":"Bison"}]', '{"x":2274.53076171875,"y":7074.193359375,"z":80.22136688232422}', '{"WEAPON_GADGETPISTOL":1,"WEAPON_SNSPISTOL":1,"piluleoubli":1,"pochon_de_weed":3218,"Chargeur":61,"ammo_pistol":11,"WEAPON_PETROLCAN":6}', '19615', '{"x":2321.989501953125,"y":7107.2021484375,"z":9.07417488098144}', '{"x":2279.574951171875,"y":7074.62158203125,"z":80.22136688232422}', '{"x":2307.413330078125,"y":7106.84814453125,"z":9.07420063018798}', 'Aucune', '100'),
+	(45, 'diaz', 'diaz', 'society_diaz', '{"x":2874.515625,"y":5607.36279296875,"z":23.795015335083}', '{"x":2889.767333984375,"y":5666.48486328125,"z":10.73384284973144}', '[{"xenonLights":false,"windowsTint":false,"fullCustom":false,"color":1,"hash":"washington","name":"Washington"},{"xenonLights":false,"windowsTint":false,"fullCustom":false,"color":1,"hash":"washington","name":"Washington"},{"xenonLights":false,"windowsTint":false,"fullCustom":false,"color":1,"hash":"btype","name":"Btype"},{"xenonLights":false,"windowsTint":false,"fullCustom":false,"color":1,"hash":"bison","name":"Bison"},{"windowsTint":false,"fullCustom":false,"color":1,"hash":"sabregt","name":"Sabre GT"}]', '{"x":2841.161865234375,"y":5638.91748046875,"z":17.5467586517334}', '{"CarteID":2,"WEAPON_PETROLCAN":5,"Creme_glacee":519,"Glace_vanille":948}', '0', '{"x":2888.93017578125,"y":5677.748046875,"z":10.73353290557861}', '{"x":2847.919189453125,"y":5646.44921875,"z":17.54707527160644}', '{"x":2894.806396484375,"y":5682.6611328125,"z":10.73405170440673}', 'Aucune', '100'),
+	(46, 'bd', 'Black Disciples', 'society_bd', '{"x":3722.064453125,"y":6336.35498046875,"z":13.51643657684326}', '{"x":3730.305419921875,"y":6361.97216796875,"z":9.20902824401855}', '[{"hash":"dukes","color":1,"fullCustom":false,"windowsTint":false,"xenonLights":false,"name":"Dukes"},{"hash":"moonbeam","color":1,"fullCustom":false,"windowsTint":false,"xenonLights":false,"name":"Moonbeam"},{"fullCustom":false,"color":1,"hash":"bison","windowsTint":false,"xenonLights":false,"name":"Bison"},{"color":1,"fullCustom":false,"hash":"primo","windowsTint":false,"name":"Primo"}]', '{"x":3724.27880859375,"y":6333.22802734375,"z":13.51642799377441}', '{"pochon_de_weed":231,"WEAPON_PETROLCAN":3,"pochon_de_coke":401,"Chargeur":18,"Joint":9}', '19340', '{"x":3736.89306640625,"y":6353.9384765625,"z":9.04348373413086}', '{"x":3721.27392578125,"y":6339.37939453125,"z":13.51643180847168}', '{"x":3733.8212890625,"y":6377.52685546875,"z":9.17824554443359}', 'Aucune', '100'),
+	(47, 'chollos', 'Chollos ', 'society_chollos', '{"x":2070.7705078125,"y":5691.57080078125,"z":8.8649320602417}', '{"x":2058.439453125,"y":5695.908203125,"z":8.81263160705566}', '[{"name":"Glendale","hash":"glendale","xenonLights":false,"windowsTint":false,"fullCustom":false,"color":1},{"name":"Minivan 2","hash":"minivan2","xenonLights":false,"windowsTint":false,"fullCustom":false,"color":1},{"windowsTint":false,"hash":"tulip","xenonLights":false,"name":"Tulip","fullCustom":false,"color":1},{"windowsTint":false,"hash":"youga2","xenonLights":false,"name":"Youga Luxuary","fullCustom":false,"color":1},{"windowsTint":false,"hash":"ingot","xenonLights":false,"name":"ingot","fullCustom":false,"color":1},{"name":"Ellie","windowsTint":false,"hash":"ellie","fullCustom":false,"color":1}]', '{"x":2072.126220703125,"y":5681.54052734375,"z":9.16210746765136}', '{"pochon_de_weed":38,"Chargeur":112,"Glace_vanille":200,"pochon_de_coke":1,"WEAPON_PISTOL":7,"Creme_glacee":1087,"WEAPON_PETROLCAN":13}', '34548', '{"x":2062.633056640625,"y":5694.08984375,"z":8.76373291015625}', '{"x":2071.76416015625,"y":5688.2568359375,"z":8.96316051483154}', '{"x":2055.853515625,"y":5705.310546875,"z":8.76906490325927}', 'Aucune', '100'),
+	(48, 'haitiens', 'Haitiens', 'society_haitiens', '{"x":2264.8818359375,"y":6257.625,"z":9.53015041351318}', '{"x":2276.500244140625,"y":6275.7490234375,"z":8.68513965606689}', '[{"color":1,"hash":"moonbeam","name":"Moonbeam"},{"color":1,"hash":"dukes","name":"Dukes"},{"color":1,"hash":"sabregt2","name":"Sabre Turbo"}]', '{"x":2258.65234375,"y":6260.27587890625,"z":9.53083801269531}', '{"patate":5}', '0', '{"x":2273.370849609375,"y":6283.4208984375,"z":8.50489234924316}', '{"x":2264.967041015625,"y":6264.2763671875,"z":9.53014945983886}', '{"x":2274.042724609375,"y":6268.3505859375,"z":8.61164188385009}', 'Aucune', '100'),
+	(50, 'vicecitybikers', 'Vice City Bikers', 'society_vicecitybikers', '{"x":2976.324951171875,"y":7590.6142578125,"z":9.37590599060058}', '{"x":2977.381103515625,"y":7615.5078125,"z":9.3759069442749}', '[{"hash":"nightblade","name":"Nightblade","color":1},{"hash":"wolfsbane","name":"Wolfsbane","color":1},{"hash":"daemon","name":"Daemon","color":1},{"hash":"cliffhanger","name":"Cliffhanger","color":1}]', '{"x":2976.303955078125,"y":7598.44384765625,"z":9.37590980529785}', '[]', '0', '{"x":2982.543701171875,"y":7608.033203125,"z":9.37589740753173}', '{"x":2975.81201171875,"y":7577.7333984375,"z":9.38763523101806}', '{"x":2988.0703125,"y":7616.5,"z":9.37590026855468}', 'Aucune', '100'),
+	(51, 'jamaican', 'Jamaican', 'society_jamaican', '{"x":2081.305419921875,"y":5593.21533203125,"z":9.82473850250244}', '{"x":2086.357421875,"y":5584.7998046875,"z":9.60965251922607}', '[{"name":"Dukes","color":1,"hash":"dukes"},{"name":"Moonbeam","color":1,"hash":"moonbeam"},{"name":"Sabre Turbo","color":1,"hash":"sabregt2"},{"name":"Primo","color":1,"hash":"primo"}]', '{"x":2081.98583984375,"y":5587.40185546875,"z":9.82445621490478}', '[]', '0', '{"x":2086.264892578125,"y":5598.80810546875,"z":9.60963058471679}', '{"x":2081.659423828125,"y":5573.9013671875,"z":9.82785129547119}', '{"x":2091.587890625,"y":5599.48681640625,"z":9.60964012145996}', 'Aucune', '100'),
+	(52, 'oceanhill', 'Ocean Hill', 'society_oceanhill', '{"x":3167.904541015625,"y":4859.1884765625,"z":8.43575477600097}', '{"x":3151.538818359375,"y":4880.2333984375,"z":8.43576049804687}', '[{"name":"Chino Luxe","color":1,"hash":"chino2"},{"name":"Minivan 2","color":1,"hash":"minivan2"},{"name":"Virgo 2","color":1,"hash":"virgo2"}]', '{"x":3167.268310546875,"y":4865.15087890625,"z":8.43575286865234}', '{"Creme_glacee":308,"Tabac_traite":313,"WEAPON_PISTOL":2,"Chargeur":165,"Tabac":135,"Cigarette":1,"Glace_vanille":1320,"Joint":3}', '70035', '{"x":3156.717041015625,"y":4879.82177734375,"z":8.43575859069824}', '{"x":3168.723876953125,"y":4905.84814453125,"z":8.43575000762939}', '{"x":3160.19677734375,"y":4871.31201171875,"z":8.43575191497802}', 'Aucune', '100'),
+	(53, 'cribs', 'Cribs', 'society_cribs', '{"x":2081.321044921875,"y":5573.77197265625,"z":9.82784461975097}', '{"x":2086.227294921875,"y":5584.6982421875,"z":9.60964012145996}', '[{"color":1,"name":"Dukes","hash":"dukes"},{"color":1,"name":"Moonbeam","hash":"moonbeam"},{"color":1,"name":"Sabre GT","hash":"sabregt"}]', '{"x":2081.361328125,"y":5592.13525390625,"z":9.82474708557128}', '{"WEAPON_MACHETE":1,"Chargeur":15}', '4845', '{"x":2084.899658203125,"y":5601.33544921875,"z":9.60964012145996}', '{"x":2082.784912109375,"y":5582.068359375,"z":9.8239164352417}', '{"x":2094.83837890625,"y":5601.6201171875,"z":9.60964202880859}', 'Aucune', '100'),
+	(54, 'mob', 'Mob ', 'society_mob', '{"x":2215.88037109375,"y":6092.654296875,"z":5.28530693054199}', '{"x":2209.374755859375,"y":6093.52294921875,"z":8.89051532745361}', '[{"name":"Dukes","windowsTint":false,"xenonLights":false,"color":1,"hash":"dukes","fullCustom":false},{"name":"Moonbeam","windowsTint":false,"xenonLights":false,"color":1,"hash":"moonbeam","fullCustom":false},{"name":"Sabre GT","windowsTint":false,"xenonLights":false,"color":1,"hash":"sabregt","fullCustom":false},{"color":1,"hash":"bmx","name":"BMX","windowsTint":false}]', '{"x":2221.982421875,"y":6093.21240234375,"z":5.26366806030273}', '{"Radio":3,"sandwich_p_curry":7,"Chaise":4,"boombox":4,"frite":72,"WEAPON_MACHETE":1,"Chargeur":4,"WEAPON_PISTOL":5,"spray":4,"spray_remover":5,"Glace_vanille":275}', '49555', '{"x":2214.24462890625,"y":6088.30615234375,"z":9.17781448364257}', '{"x":2222.013916015625,"y":6103.6435546875,"z":5.33591747283935}', '{"x":2215.52099609375,"y":6097.18701171875,"z":8.95744228363037}', 'Aucune', '100'),
+	(55, '26msb', '26msb', 'society_26msb', '{"x":3634.535400390625,"y":6467.76171875,"z":21.64043426513672}', '{"x":3665.2724609375,"y":6475.48095703125,"z":9.81548309326171}', '[{"name":"Moonbeam","color":1,"hash":"moonbeam"},{"name":"Enduro","color":1,"hash":"enduro"},{"name":"Emperor","color":1,"hash":"emperor"}]', '{"x":3632.75244140625,"y":6461.03271484375,"z":17.32508468627929}', '[]', '0', '{"x":3671.652099609375,"y":6476.16162109375,"z":9.61686706542968}', '{"x":3632.242919921875,"y":6467.982421875,"z":21.68310356140136}', '{"x":3662.575927734375,"y":6504.89111328125,"z":9.63384342193603}', 'Aucune', '100'),
+	(56, 'vicelord', 'vicelord', 'society_vicelord', '{"x":3542.9775390625,"y":6191.5869140625,"z":9.72054958343505}', '{"x":3508.786376953125,"y":6213.75830078125,"z":8.71818542480468}', '[{"hash":"dukes","name":"Dukes","color":1},{"hash":"moonbeam","name":"Moonbeam","color":1},{"hash":"sabregt","name":"Sabre GT","color":1},{"hash":"sabregt2","name":"Sabre Turbo","color":1}]', '{"x":3540.980712890625,"y":6193.544921875,"z":9.72054958343505}', '{"Joint":7,"WEAPON_PETROLCAN":12}', '0', '{"x":3512.59130859375,"y":6222.53759765625,"z":8.74289798736572}', '{"x":3535.125732421875,"y":6193.87158203125,"z":9.72055053710937}', '{"x":3502.17041015625,"y":6219.37548828125,"z":8.45271301269531}', 'Aucune', '100');
 
--- --------------------------------------------------------
 
---
--- Structure de la table `gangs`
---
-
-CREATE TABLE `gangs` (
-  `id` int(11) NOT NULL,
-  `name` varchar(20) DEFAULT NULL,
-  `chest` varchar(20) DEFAULT NULL,
-  `wear` varchar(20) DEFAULT NULL,
-  `garage` varchar(20) DEFAULT NULL,
-  `gspawn` varchar(20) DEFAULT NULL,
-  `gdelete` varchar(20) DEFAULT NULL,
-  `vehicles` varchar(20) DEFAULT NULL,
-  `ranks` varchar(20) DEFAULT NULL,
-  `activity` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `hotel_rooms`
---
-
-CREATE TABLE `hotel_rooms` (
+CREATE TABLE IF NOT EXISTS `hotel_rooms` (
   `identifier` varchar(80) NOT NULL,
   `expiration` int(11) NOT NULL,
-  `safe` text NOT NULL
+  `safe` text NOT NULL,
+  PRIMARY KEY (`identifier`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
+CREATE TABLE IF NOT EXISTS `inventories` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `identifier` text,
+  `type` varchar(50) DEFAULT NULL,
+  `data` longtext,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Structure de la table `items`
---
-
-CREATE TABLE `items` (
+CREATE TABLE IF NOT EXISTS `items` (
   `name` varchar(50) NOT NULL,
   `label` varchar(50) NOT NULL,
   `rare` int(11) NOT NULL DEFAULT '0',
   `can_remove` int(11) NOT NULL DEFAULT '1',
-  `weight` double NOT NULL DEFAULT '0'
+  `weight` double NOT NULL DEFAULT '0',
+  `desc` text,
+  PRIMARY KEY (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Contenu de la table `items`
---
+INSERT INTO `items` (`name`,`label`,`rare`,`can_remove`,`weight`,`desc`) VALUES
+	('ammo_pistol', '.45', 0, 1, 1, NULL),
+	('ammo_rifle', '5.56mm', 0, 1, 1, NULL),
+	('ammo_shotgun', 'Calibre 12', 0, 1, 1, NULL),
+	('ammo_smg', '9mm', 0, 1, 1, NULL),
+	('ammo_smg_large', '28mm', 0, 1, 1, NULL),
+	('ammo_snp', '300 Magnum', 0, 1, 1, NULL),
+	('Baileys', 'Baileys', 0, 1, 0.25, NULL),
+	('banana', 'Banane', 0, 1, 0.25, NULL),
+	('bandage', 'Bandage', 0, 1, 0.12, NULL),
+	('barrechocolat', 'Barre chocolatée', 0, 1, 0.25, NULL),
+	('barre_proteine', 'Barre Protéinée', 0, 1, 0.25, NULL),
+	('beuh', 'Beuh', 0, 1, 0.25, NULL),
+	('Biere', 'Bière', 0, 1, 0.25, NULL),
+	('bong', 'Bong', 0, 1, 0.25, NULL),
+	('boombox', 'BoomBox', 0, 1, 0.5, NULL),
+	('Bouclier', 'Bouclier', 0, 1, 2, NULL),
+	('bouteilledevin', 'Bouteille de vin', 0, 1, 0.35, NULL),
+	('bread', 'Pain', 0, 1, 0.17, NULL),
+	('bretzels', 'Bretzels', 0, 1, 0.25, NULL),
+	('cabillaud', 'Cabillaud', 0, 1, 0.1, NULL),
+	('cacahuète', 'Cacahuètes', 0, 1, 0.25, NULL),
+	('Cafe', 'Café', 0, 1, 0.25, NULL),
+	('Cafe_moulu', 'Café Moulu', 0, 1, 0.25, NULL),
+	('Calmarfrit', 'Calamar Frit', 0, 1, 0.25, NULL),
+	('calzone', 'Calzone', 0, 1, 0.25, NULL),
+	('Canne_fermente', 'Jus de canne fermenté', 0, 1, 0.25, NULL),
+	('Canne_jus', 'Jus de canne', 0, 1, 0.25, NULL),
+	('canon', 'Canon', 0, 1, 0.25, NULL),
+	('Card', 'Carte Bancaire', 0, 1, 0.15, NULL),
+	('carotool', 'Outils de carrosserie', 0, 1, 0.25, NULL),
+	('CarteID', "Carte d'identité", 0, 1, 0.01, NULL),
+	('Carte_gym', "Carte d'accès Vestiaires", 0, 1, 0.01, NULL),
+	('Chaise', 'Chaise de jardin vert', 0, 1, 1, NULL),
+	('Chaise2', 'Chaise de jardin plad', 0, 1, 1, NULL),
+	('Champagne', 'Champagne', 0, 1, 0.25, NULL),
+	('champignon', 'Champignon', 0, 1, 0.25, NULL),
+	('Chargeur', 'Chargeur', 0, 1, 0.25, NULL),
+	('Chips', 'Chips', 0, 1, 0.25, NULL),
+	('Chipscrevette', 'Chips Crevette', 0, 1, 0.25, NULL),
+	('chips_sel', 'Chips gout sel', 0, 1, 0.25, NULL),
+	('Cigarette', 'Cigarette', 0, 1, 0.05, NULL),
+	('Coca', 'Cola', 0, 1, 0.25, NULL),
+	('cocaine', 'Cocaine', 0, 1, 0.1, NULL),
+	('Cola', 'Cola', 0, 1, 0.25, NULL),
+	('colis', 'Colis', 0, 1, 0.75, NULL),
+	('cookie', 'Cookie', 0, 1, 0.25, NULL),
+	('crack', 'Crack', 0, 1, 0.25, NULL),
+	('Creme_glacee', 'Crème Glacée', 0, 1, 0.25, NULL),
+	('crochet', 'Crochet', 0, 1, 0.2, NULL),
+	('croquettes', 'Croquettes', 0, 1, 0.15, NULL),
+	('doliprane', 'Doliprane', 0, 1, 0.05, NULL),
+	('Donut', 'Donut', 0, 1, 0.25, NULL),
+	('drpepper', 'Dr Pepper', 0, 1, 0.25, NULL),
+	('Eaudevie', 'Eau de vie', 0, 1, 0.25, NULL),
+	('fanta', 'Fanta', 0, 1, 0.25, NULL),
+	('Fausses_plaques', "Fausses plaques D'immatriculation", 0, 1, 0.5, NULL),
+	('feuille', 'Feuille', 0, 1, 0.25, NULL),
+	('filtre', 'Filtre', 0, 1, 0.25, NULL),
+	('fish', 'Poisson', 0, 1, 0.6, NULL),
+	('fishandchips', 'Fish & Chips', 0, 1, 0.1, NULL),
+	('fishbait', 'Fish Bait', 0, 1, 0.5, NULL),
+	('fishingrod', 'Fishing Rod', 0, 1, 1, NULL),
+	('fixtool', 'Outils de réparation', 0, 1, 1, NULL),
+	('Framboises', 'Framboises', 0, 1, 0.45, NULL),
+	('frite', 'Frites', 0, 1, 0.25, NULL),
+	('Gambasbraisees', 'Gambas Braisées', 0, 1, 0.25, NULL),
+	('Gin', 'Gin', 0, 1, 0.25, NULL),
+	('gitanes', 'Gitanes', 0, 1, 0.25, NULL),
+	('Glace_vanille', 'Glace à la vanille', 0, 1, 0.25, NULL),
+	('Grain_cafe', 'Grain de Café', 0, 1, 0.25, NULL),
+	('grand_cru', 'Grand cru', 0, 1, 0.25, NULL),
+	('hamburger', 'Hamburger', 0, 1, 0.25, NULL),
+	('Heineken', 'Heineken', 0, 1, 0.25, NULL),
+	('heroine', 'Heroine', 0, 1, 0.25, NULL),
+	('Herse', 'Herse', 0, 1, 2, NULL),
+	('hotdog', 'Hotdog', 0, 1, 0.25, NULL),
+	('icetea', 'Icetea', 0, 1, 0.25, NULL),
+	('id_card_f', "Fausse carte d'identité", 0, 1, 0.25, NULL),
+	('jagerbomb', 'Jägerbomb', 0, 1, 0.25, NULL),
+	('jambon', 'Jambon', 0, 1, 0.25, NULL),
+	('jewelry', 'Bijoux', 0, 1, 0.5, NULL),
+	('Joint', 'Joint', 0, 1, 0.25, NULL),
+	('jumelles', 'Jumelles', 0, 1, 0.75, NULL),
+	('jusfruit', 'Jus de fruit', 0, 1, 0.25, NULL),
+	('Jus_orange', "Jus d'orange", 0, 1, 0.17, NULL),
+	('jus_raisin', "Jus de raisin", 0, 1, 0.25, NULL),
+	('Kit_de_reparation', 'Kit de réparation', 0, 1, 0.5, NULL),
+	('Lampe', 'Lampe', 0, 1, 1, NULL),
+	('Lecteur_cd', 'Lecteur CD', 0, 1, 0.25, NULL),
+	('lettre', 'Lettre', 0, 1, 0.25, NULL),
+	('levier', 'Levier', 0, 1, 0.25, NULL),
+	('limonade', 'Limonade', 0, 1, 0.25, NULL),
+	('margarita', 'Pizza Margarita', 0, 1, 0.25, NULL),
+	('marlboro', 'Marlboro', 0, 1, 0.25, NULL),
+	('martini', 'Martini', 0, 1, 0.25, NULL),
+	('Masque', 'Masque', 0, 1, 0.25, NULL),
+	('meche', 'Mèche', 0, 1, 0.25, NULL),
+	('medikit', 'Medikit', 0, 1, 0.25, NULL),
+	('metaux', 'Métaux', 0, 1, 0.25, NULL),
+	('methamphetamine', 'Methamphetamine', 0, 1, 0.25, NULL),
+	('mojito', 'Mojito', 0, 1, 0.25, NULL),
+	('mozzarella', 'Mozzarella', 0, 1, 0.25, NULL),
+	('mozzarellasticks', 'Mozzarella Sticks', 0, 1, 0.25, NULL),
+	('Mures', 'Mûres', 0, 1, 0.45, NULL),
+	('Myrtilles', 'Myrtilles', 0, 1, 0.45, NULL),
+	('net_cracker', 'Cracker', 0, 1, 0.25, NULL),
+	('oldplate', 'Ancienne plaques', 0, 1, 0.5, 'Plaques'),
+	('opium', 'Opium', 0, 1, 0.25, NULL),
+	('Orange', 'Orange', 0, 1, 0.45, NULL),
+	('Outil_crochetage', 'Outil de crochetage', 0, 1, 0.25, NULL),
+	('Pain_burger', 'Pain à burger', 0, 1, 0.25, NULL),
+	('papier', 'Papier', 0, 1, 0.45, NULL),
+	('patate', 'Pomme de terre', 0, 1, 0.05, NULL),
+	('pate', 'Pâte', 0, 1, 0.25, NULL),
+	('pepperoni', 'Pepperoni', 0, 1, 0.25, NULL),
+	('Perceuse_puissante', 'Perceuse Puissante', 0, 1, 1, NULL),
+	('permis', 'Permis', 0, 1, 0.01, NULL),
+	('Permis_arme', 'PPA', 0, 1, 0.01, NULL),
+	('Permis_bateau', 'Permis bateau', 0, 1, 0.01, NULL),
+	('Permis_camion', 'Permis camion', 0, 1, 0.01, NULL),
+	('Permis_chasse', 'Permis chasse', 0, 1, 0.01, NULL),
+	('Permis_moto', 'Permis moto', 0, 1, 0.01, NULL),
+	('Permis_voiture', 'Permis voiture', 0, 1, 0.01, NULL),
+	('phone', 'Téléphone', 0, 1, 0.5, NULL),
+	('piece', 'Pièce', 0, 1, 0.3, NULL),
+	('Piece_arme', "Pièce d'arme", 0, 1, 0.35, NULL),
+	('Piece_mechanic', 'Pièce méchanic', 0, 1, 0.35, NULL),
+	('piluleoubli', "Pilule de l'oubli", 0, 1, 0.1, NULL),
+	('Pinacolada', 'Pina Colada', 0, 1, 0.25, NULL),
+	('Pinot_noir', 'Pinot noir', 0, 1, 0.25, NULL),
+	('pizza', 'Pizza', 0, 1, 0.35, NULL),
+	('pizzajambonchampignon', 'Pizza jambon champignons', 0, 1, 0.25, NULL),
+	('pizzapepperoni', 'Pizza Pepperoni', 0, 1, 0.25, NULL),
+	('pochon_de_coke', 'Pochon de Cocaine', 0, 1, 0.1, NULL),
+	('pochon_de_crack', 'Pochon de Crack', 0, 1, 0.25, NULL),
+	('pochon_de_meth', 'Pochon de Meth', 0, 1, 0.1, NULL),
+	('pochon_de_methamphetamine', 'Pochon de Methamphetamine', 0, 1, 0.25, NULL),
+	('pochon_de_opium', "Pochon d'Opium", 0, 1, 0.25, NULL),
+	('pochon_de_weed', 'Pochon de Weed', 0, 1, 0.25, NULL),
+	('Poignée', 'Poignée', 0, 1, 1, NULL),
+	('Pomme', 'Pomme', 0, 1, 0.45, NULL),
+	('popcorn', 'Pop-corn', 0, 1, 0.25, NULL),
+	('poulet', 'Poulet', 0, 1, 0.25, NULL),
+	('poulet_barquette', 'Poulet en barquette', 0, 1, 0.25, NULL),
+	('poulet_decouper', 'Poulet découpé', 0, 1, 0.25, NULL),
+	('Radio', 'Radio', 0, 1, 0.5, NULL),
+	('raisin', 'Raisin', 0, 1, 0.25, NULL),
+	('redbull', 'Redbull', 0, 1, 0.25, NULL),
+	('rhum', 'Rhum', 0, 1, 0.25, NULL),
+	('rhumcoca', 'Rhumcoca', 0, 1, 0.25, NULL),
+	('rhumfruit', 'Rhumfruit', 0, 1, 0.25, NULL),
+	('ribs', 'Ribs', 0, 1, 0.25, NULL),
+	('sandwich_p_curry', 'Sandwich poulet curry', 0, 1, 0.25, NULL),
+	('saucetomate', 'Sauce Tomate', 0, 1, 0.25, NULL),
+	('saucisson', 'Saucisson', 0, 1, 0.25, NULL),
+	('secure_card', 'Fausse carte de secours', 0, 1, 0.25, NULL),
+	('Serflex', 'Serflex', 0, 1, 0.25, NULL),
+	('Shaker', 'Shaker', 0, 1, 0.25, NULL),
+	('shark', 'Requin', 0, 1, 1.6, NULL),
+	('spray', 'Bombe de peinture', 1, 1, 1, NULL),
+	('spray_remover', 'Nettoyant pour surfaces', 0, 1, 1, NULL),
+	('sprite', 'Sprite', 0, 1, 0.25, NULL),
+	('Sprunk', 'Sprunk', 0, 1, 0.25, NULL),
+	('Steakfrites', 'Steak-Frites', 0, 1, 0.25, NULL),
+	('Tabac', 'Tabac', 0, 1, 0.5, NULL),
+	('Tabac_traite', 'Tabac traité', 0, 1, 0.25, NULL),
+	('tableau', 'Tableau', 0, 1, 0.25, NULL),
+	('tel', 'Téléphone', 0, 1, 0.5, NULL),
+	('Tenue', 'Tenue', 0, 1, 0.25, NULL),
+	('tequila', 'Tequila', 0, 1, 0.25, NULL),
+	('thermite', 'Thermite Bombe', 0, 1, 0.85, NULL),
+	('turtle', 'Sea Turtle', 0, 1, 1.2, NULL),
+	('turtlebait', 'Turtle Bait', 0, 1, 0.95, NULL),
+	('tv', 'Télévision', 0, 1, 0.5, NULL),
+	('USB', 'Clé USB (Piratage ATM)', 0, 1, 0.15, NULL),
+	('USB2', 'Clé USB KeyLogger (Piratage Banque)', 0, 1, 0.15, NULL),
+	('viande', 'Viande', 0, 1, 0.25, NULL),
+	('Vicecity', 'Vice City Cocktail', 0, 1, 0.25, NULL),
+	('vine', 'Vin', 0, 1, 0.35, NULL),
+	('vodka', 'Vodka', 0, 1, 0.25, NULL),
+	('vodkaenergy', 'Vodka energy', 0, 1, 0.25, NULL),
+	('vodkafruit', 'Vodka fruit', 0, 1, 0.25, NULL),
+	('water', 'Eau', 0, 1, 0.35, NULL),
+	('WEAPON_ADVANNCEDRIFLE', 'Fusil avencer', 0, 1, 1, NULL),
+	('WEAPON_APPISTOL', 'Pistolet perforent ', 0, 1, 1, NULL),
+	('WEAPON_ASSAULTRIFLE', 'AK-47', 0, 1, 1, NULL),
+	('WEAPON_ASSAULTSHOTGUN', "Fusil a pompe d'\assault", 0, 1, 1, NULL),
+	('WEAPON_ASSAULTSMG', "SMG d\'assault", 0, 1, 1, NULL),
+	('WEAPON_AUTOSHOTGUN', 'Fusil a pompe automatique', 0, 1, 1, NULL),
+	('WEAPON_BALL', 'Balle', 0, 1, 1, NULL),
+	('WEAPON_BAT', 'Baseball bat', 0, 1, 1, NULL),
+	('WEAPON_BATTEAXE', 'Hache de combat', 0, 1, 1, NULL),
+	('WEAPON_BOTTLE', 'Boutelle Casser', 0, 1, 1, NULL),
+	('WEAPON_BULLPUPRIFLE', 'Fusil bullpup', 0, 1, 1, NULL),
+	('WEAPON_BULLPUPSHOTGUN', 'Fusil a pomp bullpup', 0, 1, 1, NULL),
+	('WEAPON_CARBINERIFLE', 'Carabine', 0, 1, 1, NULL),
+	('WEAPON_CERAMIQUEPISTOL', 'Pistolet Ceramique ', 0, 1, 1, NULL),
+	('WEAPON_COMBATMG', 'Mitrailleuse de combat', 0, 1, 1, NULL),
+	('WEAPON_COMBATPDW', 'ADP de combat', 0, 1, 1, NULL),
+	('WEAPON_COMBATPISTOL', 'Pistolet de combat', 0, 1, 1, NULL),
+	('WEAPON_COMBATSHOTGUN', 'Fusil a pompe de combat', 0, 1, 1, NULL),
+	('WEAPON_COMPACTRIFLE', 'AK compact', 0, 1, 1, NULL),
+	('WEAPON_CROWBAR', 'Pied de biche', 0, 1, 1, NULL),
+	('WEAPON_DAGGER', 'Dague', 0, 1, 1, NULL),
+	('WEAPON_DBSHOTGUN', 'Fusil a pompe doublle canon', 0, 1, 1, NULL),
+	('WEAPON_DOUBLEACTION', 'Pistolet doubleaction', 0, 1, 1, NULL),
+	('WEAPON_FLARE', 'Fumigène', 0, 1, 1, NULL),
+	('WEAPON_FLAREGUN', 'Flaregun', 0, 1, 1, NULL),
+	('WEAPON_FLASHLIGHT', 'Lampe de poche', 0, 1, 1, NULL),
+	('WEAPON_GADGETPISTOL', 'Pistolet gadget', 0, 1, 1, NULL),
+	('WEAPON_GOLFCLUB', 'Club de golf', 0, 1, 1, NULL),
+	('WEAPON_GRENADE', 'Grenade', 0, 1, 1, NULL),
+	('WEAPON_GUSENGERG', 'Tomson', 0, 1, 1, NULL),
+	('WEAPON_HAMMER', 'Marteau', 0, 1, 1, NULL),
+	('WEAPON_HATCHET', 'Hachette', 0, 1, 1, NULL),
+	('WEAPON_HEAVYPISTOL', 'Pistolet lourd', 0, 1, 1, NULL),
+	('WEAPON_HEAVYSHOTGUN', 'Fusil a pomp Lourd', 0, 1, 1, NULL),
+	('WEAPON_HEAVYSNIPER', 'Sniper lourd', 0, 1, 1, NULL),
+	('WEAPON_KNIFE', 'Couteau', 0, 1, 1, NULL),
+	('WEAPON_KNUCKLE', 'Poing american', 0, 1, 1, NULL),
+	('WEAPON_MACHETE', 'Machette', 0, 1, 1, NULL),
+	('WEAPON_MACHINEPISTOL', 'Scorpion', 0, 1, 1, NULL),
+	('WEAPON_MARKSMANPISTOL', 'Pistolet marksman', 0, 1, 1, NULL),
+	('WEAPON_MG', 'Mitrailleuse', 0, 1, 1, NULL),
+	('WEAPON_MICROSMG', 'Uzi', 0, 1, 1, NULL),
+	('WEAPON_MILIRARYRIFLE', 'Fusil de militaire', 0, 1, 1, NULL),
+	('WEAPON_MINISMG', 'Tec-9', 0, 1, 1, NULL),
+	('WEAPON_MOLOTOV', 'Molotov', 0, 1, 1, NULL),
+	('WEAPON_MUSKET', 'mousket', 0, 1, 1, NULL),
+	('WEAPON_NAVYREVOLVER', 'Revolver de la navy', 0, 1, 1, NULL),
+	('WEAPON_NIGHTSTICK', 'Batte de police', 0, 1, 1, NULL),
+	('WEAPON_PETROLCAN', "Bidon d'essence", 0, 1, 1, NULL),
+	('WEAPON_PISTOL', 'Pistolet', 0, 1, 1, NULL),
+	('WEAPON_PISTOL50', 'Pistolet Cal50', 0, 1, 1, NULL),
+	('WEAPON_POOLCUE', 'Queues de billard', 0, 1, 1, NULL),
+	('WEAPON_PUMPSHOTGUN', 'Fusil a pompe', 0, 1, 1, NULL),
+	('WEAPON_REVOLVER', 'Revolver', 0, 1, 1, NULL),
+	('WEAPON_SAWNOFFSHOTGUN', 'Fusil a canon siller ', 0, 1, 1, NULL),
+	('WEAPON_SMG', 'Smg', 0, 1, 1, NULL),
+	('WEAPON_SNIPERRIFLE', 'Sniper', 0, 1, 1, NULL),
+	('WEAPON_SNOWBALL', 'Boulle de neige', 0, 1, 1, NULL),
+	('WEAPON_SNSPISTOL', 'Pistolet SNS', 0, 1, 1, NULL),
+	('WEAPON_SPECIALCARBINE', 'Carabine special  ', 0, 1, 1, NULL),
+	('WEAPON_STICKBOMB', 'Bombe collente ', 0, 1, 1, NULL),
+	('WEAPON_STONE_HATCHET', 'Hache en pierre', 0, 1, 1, NULL),
+	('WEAPON_STUNGUN', 'Tazer', 0, 1, 1, NULL),
+	('WEAPON_SWITCHBLADE', "Crant d\'arret", 0, 1, 1, NULL),
+	('WEAPON_VINTAGEPISTOL', 'Pistolet vintage', 0, 1, 1, NULL),
+	('WEAPON_WRENCH', 'Cle a molette', 0, 1, 1, NULL),
+	('Weed', 'Weed', 0, 1, 0.15, NULL),
+	('Weed_traite', 'Weed traitée', 0, 1, 0.15, NULL),
+	('Whisky', 'Whisky', 0, 1, 0.25, NULL),
+	('whiskycoca', 'Whisky Coca', 0, 1, 0.25, NULL),
+	('wood', 'Bois', 0, 1, 0.25, NULL),
+	('wool', 'Laine', 0, 1, 0.25, NULL);
 
-INSERT INTO `items` (`name`, `label`, `rare`, `can_remove`, `weight`) VALUES
-('balle', 'Balle', 0, 1, 0.25),
-('banana', 'banana', 0, 1, 0.25),
-('bandage', 'Bandage', 0, 1, 0.12),
-('beuh', 'Beuh', 0, 1, 0.25),
-('bouteilledevin', 'bouteille de vin', 0, 1, 0.35),
-('bread', 'Pain', 0, 1, 0.17),
-('canon', 'Canon', 0, 1, 0.25),
-('carotool', 'outils carosserie', 0, 1, 0.25),
-('carteid', 'carte d\'identité ', 0, 1, 0.01),
-('Chaise', 'Chaise de jardin vert', 0, 1, 1),
-('Chaise2', 'Chaise de jardin plad', 0, 1, 1),
-('Champagne', 'Champagne', 0, 1, 0.25),
-('Chips', 'Chips', 0, 1, 0.25),
-('clip', 'Chargeur', 0, 1, 0.25),
-('cocacola', 'cocacola', 0, 1, 0.25),
-('cocaine', 'Cocaine', 0, 1, 0.25),
-('crack', 'Crack', 0, 1, 0.25),
-('crochet', 'crochet', 0, 1, 0.2),
-('croquettes', 'Croquettes', 0, 1, 0.15),
-('cutted_wood', 'Bois coupé', 0, 1, 0.25),
-('drpepper', 'drpepper', 0, 1, 0.25),
-('fanta', 'fanta', 0, 1, 0.25),
-('feuille', 'feuille', 0, 1, 0.25),
-('fish', 'Poisson', 0, 1, 0.6),
-('fishbait', 'Fish Bait', 0, 1, 0.5),
-('fishingrod', 'Fishing Rod', 0, 1, 1),
-('fixkit', 'Kit réparation', 0, 1, 0.5),
-('fixtool', 'outils réparation', 0, 1, 1),
-('flitres', 'filtres', 0, 1, 0.25),
-('frite', 'frite', 0, 1, 0.25),
-('gitanes', 'Gitanes', 0, 1, 0.25),
-('grand_cru', 'Grand cru', 0, 1, 0.25),
-('heroine', 'Heroine', 0, 1, 0.25),
-('icetea', 'icetea', 0, 1, 0.25),
-('id_card_f', 'fake carte d\'identification ', 0, 1, 0.25),
-('jagerbomb', 'jagerbomb', 0, 1, 0.25),
-('join', 'Join de Beuh', 0, 1, 0.35),
-('jumelles', 'Jumelles', 0, 1, 0.75),
-('jusfruit', 'jusfruit', 0, 1, 0.25),
-('Jus_orange', 'Jus d\'orange', 0, 1, 0.17),
-('jus_raisin', 'Jus de raisin', 0, 1, 0.25),
-('levier', 'Levier', 0, 1, 0.25),
-('limonade', 'limonade', 0, 1, 0.25),
-('malbora', 'Malbora', 0, 1, 0.25),
-('martini', 'martini', 0, 1, 0.25),
-('meche', 'Mèche', 0, 1, 0.25),
-('medikit', 'Medikit', 0, 1, 0.25),
-('metaux', 'Métaux', 0, 1, 0.25),
-('methamphetamine', 'Methamphetamine', 0, 1, 0.25),
-('meth_pooch', 'Pochon de meth', 0, 1, 0.25),
-('mojito', 'mojito', 0, 1, 0.25),
-('net_cracker', 'Cracker', 0, 1, 0.25),
-('opium', 'Opium', 0, 1, 0.25),
-('papier', 'Papier', 0, 1, 0.45),
-('permis', 'Permis', 0, 1, 0.01),
-('phone', 'Téléphone', 0, 1, 0.5),
-('piece', 'pièce', 0, 1, 0.3),
-('Piece_arme', 'Pièce d\'arme', 0, 1, 0.35),
-('piluleoubli', 'Pilule de l\'oubli', 0, 1, 0.1),
-('pizza', 'pizza', 0, 1, 0.35),
-('pochon_de_coke', 'Pochon de Cocaine', 0, 1, 0.25),
-('pochon_de_crack', 'Pochon de Crack', 0, 1, 0.25),
-('pochon_de_heroine', 'Pochon d\' Heroine', 0, 1, 0.25),
-('pochon_de_methamphetamine', 'Pochon de Methamphetamine', 0, 1, 0.25),
-('pochon_de_opium', 'Pochon d\'Opium', 0, 1, 0.25),
-('poulet', 'Poulet', 0, 1, 0.25),
-('poulet_barquette', 'Poulet en barquette', 0, 1, 0.25),
-('poulet_decouper', 'Poulet Découper', 0, 1, 0.25),
-('raisin', 'Raisin', 0, 1, 0.25),
-('redbull', 'redbull', 0, 1, 0.25),
-('rhum', 'rhum', 0, 1, 0.25),
-('rhumcoca', 'rhumcoca', 0, 1, 0.25),
-('rhumfruit', 'rhumfruit', 0, 1, 0.25),
-('secure_card', 'fake carte de secours', 0, 1, 0.25),
-('shark', 'Shark', 0, 1, 1.6),
-('sprite', 'sprite', 0, 1, 0.25),
-('tabac', 'tabac', 0, 1, 0.5),
-('tabacblond', 'Tabac Blond', 0, 1, 0.25),
-('tabacblondsec', 'Tabac Blond Séché', 0, 1, 0.25),
-('tabacbrun', 'Tabac Brun', 0, 1, 0.25),
-('tabacbrunsec', 'Tabac Brun Séché', 0, 1, 0.25),
-('tabac_traiter', 'tabac traiter', 0, 1, 0.25),
-('tel', 'telephone', 0, 1, 0.5),
-('tequila', 'tequila', 0, 1, 0.25),
-('thermite', 'Thermite Bombe', 0, 1, 0.85),
-('turtle', 'Sea Turtle', 0, 1, 1.2),
-('turtlebait', 'Turtle Bait', 0, 1, 0.95),
-('viande', 'viande', 0, 1, 0.25),
-('vine', 'Vin', 0, 1, 0.35),
-('vodka', 'vodka', 0, 1, 0.25),
-('vodkaenergy', 'vodkaenergy', 0, 1, 0.25),
-('vodkafruit', 'vodkafruit', 0, 1, 0.25),
-('water', 'Eau', 0, 1, 0.35),
-('weed', 'Weed', 0, 1, 0.25),
-('whiskycoca', 'whiskycoca', 0, 1, 0.25),
-('wood', 'Bois', 0, 1, 0.25),
-('wool', 'Laine', 0, 1, 0.25);
 
--- --------------------------------------------------------
-
---
--- Structure de la table `jobs`
---
-
-CREATE TABLE `jobs` (
+CREATE TABLE IF NOT EXISTS `jobs` (
   `name` varchar(50) NOT NULL,
   `label` varchar(50) DEFAULT NULL,
-  `whitelisted` tinyint(1) NOT NULL DEFAULT '0'
+  `whitelisted` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Contenu de la table `jobs`
---
+INSERT INTO `jobs` (`name`,`label`,`whitelisted`) VALUES
+	('AgentImmo', 'Agent immobilier', 1),
+	('ambulance', 'Ambulance', 1),
+	('avocat', 'Avocat', 1),
+	('bahamas', 'Bahamas', 0),
+	('bd', 'Black Disciples', 0),
+	('bikeshop', 'Concessionnaire Moto', 0),
+	('boatshop', 'Concessionnaire Bateau', 0),
+	('cabrones', 'Los Cabrones', 0),
+	('chollos', 'Chollos ', 0),
+	('cityhall', 'City Hall (Mairie)', 0),
+	('cribs', 'Cribs', 0),
+	('delivery', 'Go-Postal', 0),
+	('diaz', 'Diaz', 0),
+	('frontpage', 'Front Page', 1),
+	('gouv', 'Gouvernement', 1),
+	('greasychopper', 'The Greasy Chopper', 0),
+	('haitiens', 'Haitiens', 0),
+	('icecream', 'Ice Cream', 1),
+	('jamaican', 'Jamaican', 0),
+	('label', 'label', 1),
+	('malibu', 'Malibu', 1),
+	('mob', 'Mob ', 0),
+	('msb', '26MSB', 0),
+	('oceanhill', 'Ocean Hill', 0),
+	('oceanview', 'Ocean View', 0),
+	('pizza', 'The Well Stacked Pizza', 1),
+	('robina', "Robina's Café", 1),
+	('tabac', 'Tabac', 1),
+	('taxi', 'Taxi', 1),
+	('unemployed', 'Sans Emplois', 0),
+	('unemployed2', 'Sans Organisation', 1),
+	('vance', 'Vance', 0),
+	('vccustoms', 'Vice CIty Customs', 1),
+	('vcpd', 'VCPD', 1),
+	('vicecitybikers', 'Vice City Bikers', 0),
+	('vicelord', 'vicelord', 0),
+	('weazelnews', 'Weazel News', 0),
+	('weedshop', 'WeedShop', 1);
 
-INSERT INTO `jobs` (`name`, `label`, `whitelisted`) VALUES
-('Abatteur', 'Abatteur', 1),
-('AgentImmo', 'Agent immobilier', 1),
-('ambulance', 'Ambulance', 1),
-('avocat', 'Avocat', 1),
-('bahamas', 'Bahamas', 0),
-('bcso', 'Bcso', 1),
-('cardealer', 'Concessionnaire', 1),
-('gouv', 'Gouvernement', 1),
-('label', 'label', 1),
-('lumberjack', 'Bucheron', 0),
-('mechanic', 'Mécano', 1),
-('miner', 'Mineur', 0),
-('NorthMecano', 'NorthMecano', 0),
-('police', 'LSPD', 1),
-('tabac', 'Tabac', 1),
-('taxi', 'Taxi', 1),
-('unemployed', 'Chomeur', 0),
-('unemployed2', 'Etat', 1),
-('unicorn', 'unicorn', 1),
-('vigneron', 'vigneron', 1),
-('weedshop', 'WeedShop', 1),
-('yellow', 'YellowJack', 1);
 
--- --------------------------------------------------------
-
---
--- Structure de la table `job_grades`
---
-
-CREATE TABLE `job_grades` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `job_grades` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `job_name` varchar(50) DEFAULT NULL,
   `grade` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
   `label` varchar(50) NOT NULL,
   `skin_male` longtext NOT NULL,
-  `skin_female` longtext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `skin_female` longtext NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=721 DEFAULT CHARSET=utf8mb4;
 
---
--- Contenu de la table `job_grades`
---
+INSERT INTO `job_grades` (`id`,`job_name`,`grade`,`name`,`label`,`skin_male`,`skin_female`) VALUES
+	(1, 'unemployed', 0, 'Sans Emploi', 'Sans Emploi', '{}', '{}'),
+	(2, 'AgentImmo', 0, 'location', 'Location', '{}', '{}'),
+	(3, 'AgentImmo', 1, 'vendeur', 'Vendeur', '{}', '{}'),
+	(4, 'AgentImmo', 2, 'gestion', 'Gestion', '{}', '{}'),
+	(5, 'AgentImmo', 3, 'boss', 'Patron', '{}', '{}'),
+	(6, 'ambulance', 0, 'ambulance', 'Ambulancier', '{}', '{}'),
+	(7, 'ambulance', 1, 'doctor', 'Docteur', '{}', '{}'),
+	(8, 'ambulance', 2, 'chief_doctor', 'Medecin-chef', '{}', '{}'),
+	(9, 'ambulance', 3, 'boss', 'Patron EMS', '{}', '{}'),
+	(10, 'cityhall', 1, 'secretary', 'Secrétaire', '{}', '{}'),
+	(11, 'cityhall', 2, 'agentsecu', 'Agent de sécurité', '{}', '{}'),
+	(12, 'cityhall', 3, 'juge', 'Juge', '{}', '{}'),
+	(13, 'cityhall', 4, 'boss', 'Maire', '{}', '{}'),
+	(15, 'tabac', 1, 'recrue', 'Tabagiste', '{}', '{}'),
+	(16, 'tabac', 2, 'gerant', 'Gérant', '{}', '{}'),
+	(17, 'tabac', 3, 'boss', 'Patron', '{}', '{}'),
+	(18, 'taxi', 0, 'recrue', 'Recrue', '{}', '{}'),
+	(19, 'taxi', 1, 'novice', 'Novice', '{}', '{}'),
+	(20, 'taxi', 2, 'experimente', 'Experimente', '{}', '{}'),
+	(21, 'taxi', 3, 'uber', 'Uber', '{}', '{}'),
+	(22, 'taxi', 4, 'boss', 'Patron', '{}', '{}'),
+	(23, 'malibu', 0, 'barman', 'Barman', '{}', '{}'),
+	(24, 'malibu', 1, 'dancer', 'Danseur', '{}', '{}'),
+	(25, 'malibu', 2, 'viceboss', 'Co-gérant', '{}', '{}'),
+	(26, 'malibu', 3, 'boss', 'Gérant', '{}', '{}'),
+	(27, 'avocat', 0, 'recruit', 'Recrue', '{"tshirt_1":57,"torso_1":55,"arms":0,"pants_1":35,"glasses":0,"decals_2":0,"hair_color_2":0,"helmet_2":0,"hair_color_1":5,"face":19,"glasses_2":1,"torso_2":0,"shoes":24,"hair_1":2,"skin":34,"sex":0,"glasses_1":0,"pants_2":0,"hair_2":0,"decals_1":0,"tshirt_2":0,"helmet_1":8}', '{"tshirt_1":34,"torso_1":48,"shoes":24,"pants_1":34,"torso_2":0,"decals_2":0,"hair_color_2":0,"glasses":0,"helmet_2":0,"hair_2":3,"face":21,"decals_1":0,"glasses_2":1,"hair_1":11,"skin":34,"sex":1,"glasses_1":5,"pants_2":0,"arms":14,"hair_color_1":10,"tshirt_2":0,"helmet_1":57}'),
+	(28, 'avocat', 1, 'boss', 'Patron', '{"tshirt_1":58,"torso_1":55,"shoes":24,"pants_1":35,"pants_2":0,"decals_2":3,"hair_color_2":0,"face":19,"helmet_2":0,"hair_2":0,"arms":41,"torso_2":0,"hair_color_1":5,"hair_1":2,"skin":34,"sex":0,"glasses_1":0,"glasses_2":1,"decals_1":8,"glasses":0,"tshirt_2":0,"helmet_1":11}', '{"tshirt_1":35,"torso_1":48,"arms":44,"pants_1":34,"pants_2":0,"decals_2":3,"hair_color_2":0,"face":21,"helmet_2":0,"hair_2":3,"decals_1":7,"torso_2":0,"hair_color_1":10,"hair_1":11,"skin":34,"sex":1,"glasses_1":5,"glasses_2":1,"shoes":24,"glasses":0,"tshirt_2":0,"helmet_1":57}'),
+	(29, 'unemployed2', 0, 'rsa', 'Civil', '{}', '{}'),
+	(30, 'vccustoms', 0, 'recrue', 'Recrue', '{"decals_2":0,"beard_3":0,"hair_color_2":1,"shoes_2":0,"moles_2":0,"makeup_3":0,"chest_3":0,"bags_2":0,"helmet_1":-1,"eyebrows_1":0,"lipstick_1":0,"makeup_2":0,"mask_1":0,"watches_2":0,"lipstick_3":0,"bracelets_1":-1,"makeup_4":0,"bodyb_1":0,"arms":17,"shoes_1":24,"age_1":0,"arms_2":0,"bags_1":0,"chest_1":0,"complexion_1":0,"bproof_2":0,"eyebrows_3":0,"eye_color":0,"lipstick_4":0,"glasses_1":0,"bracelets_2":0,"sex":0,"torso_2":23,"beard_2":0,"blush_2":0,"torso_1":251,"bodyb_2":0,"blemishes_2":0,"mask_2":0,"beard_4":0,"sun_2":0,"hair_2":0,"tshirt_1":89,"skin":4,"ears_1":-1,"ears_2":0,"decals_1":0,"eyebrows_2":0,"moles_1":0,"lipstick_2":0,"hair_1":0,"blush_1":0,"makeup_1":0,"helmet_2":0,"shoes":9,"blush_3":0,"pants_1":98,"complexion_2":0,"tshirt_2":0,"pants_2":17,"glasses_2":0,"watches_1":-1,"beard_1":0,"eyebrows_4":0,"face":0,"chest_2":0,"age_2":0,"blemishes_1":0,"chain_1":0,"sun_1":0,"bproof_1":0,"hair_color_1":0,"chain_2":0}', '{}'),
+	(35, 'vccustoms', 1, 'novice', 'Novice', '{"decals_2":0,"beard_3":0,"hair_color_2":1,"shoes_2":0,"moles_2":0,"makeup_3":0,"chest_3":0,"bags_2":0,"helmet_1":-1,"eyebrows_1":0,"lipstick_1":0,"makeup_2":0,"mask_1":0,"watches_2":0,"lipstick_3":0,"bracelets_1":-1,"makeup_4":0,"bodyb_1":0,"arms":17,"shoes_1":24,"age_1":0,"arms_2":0,"bags_1":0,"chest_1":0,"complexion_1":0,"bproof_2":0,"eyebrows_3":0,"eye_color":0,"lipstick_4":0,"glasses_1":0,"bracelets_2":0,"sex":0,"torso_2":23,"beard_2":0,"blush_2":0,"torso_1":251,"bodyb_2":0,"blemishes_2":0,"mask_2":0,"beard_4":0,"sun_2":0,"hair_2":0,"tshirt_1":89,"skin":4,"ears_1":-1,"ears_2":0,"decals_1":0,"eyebrows_2":0,"moles_1":0,"lipstick_2":0,"hair_1":0,"blush_1":0,"makeup_1":0,"helmet_2":0,"shoes":9,"blush_3":0,"pants_1":98,"complexion_2":0,"tshirt_2":0,"pants_2":17,"glasses_2":0,"watches_1":-1,"beard_1":0,"eyebrows_4":0,"face":0,"chest_2":0,"age_2":0,"blemishes_1":0,"chain_1":0,"sun_1":0,"bproof_1":0,"hair_color_1":0,"chain_2":0}', '{}'),
+	(36, 'vccustoms', 2, 'experimente', 'Experimente', '{"decals_2":0,"beard_3":0,"hair_color_2":1,"shoes_2":0,"moles_2":0,"makeup_3":0,"chest_3":0,"bags_2":0,"helmet_1":-1,"eyebrows_1":0,"lipstick_1":0,"makeup_2":0,"mask_1":0,"watches_2":0,"lipstick_3":0,"bracelets_1":-1,"makeup_4":0,"bodyb_1":0,"arms":17,"shoes_1":24,"age_1":0,"arms_2":0,"bags_1":0,"chest_1":0,"complexion_1":0,"bproof_2":0,"eyebrows_3":0,"eye_color":0,"lipstick_4":0,"glasses_1":0,"bracelets_2":0,"sex":0,"torso_2":23,"beard_2":0,"blush_2":0,"torso_1":251,"bodyb_2":0,"blemishes_2":0,"mask_2":0,"beard_4":0,"sun_2":0,"hair_2":0,"tshirt_1":89,"skin":4,"ears_1":-1,"ears_2":0,"decals_1":0,"eyebrows_2":0,"moles_1":0,"lipstick_2":0,"hair_1":0,"blush_1":0,"makeup_1":0,"helmet_2":0,"shoes":9,"blush_3":0,"pants_1":98,"complexion_2":0,"tshirt_2":0,"pants_2":17,"glasses_2":0,"watches_1":-1,"beard_1":0,"eyebrows_4":0,"face":0,"chest_2":0,"age_2":0,"blemishes_1":0,"chain_1":0,"sun_1":0,"bproof_1":0,"hair_color_1":0,"chain_2":0}', '{}'),
+	(37, 'vccustoms', 3, 'chief', "Chef d'équipe", '{"decals_2":0,"beard_3":0,"hair_color_2":1,"shoes_2":0,"moles_2":0,"makeup_3":0,"chest_3":0,"bags_2":0,"helmet_1":-1,"eyebrows_1":0,"lipstick_1":0,"makeup_2":0,"mask_1":0,"watches_2":0,"lipstick_3":0,"bracelets_1":-1,"makeup_4":0,"bodyb_1":0,"arms":17,"shoes_1":24,"age_1":0,"arms_2":0,"bags_1":0,"chest_1":0,"complexion_1":0,"bproof_2":0,"eyebrows_3":0,"eye_color":0,"lipstick_4":0,"glasses_1":0,"bracelets_2":0,"sex":0,"torso_2":23,"beard_2":0,"blush_2":0,"torso_1":251,"bodyb_2":0,"blemishes_2":0,"mask_2":0,"beard_4":0,"sun_2":0,"hair_2":0,"tshirt_1":89,"skin":4,"ears_1":-1,"ears_2":0,"decals_1":0,"eyebrows_2":0,"moles_1":0,"lipstick_2":0,"hair_1":0,"blush_1":0,"makeup_1":0,"helmet_2":0,"shoes":9,"blush_3":0,"pants_1":98,"complexion_2":0,"tshirt_2":0,"pants_2":17,"glasses_2":0,"watches_1":-1,"beard_1":0,"eyebrows_4":0,"face":0,"chest_2":0,"age_2":0,"blemishes_1":0,"chain_1":0,"sun_1":0,"bproof_1":0,"hair_color_1":0,"chain_2":0}', '{}'),
+	(38, 'vccustoms', 4, 'boss', 'Patron', '{"decals_2":0,"beard_3":0,"hair_color_2":1,"shoes_2":0,"moles_2":0,"makeup_3":0,"chest_3":0,"bags_2":0,"helmet_1":-1,"eyebrows_1":0,"lipstick_1":0,"makeup_2":0,"mask_1":0,"watches_2":0,"lipstick_3":0,"bracelets_1":-1,"makeup_4":0,"bodyb_1":0,"arms":17,"shoes_1":24,"age_1":0,"arms_2":0,"bags_1":0,"chest_1":0,"complexion_1":0,"bproof_2":0,"eyebrows_3":0,"eye_color":0,"lipstick_4":0,"glasses_1":0,"bracelets_2":0,"sex":0,"torso_2":23,"beard_2":0,"blush_2":0,"torso_1":251,"bodyb_2":0,"blemishes_2":0,"mask_2":0,"beard_4":0,"sun_2":0,"hair_2":0,"tshirt_1":89,"skin":4,"ears_1":-1,"ears_2":0,"decals_1":0,"eyebrows_2":0,"moles_1":0,"lipstick_2":0,"hair_1":0,"blush_1":0,"makeup_1":0,"helmet_2":0,"shoes":9,"blush_3":0,"pants_1":98,"complexion_2":0,"tshirt_2":0,"pants_2":17,"glasses_2":0,"watches_1":-1,"beard_1":0,"eyebrows_4":0,"face":0,"chest_2":0,"age_2":0,"blemishes_1":0,"chain_1":0,"sun_1":0,"bproof_1":0,"hair_color_1":0,"chain_2":0}', '{}'),
+	(54, 'weedshop', 1, 'recrue', 'Recrue', 'null', 'null'),
+	(55, 'weedshop', 2, 'experimenter', 'Experimenter', 'null', 'null'),
+	(56, 'weedshop', 3, 'boss', 'Patron', 'null', 'null'),
+	(61, 'label', 0, 'recrue', 'Musiciens label', '{}', '{}'),
+	(62, 'label', 1, 'gerant', 'Employés label', '{}', '{}'),
+	(63, 'label', 2, 'boss', 'PDG label', '{}', '{}'),
+	(109, 'weazelnews', 0, 'stagiaire', 'Stagiaire', '{}', '{}'),
+	(110, 'weazelnews', 1, 'journaliste', 'Journaliste', '{}', '{}'),
+	(111, 'weazelnews', 2, 'drh', 'Rédacteur en chef', '{}', '{}'),
+	(112, 'weazelnews', 3, 'boss', 'Président', '{}', '{}'),
+	(113, 'delivery', 0, 'recrue', 'Recrue', '{}', '{}'),
+	(114, 'delivery', 1, 'employee', 'Employé', '{}', '{}'),
+	(115, 'delivery', 2, 'livreur', 'Livreur', '{}', '{}'),
+	(116, 'delivery', 3, 'boss', 'Patron', '{}', '{}'),
+	(117, 'frontpage', 0, 'recrue', 'Recrue', '{}', '{}'),
+	(118, 'frontpage', 1, 'employe', 'Employé', '{}', '{}'),
+	(119, 'frontpage', 2, 'barista', 'Barista', '{}', '{}'),
+	(120, 'frontpage', 3, 'boss', 'Patron', '{}', '{}'),
+	(121, 'pizza', 0, 'apprenti', 'Apprenti', '{}', '{}'),
+	(122, 'pizza', 1, 'experimente', 'Experimenté', '{}', '{}'),
+	(123, 'pizza', 2, 'pizzaiolo', 'Pizzaiolo', '{}', '{}'),
+	(124, 'pizza', 3, 'boss', 'Patron', '{}', '{}'),
+	(125, 'vcpd', 1, 'rookie', 'Rookie', '{}', '{}'),
+	(126, 'vcpd', 2, 'officerI', 'Officer I', '{}', '{}'),
+	(127, 'vcpd', 3, 'officerII', 'Officer II', '{}', '{}'),
+	(128, 'vcpd', 4, 'officerIII', 'Officer III', '{}', '{}'),
+	(129, 'vcpd', 5, 'senior_lead_officer', 'Senior Lead Officer', '{}', '{}'),
+	(130, 'vcpd', 6, 'detectiveI', 'Detective I', '{}', '{}'),
+	(131, 'vcpd', 7, 'detectiveII', 'Detective II', '{}', '{}'),
+	(132, 'vcpd', 8, 'sergeantI', 'Sergent I', '{}', '{}'),
+	(133, 'vcpd', 9, 'sergeantII', 'Sergent II', '{}', '{}'),
+	(134, 'vcpd', 10, 'lieutenant', 'Lieutenant', '{}', '{}'),
+	(135, 'vcpd', 11, 'captain', 'Captain', '{}', '{}'),
+	(136, 'vcpd', 12, 'boss', 'Commander', '{}', '{}'),
+	(137, 'boatshop', 1, 'vendeur', 'Vendeur', '{}', '{}'),
+	(138, 'boatshop', 2, 'boss', 'Patron ', '{}', '{}'),
+	(139, 'bikeshop', 1, 'vendeur', 'Vendeur', '{}', '{}'),
+	(140, 'bikeshop', 2, 'boss', 'Patron ', '{}', '{}'),
+	(603, 'greasychopper', 1, 'DJ', 'DJ', '{}', '{}'),
+	(604, 'greasychopper', 2, 'sucurity_agent', 'Agent de sécurité', '{}', '{}'),
+	(605, 'greasychopper', 3, 'barman', 'Barman', '{}', '{}'),
+	(606, 'greasychopper', 4, 'Co_gerant', 'Co gérant', '{}', '{}'),
+	(607, 'greasychopper', 5, 'boss', 'Patronne', '{}', '{}'),
+	(608, 'oceanview', 1, 'barman', 'Barman', '{}', '{}'),
+	(609, 'oceanview', 2, 'chef-barman', 'Chef Barman', '{}', '{}'),
+	(610, 'oceanview', 3, 'manager', 'Manager', '{}', '{}'),
+	(611, 'oceanview', 4, 'co_patron', 'Co-Patron', '{}', '{}'),
+	(612, 'oceanview', 5, 'boss', 'Patron', '{}', '{}'),
+	(613, 'blackdisciples', 0, 'rookie', 'Associé', '{}', '{}'),
+	(614, 'blackdisciples', 1, 'member', 'Soldat', '{}', '{}'),
+	(615, 'blackdisciples', 2, 'elite', 'Elite', '{}', '{}'),
+	(616, 'blackdisciples', 3, 'lieutenant', 'Lieutenant', '{}', '{}'),
+	(617, 'blackdisciples', 4, 'viceboss', 'Bras Droit', '{}', '{}'),
+	(618, 'blackdisciples', 5, 'boss', 'Patron', '{}', '{}'),
+	(625, 'vicelord', 0, 'rookie', 'Associé', '{}', '{}'),
+	(626, 'vicelord', 1, 'member', 'Soldat', '{}', '{}'),
+	(627, 'vicelord', 2, 'elite', 'Elite', '{}', '{}'),
+	(628, 'vicelord', 3, 'lieutenant', 'Lieutenant', '{}', '{}'),
+	(629, 'vicelord', 4, 'viceboss', 'Bras Droit', '{}', '{}'),
+	(630, 'vicelord', 5, 'boss', 'Patron', '{}', '{}'),
+	(631, 'vance', 0, 'rookie', 'Associé', '{}', '{}'),
+	(632, 'vance', 1, 'member', 'Soldat', '{}', '{}'),
+	(633, 'vance', 2, 'elite', 'Elite', '{}', '{}'),
+	(634, 'vance', 3, 'lieutenant', 'Lieutenant', '{}', '{}'),
+	(635, 'vance', 4, 'viceboss', 'Bras Droit', '{}', '{}'),
+	(636, 'vance', 5, 'boss', 'Patron', '{}', '{}'),
+	(637, 'cabrones', 0, 'rookie', 'Associé', '{}', '{}'),
+	(638, 'cabrones', 1, 'member', 'Soldat', '{}', '{}'),
+	(639, 'cabrones', 2, 'elite', 'Elite', '{}', '{}'),
+	(640, 'cabrones', 3, 'lieutenant', 'Lieutenant', '{}', '{}'),
+	(641, 'cabrones', 4, 'viceboss', 'Bras Droit', '{}', '{}'),
+	(642, 'cabrones', 5, 'boss', 'Patron', '{}', '{}'),
+	(643, 'diaz', 0, 'rookie', 'Associé', '{}', '{}'),
+	(644, 'diaz', 1, 'member', 'Soldat', '{}', '{}'),
+	(645, 'diaz', 2, 'elite', 'Elite', '{}', '{}'),
+	(646, 'diaz', 3, 'lieutenant', 'Lieutenant', '{}', '{}'),
+	(647, 'diaz', 4, 'viceboss', 'Bras Droit', '{}', '{}'),
+	(648, 'diaz', 5, 'boss', 'Patron', '{}', '{}'),
+	(649, 'bd', 0, 'rookie', 'Associé', '{}', '{}'),
+	(650, 'bd', 1, 'member', 'Soldat', '{}', '{}'),
+	(651, 'bd', 2, 'elite', 'Elite', '{}', '{}'),
+	(652, 'bd', 3, 'lieutenant', 'Lieutenant', '{}', '{}'),
+	(653, 'bd', 4, 'viceboss', 'Bras Droit', '{}', '{}'),
+	(654, 'bd', 5, 'boss', 'Patron', '{}', '{}'),
+	(655, 'chollos', 0, 'rookie', 'Associé', '{}', '{}'),
+	(656, 'chollos', 1, 'member', 'Soldat', '{}', '{}'),
+	(657, 'chollos', 2, 'elite', 'Elite', '{}', '{}'),
+	(658, 'chollos', 3, 'lieutenant', 'Lieutenant', '{}', '{}'),
+	(659, 'chollos', 4, 'viceboss', 'Bras Droit', '{}', '{}'),
+	(660, 'chollos', 5, 'boss', 'Patron', '{}', '{}'),
+	(661, 'haitiens', 0, 'rookie', 'Associé', '{}', '{}'),
+	(662, 'haitiens', 1, 'member', 'Soldat', '{}', '{}'),
+	(663, 'haitiens', 2, 'elite', 'Elite', '{}', '{}'),
+	(664, 'haitiens', 3, 'lieutenant', 'Lieutenant', '{}', '{}'),
+	(665, 'haitiens', 4, 'viceboss', 'Bras Droit', '{}', '{}'),
+	(666, 'haitiens', 5, 'boss', 'Patron', '{}', '{}'),
+	(673, 'vicecitybikers', 0, 'rookie', 'Associé', '{}', '{}'),
+	(674, 'vicecitybikers', 1, 'member', 'Soldat', '{}', '{}'),
+	(675, 'vicecitybikers', 2, 'elite', 'Elite', '{}', '{}'),
+	(676, 'vicecitybikers', 3, 'lieutenant', 'Lieutenant', '{}', '{}'),
+	(677, 'vicecitybikers', 4, 'viceboss', 'Bras Droit', '{}', '{}'),
+	(678, 'vicecitybikers', 5, 'boss', 'Patron', '{}', '{}'),
+	(679, 'jamaican', 0, 'rookie', 'Associé', '{}', '{}'),
+	(680, 'jamaican', 1, 'member', 'Soldat', '{}', '{}'),
+	(681, 'jamaican', 2, 'elite', 'Elite', '{}', '{}'),
+	(682, 'jamaican', 3, 'lieutenant', 'Lieutenant', '{}', '{}'),
+	(683, 'jamaican', 4, 'viceboss', 'Bras Droit', '{}', '{}'),
+	(684, 'jamaican', 5, 'boss', 'Patron', '{}', '{}'),
+	(685, 'oceanhill', 0, 'rookie', 'Associé', '{}', '{}'),
+	(686, 'oceanhill', 1, 'member', 'Soldat', '{}', '{}'),
+	(687, 'oceanhill', 2, 'elite', 'Elite', '{}', '{}'),
+	(688, 'oceanhill', 3, 'lieutenant', 'Lieutenant', '{}', '{}'),
+	(689, 'oceanhill', 4, 'viceboss', 'Bras Droit', '{}', '{}'),
+	(690, 'oceanhill', 5, 'boss', 'Patron', '{}', '{}'),
+	(691, 'cribs', 0, 'rookie', 'Associé', '{}', '{}'),
+	(692, 'cribs', 1, 'member', 'Soldat', '{}', '{}'),
+	(693, 'cribs', 2, 'elite', 'Elite', '{}', '{}'),
+	(694, 'cribs', 3, 'lieutenant', 'Lieutenant', '{}', '{}'),
+	(695, 'cribs', 4, 'viceboss', 'Bras Droit', '{}', '{}'),
+	(696, 'cribs', 5, 'boss', 'Patron', '{}', '{}'),
+	(697, 'icecream', 1, 'novice', 'Novice', '{}', '{}'),
+	(698, 'icecream', 2, 'experimente', 'Expérimenté', '{}', '{}'),
+	(699, 'icecream', 3, 'boss', 'Patron', '{}', '{}'),
+	(700, 'robina', 1, 'novice', 'Novice', '{}', '{}'),
+	(701, 'robina', 2, 'experimente', 'Expérimenté', '{}', '{}'),
+	(702, 'robina', 3, 'boss', 'Patron', '{}', '{}'),
+	(703, 'mob', 0, 'rookie', 'Associé', '{}', '{}'),
+	(704, 'mob', 1, 'member', 'Soldat', '{}', '{}'),
+	(705, 'mob', 2, 'elite', 'Elite', '{}', '{}'),
+	(706, 'mob', 3, 'lieutenant', 'Lieutenant', '{}', '{}'),
+	(707, 'mob', 4, 'viceboss', 'Bras Droit', '{}', '{}'),
+	(708, 'mob', 5, 'boss', 'Patron', '{}', '{}'),
+	(709, 'msb', 0, 'rookie', 'Associé', '{}', '{}'),
+	(710, 'msb', 1, 'member', 'Soldat', '{}', '{}'),
+	(711, 'msb', 2, 'elite', 'Elite', '{}', '{}'),
+	(712, 'msb', 3, 'lieutenant', 'Lieutenant', '{}', '{}'),
+	(713, 'msb', 4, 'viceboss', 'Bras Droit', '{}', '{}'),
+	(714, 'msb', 5, 'boss', 'Patron', '{}', '{}'),
+	(715, 'vicelord', 0, 'rookie', 'Associé', '{}', '{}'),
+	(716, 'vicelord', 1, 'member', 'Soldat', '{}', '{}'),
+	(717, 'vicelord', 2, 'elite', 'Elite', '{}', '{}'),
+	(718, 'vicelord', 3, 'lieutenant', 'Lieutenant', '{}', '{}'),
+	(719, 'vicelord', 4, 'viceboss', 'Bras Droit', '{}', '{}'),
+	(720, 'vicelord', 5, 'boss', 'Patron', '{}', '{}');
 
-INSERT INTO `job_grades` (`id`, `job_name`, `grade`, `name`, `label`, `skin_male`, `skin_female`) VALUES
-(1, 'unemployed', 0, 'unemployed', 'Pole emploi', '{}', '{}'),
-(2, 'AgentImmo', 0, 'location', 'Location', '{}', '{}'),
-(3, 'AgentImmo', 1, 'vendeur', 'Vendeur', '{}', '{}'),
-(4, 'AgentImmo', 2, 'gestion', 'Gestion', '{}', '{}'),
-(5, 'AgentImmo', 3, 'boss', 'Patron', '{}', '{}'),
-(6, 'ambulance', 0, 'ambulance', 'Ambulancier', '{\"age_2\":0,\"beard_1\":0,\"bags_2\":0,\"bproof_1\":0,\"eyebrows_4\":0,\"eyebrows_3\":0,\"mask_2\":0,\"hair_color_1\":0,\"blemishes_2\":0,\"sun_1\":0,\"lipstick_1\":0,\"arms\":85,\"ears_2\":0,\"sex\":0,\"bproof_2\":0,\"eyebrows_2\":0,\"glasses_1\":0,\"tshirt_1\":19,\"glasses_2\":0,\"complexion_2\":0,\"mask_1\":0,\"makeup_1\":0,\"chest_1\":0,\"pants_1\":96,\"chain_2\":0,\"eyebrows_1\":0,\"bodyb_1\":0,\"blush_1\":0,\"shoes_1\":8,\"chain_1\":30,\"complexion_1\":0,\"lipstick_4\":0,\"decals_2\":0,\"age_1\":0,\"helmet_2\":1,\"blush_2\":0,\"moles_2\":0,\"blush_3\":0,\"lipstick_3\":0,\"sun_2\":0,\"beard_3\":0,\"face\":0,\"blemishes_1\":0,\"hair_color_2\":0,\"torso_1\":250,\"hair_1\":0,\"bodyb_2\":0,\"arms_2\":0,\"beard_4\":0,\"lipstick_2\":0,\"bracelets_1\":-1,\"hair_2\":0,\"makeup_3\":0,\"tshirt_2\":0,\"chest_2\":0,\"helmet_1\":122,\"bracelets_2\":0,\"makeup_2\":0,\"eye_color\":0,\"decals_1\":0,\"bags_1\":0,\"skin\":0,\"ears_1\":-1,\"makeup_4\":0,\"watches_2\":0,\"chest_3\":0,\"beard_2\":0,\"moles_1\":0,\"torso_2\":1,\"pants_2\":1,\"shoes_2\":0,\"watches_1\":-1}', '{\"age_2\":0,\"beard_1\":0,\"bags_2\":0,\"bproof_1\":0,\"eyebrows_4\":0,\"eyebrows_3\":0,\"mask_2\":0,\"hair_color_1\":0,\"blemishes_2\":0,\"sun_1\":0,\"lipstick_1\":0,\"arms\":85,\"ears_2\":0,\"sex\":0,\"bproof_2\":0,\"eyebrows_2\":0,\"glasses_1\":0,\"tshirt_1\":19,\"glasses_2\":0,\"complexion_2\":0,\"mask_1\":0,\"makeup_1\":0,\"chest_1\":0,\"pants_1\":96,\"chain_2\":0,\"eyebrows_1\":0,\"bodyb_1\":0,\"blush_1\":0,\"shoes_1\":8,\"chain_1\":30,\"complexion_1\":0,\"lipstick_4\":0,\"decals_2\":0,\"age_1\":0,\"helmet_2\":1,\"blush_2\":0,\"moles_2\":0,\"blush_3\":0,\"lipstick_3\":0,\"sun_2\":0,\"beard_3\":0,\"face\":0,\"blemishes_1\":0,\"hair_color_2\":0,\"torso_1\":250,\"hair_1\":0,\"bodyb_2\":0,\"arms_2\":0,\"beard_4\":0,\"lipstick_2\":0,\"bracelets_1\":-1,\"hair_2\":0,\"makeup_3\":0,\"tshirt_2\":0,\"chest_2\":0,\"helmet_1\":122,\"bracelets_2\":0,\"makeup_2\":0,\"eye_color\":0,\"decals_1\":0,\"bags_1\":0,\"skin\":0,\"ears_1\":-1,\"makeup_4\":0,\"watches_2\":0,\"chest_3\":0,\"beard_2\":0,\"moles_1\":0,\"torso_2\":1,\"pants_2\":1,\"shoes_2\":0,\"watches_1\":-1}'),
-(7, 'ambulance', 1, 'doctor', 'Medecin', '{\"age_2\":0,\"beard_1\":0,\"bags_2\":0,\"bproof_1\":0,\"eyebrows_4\":0,\"eyebrows_3\":0,\"mask_2\":0,\"hair_color_1\":0,\"blemishes_2\":0,\"sun_1\":0,\"lipstick_1\":0,\"arms\":85,\"ears_2\":0,\"sex\":0,\"bproof_2\":0,\"eyebrows_2\":0,\"glasses_1\":0,\"tshirt_1\":19,\"glasses_2\":0,\"complexion_2\":0,\"mask_1\":0,\"makeup_1\":0,\"chest_1\":0,\"pants_1\":96,\"chain_2\":0,\"eyebrows_1\":0,\"bodyb_1\":0,\"blush_1\":0,\"shoes_1\":8,\"chain_1\":30,\"complexion_1\":0,\"lipstick_4\":0,\"decals_2\":0,\"age_1\":0,\"helmet_2\":1,\"blush_2\":0,\"moles_2\":0,\"blush_3\":0,\"lipstick_3\":0,\"sun_2\":0,\"beard_3\":0,\"face\":0,\"blemishes_1\":0,\"hair_color_2\":0,\"torso_1\":250,\"hair_1\":0,\"bodyb_2\":0,\"arms_2\":0,\"beard_4\":0,\"lipstick_2\":0,\"bracelets_1\":-1,\"hair_2\":0,\"makeup_3\":0,\"tshirt_2\":0,\"chest_2\":0,\"helmet_1\":122,\"bracelets_2\":0,\"makeup_2\":0,\"eye_color\":0,\"decals_1\":0,\"bags_1\":0,\"skin\":0,\"ears_1\":-1,\"makeup_4\":0,\"watches_2\":0,\"chest_3\":0,\"beard_2\":0,\"moles_1\":0,\"torso_2\":1,\"pants_2\":1,\"shoes_2\":0,\"watches_1\":-1}', '{\"age_2\":0,\"beard_1\":0,\"bags_2\":0,\"bproof_1\":0,\"eyebrows_4\":0,\"eyebrows_3\":0,\"mask_2\":0,\"hair_color_1\":0,\"blemishes_2\":0,\"sun_1\":0,\"lipstick_1\":0,\"arms\":85,\"ears_2\":0,\"sex\":0,\"bproof_2\":0,\"eyebrows_2\":0,\"glasses_1\":0,\"tshirt_1\":19,\"glasses_2\":0,\"complexion_2\":0,\"mask_1\":0,\"makeup_1\":0,\"chest_1\":0,\"pants_1\":96,\"chain_2\":0,\"eyebrows_1\":0,\"bodyb_1\":0,\"blush_1\":0,\"shoes_1\":8,\"chain_1\":30,\"complexion_1\":0,\"lipstick_4\":0,\"decals_2\":0,\"age_1\":0,\"helmet_2\":1,\"blush_2\":0,\"moles_2\":0,\"blush_3\":0,\"lipstick_3\":0,\"sun_2\":0,\"beard_3\":0,\"face\":0,\"blemishes_1\":0,\"hair_color_2\":0,\"torso_1\":250,\"hair_1\":0,\"bodyb_2\":0,\"arms_2\":0,\"beard_4\":0,\"lipstick_2\":0,\"bracelets_1\":-1,\"hair_2\":0,\"makeup_3\":0,\"tshirt_2\":0,\"chest_2\":0,\"helmet_1\":122,\"bracelets_2\":0,\"makeup_2\":0,\"eye_color\":0,\"decals_1\":0,\"bags_1\":0,\"skin\":0,\"ears_1\":-1,\"makeup_4\":0,\"watches_2\":0,\"chest_3\":0,\"beard_2\":0,\"moles_1\":0,\"torso_2\":1,\"pants_2\":1,\"shoes_2\":0,\"watches_1\":-1}'),
-(8, 'ambulance', 2, 'chief_doctor', 'Medecin-chef', '{\"age_2\":0,\"beard_1\":0,\"bags_2\":0,\"bproof_1\":0,\"eyebrows_4\":0,\"eyebrows_3\":0,\"mask_2\":0,\"hair_color_1\":0,\"blemishes_2\":0,\"sun_1\":0,\"lipstick_1\":0,\"arms\":85,\"ears_2\":0,\"sex\":0,\"bproof_2\":0,\"eyebrows_2\":0,\"glasses_1\":0,\"tshirt_1\":19,\"glasses_2\":0,\"complexion_2\":0,\"mask_1\":0,\"makeup_1\":0,\"chest_1\":0,\"pants_1\":96,\"chain_2\":0,\"eyebrows_1\":0,\"bodyb_1\":0,\"blush_1\":0,\"shoes_1\":8,\"chain_1\":30,\"complexion_1\":0,\"lipstick_4\":0,\"decals_2\":0,\"age_1\":0,\"helmet_2\":1,\"blush_2\":0,\"moles_2\":0,\"blush_3\":0,\"lipstick_3\":0,\"sun_2\":0,\"beard_3\":0,\"face\":0,\"blemishes_1\":0,\"hair_color_2\":0,\"torso_1\":250,\"hair_1\":0,\"bodyb_2\":0,\"arms_2\":0,\"beard_4\":0,\"lipstick_2\":0,\"bracelets_1\":-1,\"hair_2\":0,\"makeup_3\":0,\"tshirt_2\":0,\"chest_2\":0,\"helmet_1\":122,\"bracelets_2\":0,\"makeup_2\":0,\"eye_color\":0,\"decals_1\":0,\"bags_1\":0,\"skin\":0,\"ears_1\":-1,\"makeup_4\":0,\"watches_2\":0,\"chest_3\":0,\"beard_2\":0,\"moles_1\":0,\"torso_2\":1,\"pants_2\":1,\"shoes_2\":0,\"watches_1\":-1}', '{\"age_2\":0,\"beard_1\":0,\"bags_2\":0,\"bproof_1\":0,\"eyebrows_4\":0,\"eyebrows_3\":0,\"mask_2\":0,\"hair_color_1\":0,\"blemishes_2\":0,\"sun_1\":0,\"lipstick_1\":0,\"arms\":85,\"ears_2\":0,\"sex\":0,\"bproof_2\":0,\"eyebrows_2\":0,\"glasses_1\":0,\"tshirt_1\":19,\"glasses_2\":0,\"complexion_2\":0,\"mask_1\":0,\"makeup_1\":0,\"chest_1\":0,\"pants_1\":96,\"chain_2\":0,\"eyebrows_1\":0,\"bodyb_1\":0,\"blush_1\":0,\"shoes_1\":8,\"chain_1\":30,\"complexion_1\":0,\"lipstick_4\":0,\"decals_2\":0,\"age_1\":0,\"helmet_2\":1,\"blush_2\":0,\"moles_2\":0,\"blush_3\":0,\"lipstick_3\":0,\"sun_2\":0,\"beard_3\":0,\"face\":0,\"blemishes_1\":0,\"hair_color_2\":0,\"torso_1\":250,\"hair_1\":0,\"bodyb_2\":0,\"arms_2\":0,\"beard_4\":0,\"lipstick_2\":0,\"bracelets_1\":-1,\"hair_2\":0,\"makeup_3\":0,\"tshirt_2\":0,\"chest_2\":0,\"helmet_1\":122,\"bracelets_2\":0,\"makeup_2\":0,\"eye_color\":0,\"decals_1\":0,\"bags_1\":0,\"skin\":0,\"ears_1\":-1,\"makeup_4\":0,\"watches_2\":0,\"chest_3\":0,\"beard_2\":0,\"moles_1\":0,\"torso_2\":1,\"pants_2\":1,\"shoes_2\":0,\"watches_1\":-1}'),
-(9, 'ambulance', 3, 'boss', 'Patron EMS', '{\"age_2\":0,\"beard_1\":0,\"bags_2\":0,\"bproof_1\":0,\"eyebrows_4\":0,\"eyebrows_3\":0,\"mask_2\":0,\"hair_color_1\":0,\"blemishes_2\":0,\"sun_1\":0,\"lipstick_1\":0,\"arms\":85,\"ears_2\":0,\"sex\":0,\"bproof_2\":0,\"eyebrows_2\":0,\"glasses_1\":0,\"tshirt_1\":19,\"glasses_2\":0,\"complexion_2\":0,\"mask_1\":0,\"makeup_1\":0,\"chest_1\":0,\"pants_1\":96,\"chain_2\":0,\"eyebrows_1\":0,\"bodyb_1\":0,\"blush_1\":0,\"shoes_1\":8,\"chain_1\":30,\"complexion_1\":0,\"lipstick_4\":0,\"decals_2\":0,\"age_1\":0,\"helmet_2\":1,\"blush_2\":0,\"moles_2\":0,\"blush_3\":0,\"lipstick_3\":0,\"sun_2\":0,\"beard_3\":0,\"face\":0,\"blemishes_1\":0,\"hair_color_2\":0,\"torso_1\":250,\"hair_1\":0,\"bodyb_2\":0,\"arms_2\":0,\"beard_4\":0,\"lipstick_2\":0,\"bracelets_1\":-1,\"hair_2\":0,\"makeup_3\":0,\"tshirt_2\":0,\"chest_2\":0,\"helmet_1\":122,\"bracelets_2\":0,\"makeup_2\":0,\"eye_color\":0,\"decals_1\":0,\"bags_1\":0,\"skin\":0,\"ears_1\":-1,\"makeup_4\":0,\"watches_2\":0,\"chest_3\":0,\"beard_2\":0,\"moles_1\":0,\"torso_2\":1,\"pants_2\":1,\"shoes_2\":0,\"watches_1\":-1}', '{\"age_2\":0,\"beard_1\":0,\"bags_2\":0,\"bproof_1\":0,\"eyebrows_4\":0,\"eyebrows_3\":0,\"mask_2\":0,\"hair_color_1\":0,\"blemishes_2\":0,\"sun_1\":0,\"lipstick_1\":0,\"arms\":85,\"ears_2\":0,\"sex\":0,\"bproof_2\":0,\"eyebrows_2\":0,\"glasses_1\":0,\"tshirt_1\":19,\"glasses_2\":0,\"complexion_2\":0,\"mask_1\":0,\"makeup_1\":0,\"chest_1\":0,\"pants_1\":96,\"chain_2\":0,\"eyebrows_1\":0,\"bodyb_1\":0,\"blush_1\":0,\"shoes_1\":8,\"chain_1\":30,\"complexion_1\":0,\"lipstick_4\":0,\"decals_2\":0,\"age_1\":0,\"helmet_2\":1,\"blush_2\":0,\"moles_2\":0,\"blush_3\":0,\"lipstick_3\":0,\"sun_2\":0,\"beard_3\":0,\"face\":0,\"blemishes_1\":0,\"hair_color_2\":0,\"torso_1\":250,\"hair_1\":0,\"bodyb_2\":0,\"arms_2\":0,\"beard_4\":0,\"lipstick_2\":0,\"bracelets_1\":-1,\"hair_2\":0,\"makeup_3\":0,\"tshirt_2\":0,\"chest_2\":0,\"helmet_1\":122,\"bracelets_2\":0,\"makeup_2\":0,\"eye_color\":0,\"decals_1\":0,\"bags_1\":0,\"skin\":0,\"ears_1\":-1,\"makeup_4\":0,\"watches_2\":0,\"chest_3\":0,\"beard_2\":0,\"moles_1\":0,\"torso_2\":1,\"pants_2\":1,\"shoes_2\":0,\"watches_1\":-1}'),
-(10, 'gouv', 0, 'secretary', 'Secrétaire', '{}', '{}'),
-(11, 'gouv', 1, 'security', 'Garde du corps', '{}', '{}'),
-(12, 'gouv', 2, 'boss', 'Gouverneur', '{}', '{}'),
-(13, 'lumberjack', 0, 'employee', 'Intérimaire', '{\"age_1\":0,\"glasses_2\":0,\"beard_1\":5,\"decals_2\":0,\"beard_4\":0,\"shoes_2\":0,\"tshirt_2\":0,\"lipstick_2\":0,\"hair_2\":0,\"arms\":70,\"pants_1\":36,\"skin\":29,\"eyebrows_2\":0,\"shoes\":10,\"helmet_1\":-1,\"lipstick_1\":0,\"helmet_2\":0,\"hair_color_1\":0,\"glasses\":0,\"makeup_4\":0,\"makeup_1\":0,\"hair_1\":2,\"bproof_1\":0,\"bags_1\":0,\"mask_1\":0,\"lipstick_3\":0,\"chain_1\":0,\"eyebrows_4\":0,\"sex\":0,\"torso_1\":43,\"beard_2\":6,\"shoes_1\":12,\"decals_1\":0,\"face\":19,\"lipstick_4\":0,\"tshirt_1\":15,\"mask_2\":0,\"age_2\":0,\"eyebrows_3\":0,\"chain_2\":0,\"glasses_1\":0,\"ears_1\":-1,\"bags_2\":0,\"ears_2\":0,\"torso_2\":0,\"bproof_2\":0,\"makeup_2\":0,\"eyebrows_1\":0,\"makeup_3\":0,\"pants_2\":0,\"beard_3\":0,\"hair_color_2\":4}', '{\"age_1\":0,\"glasses_2\":0,\"beard_1\":5,\"decals_2\":0,\"beard_4\":0,\"shoes_2\":0,\"tshirt_2\":0,\"lipstick_2\":0,\"hair_2\":0,\"arms\":67,\"pants_1\":36,\"skin\":29,\"eyebrows_2\":0,\"shoes\":10,\"helmet_1\":-1,\"lipstick_1\":0,\"helmet_2\":0,\"hair_color_1\":0,\"glasses\":0,\"makeup_4\":0,\"makeup_1\":0,\"hair_1\":2,\"bproof_1\":0,\"bags_1\":0,\"mask_1\":0,\"lipstick_3\":0,\"chain_1\":0,\"eyebrows_4\":0,\"sex\":0,\"torso_1\":56,\"beard_2\":6,\"shoes_1\":12,\"decals_1\":0,\"face\":19,\"lipstick_4\":0,\"tshirt_1\":15,\"mask_2\":0,\"age_2\":0,\"eyebrows_3\":0,\"chain_2\":0,\"glasses_1\":0,\"ears_1\":-1,\"bags_2\":0,\"ears_2\":0,\"torso_2\":0,\"bproof_2\":0,\"makeup_2\":0,\"eyebrows_1\":0,\"makeup_3\":0,\"pants_2\":0,\"beard_3\":0,\"hair_color_2\":4}'),
-(14, 'miner', 0, 'employee', 'Intérimaire', '{\"tshirt_2\":1,\"ears_1\":8,\"glasses_1\":15,\"torso_2\":0,\"ears_2\":2,\"glasses_2\":3,\"shoes_2\":1,\"pants_1\":75,\"shoes_1\":51,\"bags_1\":0,\"helmet_2\":0,\"pants_2\":7,\"torso_1\":71,\"tshirt_1\":59,\"arms\":2,\"bags_2\":0,\"helmet_1\":0}', '{}'),
-(15, 'tabac', 0, 'recrue', 'Tabagiste', '{}', '{}'),
-(16, 'tabac', 1, 'gerant', 'Gérant', '{}', '{}'),
-(17, 'tabac', 2, 'boss', 'Patron', '{}', '{}'),
-(18, 'taxi', 0, 'recrue', 'Recrue', '{\"decals_1\":0,\"hair_2\":0,\"eyebrows_2\":0,\"lipstick_2\":0,\"eyebrows_4\":0,\"face\":0,\"blemishes_1\":0,\"ears_1\":-1,\"hair_1\":0,\"hair_color_2\":1,\"shoes_1\":3,\"blush_1\":0,\"bproof_2\":0,\"sex\":0,\"shoes\":9,\"complexion_1\":0,\"bracelets_1\":-1,\"eye_color\":0,\"age_2\":0,\"bproof_1\":0,\"beard_2\":0,\"chest_1\":0,\"makeup_2\":0,\"eyebrows_1\":0,\"torso_1\":3,\"watches_1\":-1,\"pants_2\":5,\"helmet_1\":-1,\"decals_2\":0,\"chest_3\":0,\"sun_1\":0,\"moles_2\":0,\"bags_1\":0,\"lipstick_4\":0,\"blush_2\":0,\"shoes_2\":0,\"bodyb_2\":0,\"watches_2\":0,\"makeup_3\":0,\"sun_2\":0,\"glasses_1\":0,\"bodyb_1\":0,\"chest_2\":0,\"bracelets_2\":0,\"complexion_2\":0,\"moles_1\":0,\"makeup_1\":0,\"makeup_4\":0,\"ears_2\":0,\"chain_1\":0,\"pants_1\":24,\"blush_3\":0,\"chain_2\":0,\"arms_2\":0,\"torso_2\":0,\"beard_3\":0,\"lipstick_1\":0,\"beard_4\":0,\"arms\":17,\"eyebrows_3\":0,\"glasses_2\":0,\"tshirt_1\":12,\"blemishes_2\":0,\"bags_2\":0,\"hair_color_1\":0,\"beard_1\":0,\"tshirt_2\":0,\"mask_1\":0,\"lipstick_3\":0,\"helmet_2\":0,\"mask_2\":0,\"age_1\":0,\"skin\":4}', '{\"hair_2\":0,\"hair_color_2\":0,\"torso_1\":57,\"bags_1\":0,\"helmet_2\":0,\"chain_2\":0,\"eyebrows_3\":0,\"makeup_3\":0,\"makeup_2\":0,\"tshirt_1\":38,\"makeup_1\":0,\"bags_2\":0,\"makeup_4\":0,\"eyebrows_4\":0,\"chain_1\":0,\"lipstick_4\":0,\"bproof_2\":0,\"hair_color_1\":0,\"decals_2\":0,\"pants_2\":1,\"age_2\":0,\"glasses_2\":0,\"ears_2\":0,\"arms\":21,\"lipstick_1\":0,\"ears_1\":-1,\"mask_2\":0,\"sex\":1,\"lipstick_3\":0,\"helmet_1\":-1,\"shoes_2\":0,\"beard_2\":0,\"beard_1\":0,\"lipstick_2\":0,\"beard_4\":0,\"glasses_1\":5,\"bproof_1\":0,\"mask_1\":0,\"decals_1\":1,\"hair_1\":0,\"eyebrows_2\":0,\"beard_3\":0,\"age_1\":0,\"tshirt_2\":0,\"skin\":0,\"torso_2\":0,\"eyebrows_1\":0,\"face\":0,\"shoes_1\":49,\"pants_1\":11}'),
-(19, 'taxi', 1, 'novice', 'Novice', '{\"decals_1\":0,\"hair_2\":0,\"eyebrows_2\":0,\"lipstick_2\":0,\"eyebrows_4\":0,\"face\":0,\"blemishes_1\":0,\"ears_1\":-1,\"hair_1\":0,\"hair_color_2\":1,\"shoes_1\":3,\"blush_1\":0,\"bproof_2\":0,\"sex\":0,\"shoes\":9,\"complexion_1\":0,\"bracelets_1\":-1,\"eye_color\":0,\"age_2\":0,\"bproof_1\":0,\"beard_2\":0,\"chest_1\":0,\"makeup_2\":0,\"eyebrows_1\":0,\"torso_1\":3,\"watches_1\":-1,\"pants_2\":5,\"helmet_1\":-1,\"decals_2\":0,\"chest_3\":0,\"sun_1\":0,\"moles_2\":0,\"bags_1\":0,\"lipstick_4\":0,\"blush_2\":0,\"shoes_2\":0,\"bodyb_2\":0,\"watches_2\":0,\"makeup_3\":0,\"sun_2\":0,\"glasses_1\":0,\"bodyb_1\":0,\"chest_2\":0,\"bracelets_2\":0,\"complexion_2\":0,\"moles_1\":0,\"makeup_1\":0,\"makeup_4\":0,\"ears_2\":0,\"chain_1\":0,\"pants_1\":24,\"blush_3\":0,\"chain_2\":0,\"arms_2\":0,\"torso_2\":0,\"beard_3\":0,\"lipstick_1\":0,\"beard_4\":0,\"arms\":17,\"eyebrows_3\":0,\"glasses_2\":0,\"tshirt_1\":12,\"blemishes_2\":0,\"bags_2\":0,\"hair_color_1\":0,\"beard_1\":0,\"tshirt_2\":0,\"mask_1\":0,\"lipstick_3\":0,\"helmet_2\":0,\"mask_2\":0,\"age_1\":0,\"skin\":4}', '{\"hair_2\":0,\"hair_color_2\":0,\"torso_1\":57,\"bags_1\":0,\"helmet_2\":0,\"chain_2\":0,\"eyebrows_3\":0,\"makeup_3\":0,\"makeup_2\":0,\"tshirt_1\":38,\"makeup_1\":0,\"bags_2\":0,\"makeup_4\":0,\"eyebrows_4\":0,\"chain_1\":0,\"lipstick_4\":0,\"bproof_2\":0,\"hair_color_1\":0,\"decals_2\":0,\"pants_2\":1,\"age_2\":0,\"glasses_2\":0,\"ears_2\":0,\"arms\":21,\"lipstick_1\":0,\"ears_1\":-1,\"mask_2\":0,\"sex\":1,\"lipstick_3\":0,\"helmet_1\":-1,\"shoes_2\":0,\"beard_2\":0,\"beard_1\":0,\"lipstick_2\":0,\"beard_4\":0,\"glasses_1\":5,\"bproof_1\":0,\"mask_1\":0,\"decals_1\":1,\"hair_1\":0,\"eyebrows_2\":0,\"beard_3\":0,\"age_1\":0,\"tshirt_2\":0,\"skin\":0,\"torso_2\":0,\"eyebrows_1\":0,\"face\":0,\"shoes_1\":49,\"pants_1\":11}'),
-(20, 'taxi', 2, 'experimente', 'Experimente', '{\"decals_1\":0,\"hair_2\":0,\"eyebrows_2\":0,\"lipstick_2\":0,\"eyebrows_4\":0,\"face\":0,\"blemishes_1\":0,\"ears_1\":-1,\"hair_1\":0,\"hair_color_2\":1,\"shoes_1\":3,\"blush_1\":0,\"bproof_2\":0,\"sex\":0,\"shoes\":9,\"complexion_1\":0,\"bracelets_1\":-1,\"eye_color\":0,\"age_2\":0,\"bproof_1\":0,\"beard_2\":0,\"chest_1\":0,\"makeup_2\":0,\"eyebrows_1\":0,\"torso_1\":3,\"watches_1\":-1,\"pants_2\":5,\"helmet_1\":-1,\"decals_2\":0,\"chest_3\":0,\"sun_1\":0,\"moles_2\":0,\"bags_1\":0,\"lipstick_4\":0,\"blush_2\":0,\"shoes_2\":0,\"bodyb_2\":0,\"watches_2\":0,\"makeup_3\":0,\"sun_2\":0,\"glasses_1\":0,\"bodyb_1\":0,\"chest_2\":0,\"bracelets_2\":0,\"complexion_2\":0,\"moles_1\":0,\"makeup_1\":0,\"makeup_4\":0,\"ears_2\":0,\"chain_1\":0,\"pants_1\":24,\"blush_3\":0,\"chain_2\":0,\"arms_2\":0,\"torso_2\":0,\"beard_3\":0,\"lipstick_1\":0,\"beard_4\":0,\"arms\":17,\"eyebrows_3\":0,\"glasses_2\":0,\"tshirt_1\":12,\"blemishes_2\":0,\"bags_2\":0,\"hair_color_1\":0,\"beard_1\":0,\"tshirt_2\":0,\"mask_1\":0,\"lipstick_3\":0,\"helmet_2\":0,\"mask_2\":0,\"age_1\":0,\"skin\":4}', '{\"hair_2\":0,\"hair_color_2\":0,\"torso_1\":57,\"bags_1\":0,\"helmet_2\":0,\"chain_2\":0,\"eyebrows_3\":0,\"makeup_3\":0,\"makeup_2\":0,\"tshirt_1\":38,\"makeup_1\":0,\"bags_2\":0,\"makeup_4\":0,\"eyebrows_4\":0,\"chain_1\":0,\"lipstick_4\":0,\"bproof_2\":0,\"hair_color_1\":0,\"decals_2\":0,\"pants_2\":1,\"age_2\":0,\"glasses_2\":0,\"ears_2\":0,\"arms\":21,\"lipstick_1\":0,\"ears_1\":-1,\"mask_2\":0,\"sex\":1,\"lipstick_3\":0,\"helmet_1\":-1,\"shoes_2\":0,\"beard_2\":0,\"beard_1\":0,\"lipstick_2\":0,\"beard_4\":0,\"glasses_1\":5,\"bproof_1\":0,\"mask_1\":0,\"decals_1\":1,\"hair_1\":0,\"eyebrows_2\":0,\"beard_3\":0,\"age_1\":0,\"tshirt_2\":0,\"skin\":0,\"torso_2\":0,\"eyebrows_1\":0,\"face\":0,\"shoes_1\":49,\"pants_1\":11}'),
-(21, 'taxi', 3, 'uber', 'Uber', '{\"decals_1\":0,\"hair_2\":0,\"eyebrows_2\":0,\"lipstick_2\":0,\"eyebrows_4\":0,\"face\":0,\"blemishes_1\":0,\"ears_1\":-1,\"hair_1\":0,\"hair_color_2\":1,\"shoes_1\":3,\"blush_1\":0,\"bproof_2\":0,\"sex\":0,\"shoes\":9,\"complexion_1\":0,\"bracelets_1\":-1,\"eye_color\":0,\"age_2\":0,\"bproof_1\":0,\"beard_2\":0,\"chest_1\":0,\"makeup_2\":0,\"eyebrows_1\":0,\"torso_1\":3,\"watches_1\":-1,\"pants_2\":5,\"helmet_1\":-1,\"decals_2\":0,\"chest_3\":0,\"sun_1\":0,\"moles_2\":0,\"bags_1\":0,\"lipstick_4\":0,\"blush_2\":0,\"shoes_2\":0,\"bodyb_2\":0,\"watches_2\":0,\"makeup_3\":0,\"sun_2\":0,\"glasses_1\":0,\"bodyb_1\":0,\"chest_2\":0,\"bracelets_2\":0,\"complexion_2\":0,\"moles_1\":0,\"makeup_1\":0,\"makeup_4\":0,\"ears_2\":0,\"chain_1\":0,\"pants_1\":24,\"blush_3\":0,\"chain_2\":0,\"arms_2\":0,\"torso_2\":0,\"beard_3\":0,\"lipstick_1\":0,\"beard_4\":0,\"arms\":17,\"eyebrows_3\":0,\"glasses_2\":0,\"tshirt_1\":12,\"blemishes_2\":0,\"bags_2\":0,\"hair_color_1\":0,\"beard_1\":0,\"tshirt_2\":0,\"mask_1\":0,\"lipstick_3\":0,\"helmet_2\":0,\"mask_2\":0,\"age_1\":0,\"skin\":4}', '{\"hair_2\":0,\"hair_color_2\":0,\"torso_1\":57,\"bags_1\":0,\"helmet_2\":0,\"chain_2\":0,\"eyebrows_3\":0,\"makeup_3\":0,\"makeup_2\":0,\"tshirt_1\":38,\"makeup_1\":0,\"bags_2\":0,\"makeup_4\":0,\"eyebrows_4\":0,\"chain_1\":0,\"lipstick_4\":0,\"bproof_2\":0,\"hair_color_1\":0,\"decals_2\":0,\"pants_2\":1,\"age_2\":0,\"glasses_2\":0,\"ears_2\":0,\"arms\":21,\"lipstick_1\":0,\"ears_1\":-1,\"mask_2\":0,\"sex\":1,\"lipstick_3\":0,\"helmet_1\":-1,\"shoes_2\":0,\"beard_2\":0,\"beard_1\":0,\"lipstick_2\":0,\"beard_4\":0,\"glasses_1\":5,\"bproof_1\":0,\"mask_1\":0,\"decals_1\":1,\"hair_1\":0,\"eyebrows_2\":0,\"beard_3\":0,\"age_1\":0,\"tshirt_2\":0,\"skin\":0,\"torso_2\":0,\"eyebrows_1\":0,\"face\":0,\"shoes_1\":49,\"pants_1\":11}'),
-(22, 'taxi', 4, 'boss', 'Patron', '{\"decals_1\":0,\"hair_2\":0,\"eyebrows_2\":0,\"lipstick_2\":0,\"eyebrows_4\":0,\"face\":0,\"blemishes_1\":0,\"ears_1\":-1,\"hair_1\":0,\"hair_color_2\":1,\"shoes_1\":3,\"blush_1\":0,\"bproof_2\":0,\"sex\":0,\"shoes\":9,\"complexion_1\":0,\"bracelets_1\":-1,\"eye_color\":0,\"age_2\":0,\"bproof_1\":0,\"beard_2\":0,\"chest_1\":0,\"makeup_2\":0,\"eyebrows_1\":0,\"torso_1\":3,\"watches_1\":-1,\"pants_2\":5,\"helmet_1\":-1,\"decals_2\":0,\"chest_3\":0,\"sun_1\":0,\"moles_2\":0,\"bags_1\":0,\"lipstick_4\":0,\"blush_2\":0,\"shoes_2\":0,\"bodyb_2\":0,\"watches_2\":0,\"makeup_3\":0,\"sun_2\":0,\"glasses_1\":0,\"bodyb_1\":0,\"chest_2\":0,\"bracelets_2\":0,\"complexion_2\":0,\"moles_1\":0,\"makeup_1\":0,\"makeup_4\":0,\"ears_2\":0,\"chain_1\":0,\"pants_1\":24,\"blush_3\":0,\"chain_2\":0,\"arms_2\":0,\"torso_2\":0,\"beard_3\":0,\"lipstick_1\":0,\"beard_4\":0,\"arms\":17,\"eyebrows_3\":0,\"glasses_2\":0,\"tshirt_1\":12,\"blemishes_2\":0,\"bags_2\":0,\"hair_color_1\":0,\"beard_1\":0,\"tshirt_2\":0,\"mask_1\":0,\"lipstick_3\":0,\"helmet_2\":0,\"mask_2\":0,\"age_1\":0,\"skin\":4}', '{\"hair_2\":0,\"hair_color_2\":0,\"torso_1\":57,\"bags_1\":0,\"helmet_2\":0,\"chain_2\":0,\"eyebrows_3\":0,\"makeup_3\":0,\"makeup_2\":0,\"tshirt_1\":38,\"makeup_1\":0,\"bags_2\":0,\"makeup_4\":0,\"eyebrows_4\":0,\"chain_1\":0,\"lipstick_4\":0,\"bproof_2\":0,\"hair_color_1\":0,\"decals_2\":0,\"pants_2\":1,\"age_2\":0,\"glasses_2\":0,\"ears_2\":0,\"arms\":21,\"lipstick_1\":0,\"ears_1\":-1,\"mask_2\":0,\"sex\":1,\"lipstick_3\":0,\"helmet_1\":-1,\"shoes_2\":0,\"beard_2\":0,\"beard_1\":0,\"lipstick_2\":0,\"beard_4\":0,\"glasses_1\":5,\"bproof_1\":0,\"mask_1\":0,\"decals_1\":1,\"hair_1\":0,\"eyebrows_2\":0,\"beard_3\":0,\"age_1\":0,\"tshirt_2\":0,\"skin\":0,\"torso_2\":0,\"eyebrows_1\":0,\"face\":0,\"shoes_1\":49,\"pants_1\":11}'),
-(23, 'cardealer', 0, 'recruit', 'Recrue', '{}', '{}'),
-(24, 'cardealer', 1, 'novice', 'Novice', '{}', '{}'),
-(25, 'cardealer', 2, 'experienced', 'Experimente', '{}', '{}'),
-(26, 'cardealer', 3, 'boss', 'Patron', '{}', '{}'),
-(65, 'unicorn', 0, 'barman', 'Barman', '{}', '{}'),
-(66, 'unicorn', 1, 'dancer', 'Danseur', '{}', '{}'),
-(67, 'unicorn', 2, 'viceboss', 'Co-gérant', '{}', '{}'),
-(68, 'unicorn', 3, 'boss', 'Gérant', '{}', '{}'),
-(69, 'avocat', 0, 'recruit', 'Recrue', '{\"tshirt_1\":57,\"torso_1\":55,\"arms\":0,\"pants_1\":35,\"glasses\":0,\"decals_2\":0,\"hair_color_2\":0,\"helmet_2\":0,\"hair_color_1\":5,\"face\":19,\"glasses_2\":1,\"torso_2\":0,\"shoes\":24,\"hair_1\":2,\"skin\":34,\"sex\":0,\"glasses_1\":0,\"pants_2\":0,\"hair_2\":0,\"decals_1\":0,\"tshirt_2\":0,\"helmet_1\":8}', '{\"tshirt_1\":34,\"torso_1\":48,\"shoes\":24,\"pants_1\":34,\"torso_2\":0,\"decals_2\":0,\"hair_color_2\":0,\"glasses\":0,\"helmet_2\":0,\"hair_2\":3,\"face\":21,\"decals_1\":0,\"glasses_2\":1,\"hair_1\":11,\"skin\":34,\"sex\":1,\"glasses_1\":5,\"pants_2\":0,\"arms\":14,\"hair_color_1\":10,\"tshirt_2\":0,\"helmet_1\":57}'),
-(70, 'avocat', 1, 'boss', 'Patron', '{\"tshirt_1\":58,\"torso_1\":55,\"shoes\":24,\"pants_1\":35,\"pants_2\":0,\"decals_2\":3,\"hair_color_2\":0,\"face\":19,\"helmet_2\":0,\"hair_2\":0,\"arms\":41,\"torso_2\":0,\"hair_color_1\":5,\"hair_1\":2,\"skin\":34,\"sex\":0,\"glasses_1\":0,\"glasses_2\":1,\"decals_1\":8,\"glasses\":0,\"tshirt_2\":0,\"helmet_1\":11}', '{\"tshirt_1\":35,\"torso_1\":48,\"arms\":44,\"pants_1\":34,\"pants_2\":0,\"decals_2\":3,\"hair_color_2\":0,\"face\":21,\"helmet_2\":0,\"hair_2\":3,\"decals_1\":7,\"torso_2\":0,\"hair_color_1\":10,\"hair_1\":11,\"skin\":34,\"sex\":1,\"glasses_1\":5,\"glasses_2\":1,\"shoes\":24,\"glasses\":0,\"tshirt_2\":0,\"helmet_1\":57}'),
-(256, 'unemployed2', 0, 'rsa', 'Civil', '{}', '{}'),
-(281, 'mechanic', 0, 'recrue', 'Recrue', '{\"decals_2\":0,\"beard_3\":0,\"hair_color_2\":1,\"shoes_2\":0,\"moles_2\":0,\"makeup_3\":0,\"chest_3\":0,\"bags_2\":0,\"helmet_1\":-1,\"eyebrows_1\":0,\"lipstick_1\":0,\"makeup_2\":0,\"mask_1\":0,\"watches_2\":0,\"lipstick_3\":0,\"bracelets_1\":-1,\"makeup_4\":0,\"bodyb_1\":0,\"arms\":17,\"shoes_1\":24,\"age_1\":0,\"arms_2\":0,\"bags_1\":0,\"chest_1\":0,\"complexion_1\":0,\"bproof_2\":0,\"eyebrows_3\":0,\"eye_color\":0,\"lipstick_4\":0,\"glasses_1\":0,\"bracelets_2\":0,\"sex\":0,\"torso_2\":23,\"beard_2\":0,\"blush_2\":0,\"torso_1\":251,\"bodyb_2\":0,\"blemishes_2\":0,\"mask_2\":0,\"beard_4\":0,\"sun_2\":0,\"hair_2\":0,\"tshirt_1\":89,\"skin\":4,\"ears_1\":-1,\"ears_2\":0,\"decals_1\":0,\"eyebrows_2\":0,\"moles_1\":0,\"lipstick_2\":0,\"hair_1\":0,\"blush_1\":0,\"makeup_1\":0,\"helmet_2\":0,\"shoes\":9,\"blush_3\":0,\"pants_1\":98,\"complexion_2\":0,\"tshirt_2\":0,\"pants_2\":17,\"glasses_2\":0,\"watches_1\":-1,\"beard_1\":0,\"eyebrows_4\":0,\"face\":0,\"chest_2\":0,\"age_2\":0,\"blemishes_1\":0,\"chain_1\":0,\"sun_1\":0,\"bproof_1\":0,\"hair_color_1\":0,\"chain_2\":0}', '{}'),
-(282, 'mechanic', 1, 'novice', 'Novice', '{\"decals_2\":0,\"beard_3\":0,\"hair_color_2\":1,\"shoes_2\":0,\"moles_2\":0,\"makeup_3\":0,\"chest_3\":0,\"bags_2\":0,\"helmet_1\":-1,\"eyebrows_1\":0,\"lipstick_1\":0,\"makeup_2\":0,\"mask_1\":0,\"watches_2\":0,\"lipstick_3\":0,\"bracelets_1\":-1,\"makeup_4\":0,\"bodyb_1\":0,\"arms\":17,\"shoes_1\":24,\"age_1\":0,\"arms_2\":0,\"bags_1\":0,\"chest_1\":0,\"complexion_1\":0,\"bproof_2\":0,\"eyebrows_3\":0,\"eye_color\":0,\"lipstick_4\":0,\"glasses_1\":0,\"bracelets_2\":0,\"sex\":0,\"torso_2\":23,\"beard_2\":0,\"blush_2\":0,\"torso_1\":251,\"bodyb_2\":0,\"blemishes_2\":0,\"mask_2\":0,\"beard_4\":0,\"sun_2\":0,\"hair_2\":0,\"tshirt_1\":89,\"skin\":4,\"ears_1\":-1,\"ears_2\":0,\"decals_1\":0,\"eyebrows_2\":0,\"moles_1\":0,\"lipstick_2\":0,\"hair_1\":0,\"blush_1\":0,\"makeup_1\":0,\"helmet_2\":0,\"shoes\":9,\"blush_3\":0,\"pants_1\":98,\"complexion_2\":0,\"tshirt_2\":0,\"pants_2\":17,\"glasses_2\":0,\"watches_1\":-1,\"beard_1\":0,\"eyebrows_4\":0,\"face\":0,\"chest_2\":0,\"age_2\":0,\"blemishes_1\":0,\"chain_1\":0,\"sun_1\":0,\"bproof_1\":0,\"hair_color_1\":0,\"chain_2\":0}', '{}'),
-(283, 'mechanic', 2, 'experimente', 'Experimente', '{\"decals_2\":0,\"beard_3\":0,\"hair_color_2\":1,\"shoes_2\":0,\"moles_2\":0,\"makeup_3\":0,\"chest_3\":0,\"bags_2\":0,\"helmet_1\":-1,\"eyebrows_1\":0,\"lipstick_1\":0,\"makeup_2\":0,\"mask_1\":0,\"watches_2\":0,\"lipstick_3\":0,\"bracelets_1\":-1,\"makeup_4\":0,\"bodyb_1\":0,\"arms\":17,\"shoes_1\":24,\"age_1\":0,\"arms_2\":0,\"bags_1\":0,\"chest_1\":0,\"complexion_1\":0,\"bproof_2\":0,\"eyebrows_3\":0,\"eye_color\":0,\"lipstick_4\":0,\"glasses_1\":0,\"bracelets_2\":0,\"sex\":0,\"torso_2\":23,\"beard_2\":0,\"blush_2\":0,\"torso_1\":251,\"bodyb_2\":0,\"blemishes_2\":0,\"mask_2\":0,\"beard_4\":0,\"sun_2\":0,\"hair_2\":0,\"tshirt_1\":89,\"skin\":4,\"ears_1\":-1,\"ears_2\":0,\"decals_1\":0,\"eyebrows_2\":0,\"moles_1\":0,\"lipstick_2\":0,\"hair_1\":0,\"blush_1\":0,\"makeup_1\":0,\"helmet_2\":0,\"shoes\":9,\"blush_3\":0,\"pants_1\":98,\"complexion_2\":0,\"tshirt_2\":0,\"pants_2\":17,\"glasses_2\":0,\"watches_1\":-1,\"beard_1\":0,\"eyebrows_4\":0,\"face\":0,\"chest_2\":0,\"age_2\":0,\"blemishes_1\":0,\"chain_1\":0,\"sun_1\":0,\"bproof_1\":0,\"hair_color_1\":0,\"chain_2\":0}', '{}'),
-(284, 'mechanic', 3, 'chief', 'Chef d\'équipe', '{\"decals_2\":0,\"beard_3\":0,\"hair_color_2\":1,\"shoes_2\":0,\"moles_2\":0,\"makeup_3\":0,\"chest_3\":0,\"bags_2\":0,\"helmet_1\":-1,\"eyebrows_1\":0,\"lipstick_1\":0,\"makeup_2\":0,\"mask_1\":0,\"watches_2\":0,\"lipstick_3\":0,\"bracelets_1\":-1,\"makeup_4\":0,\"bodyb_1\":0,\"arms\":17,\"shoes_1\":24,\"age_1\":0,\"arms_2\":0,\"bags_1\":0,\"chest_1\":0,\"complexion_1\":0,\"bproof_2\":0,\"eyebrows_3\":0,\"eye_color\":0,\"lipstick_4\":0,\"glasses_1\":0,\"bracelets_2\":0,\"sex\":0,\"torso_2\":23,\"beard_2\":0,\"blush_2\":0,\"torso_1\":251,\"bodyb_2\":0,\"blemishes_2\":0,\"mask_2\":0,\"beard_4\":0,\"sun_2\":0,\"hair_2\":0,\"tshirt_1\":89,\"skin\":4,\"ears_1\":-1,\"ears_2\":0,\"decals_1\":0,\"eyebrows_2\":0,\"moles_1\":0,\"lipstick_2\":0,\"hair_1\":0,\"blush_1\":0,\"makeup_1\":0,\"helmet_2\":0,\"shoes\":9,\"blush_3\":0,\"pants_1\":98,\"complexion_2\":0,\"tshirt_2\":0,\"pants_2\":17,\"glasses_2\":0,\"watches_1\":-1,\"beard_1\":0,\"eyebrows_4\":0,\"face\":0,\"chest_2\":0,\"age_2\":0,\"blemishes_1\":0,\"chain_1\":0,\"sun_1\":0,\"bproof_1\":0,\"hair_color_1\":0,\"chain_2\":0}', '{}'),
-(285, 'mechanic', 4, 'boss', 'Patron', '{\"decals_2\":0,\"beard_3\":0,\"hair_color_2\":1,\"shoes_2\":0,\"moles_2\":0,\"makeup_3\":0,\"chest_3\":0,\"bags_2\":0,\"helmet_1\":-1,\"eyebrows_1\":0,\"lipstick_1\":0,\"makeup_2\":0,\"mask_1\":0,\"watches_2\":0,\"lipstick_3\":0,\"bracelets_1\":-1,\"makeup_4\":0,\"bodyb_1\":0,\"arms\":17,\"shoes_1\":24,\"age_1\":0,\"arms_2\":0,\"bags_1\":0,\"chest_1\":0,\"complexion_1\":0,\"bproof_2\":0,\"eyebrows_3\":0,\"eye_color\":0,\"lipstick_4\":0,\"glasses_1\":0,\"bracelets_2\":0,\"sex\":0,\"torso_2\":23,\"beard_2\":0,\"blush_2\":0,\"torso_1\":251,\"bodyb_2\":0,\"blemishes_2\":0,\"mask_2\":0,\"beard_4\":0,\"sun_2\":0,\"hair_2\":0,\"tshirt_1\":89,\"skin\":4,\"ears_1\":-1,\"ears_2\":0,\"decals_1\":0,\"eyebrows_2\":0,\"moles_1\":0,\"lipstick_2\":0,\"hair_1\":0,\"blush_1\":0,\"makeup_1\":0,\"helmet_2\":0,\"shoes\":9,\"blush_3\":0,\"pants_1\":98,\"complexion_2\":0,\"tshirt_2\":0,\"pants_2\":17,\"glasses_2\":0,\"watches_1\":-1,\"beard_1\":0,\"eyebrows_4\":0,\"face\":0,\"chest_2\":0,\"age_2\":0,\"blemishes_1\":0,\"chain_1\":0,\"sun_1\":0,\"bproof_1\":0,\"hair_color_1\":0,\"chain_2\":0}', '{}'),
-(485, 'police', 0, 'recruit', 'Recrue', '{}', '{}'),
-(486, 'police', 1, 'recruit', 'Cadet', '{}', '{}'),
-(487, 'police', 2, 'officer', 'Officier', '{}', '{}'),
-(488, 'police', 3, 'sergent', 'Sergent', '{}', '{}'),
-(489, 'police', 4, 'lieutenant', 'Lieutenant', '{}', '{}'),
-(490, 'police', 5, 'capitaine', 'Capitaine', '{}', '{}'),
-(491, 'police', 6, 'boss', 'Commandant', '{}', '{}'),
-(539, 'bahamas', 0, 'barman', 'Agent d\'accueil', '{}', '{}'),
-(540, 'bahamas', 1, 'dancer', 'Barman / Danseur', '{}', '{}'),
-(541, 'bahamas', 2, 'viceboss', 'Manager', '{}', '{}'),
-(542, 'bahamas', 3, 'boss', 'Gérant', '{}', '{}'),
-(543, 'yellow', 0, 'barman', 'Barman', '{}', '{}'),
-(544, 'yellow', 1, 'dancer', 'Danseur', '{}', '{}'),
-(545, 'yellow', 2, 'viceboss', 'Co-gérant', '{}', '{}'),
-(546, 'yellow', 3, 'boss', 'Gérant', '{}', '{}'),
-(547, 'weedshop', 0, 'recrue', 'recrue', 'null', 'null'),
-(549, 'weedshop', 1, 'experimenter', 'experimenter', 'null', 'null'),
-(550, 'weedshop', 2, 'boss', 'Chef', 'null', 'null'),
-(557, 'vigneron', 0, 'recrue', 'Intérimaire', '{\"tshirt_1\":59,\"tshirt_2\":0,\"torso_1\":12,\"torso_2\":5,\"shoes_1\":7,\"shoes_2\":2,\"pants_1\":9, \"pants_2\":7, \"arms\":1, \"helmet_1\":11, \"helmet_2\":0,\"bags_1\":0,\"bags_2\":0,\"ears_1\":0,\"glasses_1\":0,\"ears_2\":0,\"glasses_2\":0}', '{\"tshirt_1\":0,\"tshirt_2\":0,\"torso_1\":56,\"torso_2\":0,\"shoes_1\":27,\"shoes_2\":0,\"pants_1\":36, \"pants_2\":0, \"arms\":63, \"helmet_1\":11, \"helmet_2\":0,\"bags_1\":0,\"bags_2\":0,\"ears_1\":0,\"glasses_1\":0,\"ears_2\":0,\"glasses_2\":0}'),
-(558, 'vigneron', 1, 'novice', 'vigneron', '{\"tshirt_1\":57,\"tshirt_2\":0,\"torso_1\":13,\"torso_2\":5,\"shoes_1\":7,\"shoes_2\":2,\"pants_1\":9, \"pants_2\":7, \"arms\":11, \"helmet_1\":11, \"helmet_2\":0,\"bags_1\":0,\"bags_2\":0,\"ears_1\":0,\"glasses_1\":0,\"ears_2\":0,\"glasses_2\":0}', '{\"tshirt_1\":0,\"tshirt_2\":0,\"torso_1\":56,\"torso_2\":0,\"shoes_1\":27,\"shoes_2\":0,\"pants_1\":36, \"pants_2\":0, \"arms\":63, \"helmet_1\":11, \"helmet_2\":0,\"bags_1\":0,\"bags_2\":0,\"ears_1\":0,\"glasses_1\":0,\"ears_2\":0,\"glasses_2\":0}'),
-(559, 'vigneron', 2, 'cdisenior', 'Chef de chai', '{\"tshirt_1\":57,\"tshirt_2\":0,\"torso_1\":13,\"torso_2\":5,\"shoes_1\":7,\"shoes_2\":2,\"pants_1\":9, \"pants_2\":7, \"arms\":11, \"helmet_1\":11, \"helmet_2\":0,\"bags_1\":0,\"bags_2\":0,\"ears_1\":0,\"glasses_1\":0,\"ears_2\":0,\"glasses_2\":0}', '{\"tshirt_1\":0,\"tshirt_2\":0,\"torso_1\":56,\"torso_2\":0,\"shoes_1\":27,\"shoes_2\":0,\"pants_1\":36, \"pants_2\":0, \"arms\":63, \"helmet_1\":11, \"helmet_2\":0,\"bags_1\":0,\"bags_2\":0,\"ears_1\":0,\"glasses_1\":0,\"ears_2\":0,\"glasses_2\":0}'),
-(560, 'vigneron', 3, 'boss', 'Patron', '{\"tshirt_1\":57,\"tshirt_2\":0,\"torso_1\":13,\"torso_2\":5,\"shoes_1\":7,\"shoes_2\":2,\"pants_1\":9, \"pants_2\":7, \"arms\":11, \"helmet_1\":11, \"helmet_2\":0,\"bags_1\":0,\"bags_2\":0,\"ears_1\":0,\"glasses_1\":0,\"ears_2\":0,\"glasses_2\":0}', '{\"tshirt_1\":15,\"tshirt_2\":0,\"torso_1\":14,\"torso_2\":15,\"shoes_1\":12,\"shoes_2\":0,\"pants_1\":9, \"pants_2\":5, \"arms\":1, \"helmet_1\":11, \"helmet_2\":0,\"bags_1\":0,\"bags_2\":0,\"ears_1\":0,\"glasses_1\":0,\"ears_2\":0,\"glasses_2\":0}'),
-(565, 'label', 0, 'recrue', 'Musiciens label', '{}', '{}'),
-(566, 'label', 1, 'gerant', 'Employés label', '{}', '{}'),
-(567, 'label', 2, 'boss', 'PDG label', '{}', '{}'),
-(597, 'NorthMecano', 0, 'recrue', 'Recrue', '{}', '{}'),
-(598, 'NorthMecano', 1, 'novice', 'Novice', '{}', '{}'),
-(599, 'NorthMecano', 2, 'experimente', 'Experimente', '{}', '{}'),
-(600, 'NorthMecano', 3, 'chief', 'Chef d\'équipe', '{}', '{}'),
-(601, 'NorthMecano', 4, 'boss', 'Patron', '{}', '{}'),
-(608, 'bcso', 0, 'Junior', 'Junior', '{}', '{}'),
-(609, 'bcso', 1, 'Major', 'Major', '{}', '{}'),
-(610, 'bcso', 2, 'SheriffAdjoint', 'Sheriff Adjoint', '{}', '{}'),
-(611, 'bcso', 3, 'boss', 'Sheriff', '{}', '{}'),
-(613, 'Abatteur', 0, 'Abatteur', 'Abatteur', '{}', '{}'),
-(614, 'Abatteur', 1, 'boss', 'Patron', '{}', '{}');
 
--- --------------------------------------------------------
-
---
--- Structure de la table `leboncoin`
---
-
-CREATE TABLE `leboncoin` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `craigslist` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `license` varchar(80) NOT NULL,
   `name` text NOT NULL,
   `description` varchar(150) NOT NULL,
   `model` text NOT NULL,
   `price` int(10) NOT NULL,
   `createdAt` text NOT NULL,
-  `plate` varchar(15) NOT NULL
+  `plate` varchar(15) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
-
---
--- Structure de la table `licenses`
---
-
-CREATE TABLE `licenses` (
-  `type` varchar(60) COLLATE utf8mb4_bin NOT NULL,
-  `label` varchar(60) COLLATE utf8mb4_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
-
---
--- Contenu de la table `licenses`
---
-
-INSERT INTO `licenses` (`type`, `label`) VALUES
-('dmv', 'Code de la route'),
-('drive', 'Permis de conduire'),
-('drive_bike', 'Permis moto'),
-('drive_truck', 'Permis camion'),
-('weapon', 'Permis de port d\'arme');
-
--- --------------------------------------------------------
-
---
--- Structure de la table `lottery`
---
-
-CREATE TABLE `lottery` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `lottery` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `expireDate` int(11) NOT NULL DEFAULT '0',
   `totalMoney` int(11) NOT NULL DEFAULT '5000',
-  `participationCount` int(11) NOT NULL DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `participationCount` int(11) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
---
--- Contenu de la table `lottery`
---
+INSERT INTO `lottery` (`id`,`expireDate`,`totalMoney`,`participationCount`) VALUES
+	(1, 1662664723, 5000, 1);
 
-INSERT INTO `lottery` (`id`, `expireDate`, `totalMoney`, `participationCount`) VALUES
-(1, 1638004633, 159000, 4);
+CREATE TABLE IF NOT EXISTS `orgWear` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `orgName` varchar(55) NOT NULL,
+  `orgWearName` varchar(55) NOT NULL,
+  `orgClothes` longtext NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
+INSERT INTO `orgWear` (`id`,`orgName`,`orgWearName`,`orgClothes`) VALUES
+	(2, 'vicelord', '84 lakers', '{"hair_1":85,"bags_2":0,"chain_2":0,"cheeks_3":0.0,"helmet_1":14,"ears_1":-1,"arms":1,"beard_2":10.0,"lipstick_3":0,"skin_md_weight":100,"chin_width":0.0,"hair_color_2":1,"eyebrows_5":0.0,"age_1":0,"bodyb_2":0,"sun_2":0,"nose_2":0.0,"nose_3":0.0,"skin":0,"blush_3":0,"chin_hole":0.0,"bproof_1":0,"decals_1":0,"mask_1":0,"makeup_4":0,"tshirt_1":15,"eyebrows_6":0.0,"lipstick_1":0,"eyebrows_1":12,"bracelets_1":-1,"shoes_2":6,"bodyb_1":0,"arms_2":0,"jaw_1":0.0,"hair_color_1":61,"blemishes_1":0,"makeup_3":0,"mom":2,"bags_1":0,"torso_2":1,"chest_1":0,"cheeks_1":0.0,"lips_thick":0.0,"cheeks_2":0.0,"jaw_2":0.0,"chest_2":0,"eye_color":2,"moles_1":0,"decals_2":0,"age_2":0,"sun_1":0,"bracelets_2":0,"eye_open":0.0,"makeup_1":0,"helmet_2":1,"chin_lenght":0.0,"beard_3":0,"sex":0,"nose_1":0.0,"chain_1":0,"eyebrows_3":0,"moles_2":0,"watches_1":-1,"lipstick_4":0,"neck_thick":0.0,"face_md_weight":100,"shoes_1":8,"nose_4":0.0,"complexion_2":0,"tshirt_2":0,"blemishes_2":0,"makeup_2":0,"blush_1":0,"lipstick_2":0,"glasses_2":0,"bproof_2":0,"beard_1":14,"eyebrows_4":0,"beard_4":0,"nose_6":0.0,"glasses_1":22,"watches_2":0,"mask_2":0,"pants_2":0,"chest_3":0,"nose_5":0.0,"hair_2":0,"chin_height":0.0,"pants_1":19,"face":0,"complexion_1":0,"dad":2,"blush_2":0,"torso_1":19,"ears_2":0,"eyebrows_2":10.0}'),
+	(3, 'vicelord', 'chemise noir', '{"hair_1":85,"bags_2":0,"chain_2":0,"cheeks_3":0.0,"helmet_1":14,"ears_1":-1,"arms":8,"beard_2":10.0,"lipstick_3":0,"skin_md_weight":100,"chin_width":0.0,"hair_color_2":1,"eyebrows_5":0.0,"age_1":0,"bodyb_2":0,"sun_2":0,"nose_2":0.0,"nose_3":0.0,"skin":0,"blush_3":0,"chin_hole":0.0,"bproof_1":0,"decals_1":0,"mask_1":0,"makeup_4":0,"tshirt_1":0,"eyebrows_6":0.0,"lipstick_1":0,"eyebrows_1":12,"bracelets_1":-1,"shoes_2":6,"bodyb_1":0,"arms_2":0,"jaw_1":0.0,"hair_color_1":61,"blemishes_1":0,"makeup_3":0,"mom":2,"bags_1":0,"torso_2":4,"chest_1":0,"cheeks_1":0.0,"lips_thick":0.0,"cheeks_2":0.0,"jaw_2":0.0,"chest_2":0,"eye_color":2,"moles_1":0,"decals_2":0,"age_2":0,"sun_1":0,"bracelets_2":0,"eye_open":0.0,"makeup_1":0,"helmet_2":1,"chin_lenght":0.0,"beard_3":0,"sex":0,"nose_1":0.0,"chain_1":0,"eyebrows_3":0,"moles_2":0,"watches_1":-1,"lipstick_4":0,"neck_thick":0.0,"face_md_weight":100,"shoes_1":8,"nose_4":0.0,"complexion_2":0,"tshirt_2":0,"blemishes_2":0,"makeup_2":0,"blush_1":0,"lipstick_2":0,"glasses_2":0,"bproof_2":0,"beard_1":14,"eyebrows_4":0,"beard_4":0,"nose_6":0.0,"glasses_1":22,"watches_2":0,"mask_2":0,"pants_2":0,"chest_3":0,"nose_5":0.0,"hair_2":0,"chin_height":0.0,"pants_1":19,"face":0,"complexion_1":0,"dad":2,"blush_2":0,"torso_1":21,"ears_2":0,"eyebrows_2":10.0}'),
+	(4, 'bd', 'lead BD', '{"skin":0,"watches_2":0,"blush_1":0,"moles_2":0,"beard_1":3,"cheeks_1":0.0,"shoes_1":8,"cheeks_2":1.38,"skin_md_weight":100,"lips_thick":0.0,"arms":11,"decals_2":0,"sex":0,"eyebrows_2":10.0,"eyebrows_3":0,"pants_1":1,"arms_2":0,"ears_2":0,"bproof_1":0,"mask_2":0,"age_2":0,"hair_color_1":60,"glasses_2":0,"mom":2,"eye_color":8,"shoes_2":2,"complexion_2":0,"beard_2":9.9,"blemishes_1":0,"moles_1":0,"dad":2,"chin_lenght":0.0,"ears_1":-1,"eye_open":0.0,"face_md_weight":100,"chest_2":0,"blemishes_2":0,"complexion_1":0,"bracelets_1":-1,"pants_2":0,"torso_2":2,"chain_1":0,"face":0,"jaw_1":0.0,"blush_2":0,"bodyb_1":0,"hair_2":0,"nose_5":0.0,"nose_2":0.0,"bodyb_2":0,"beard_3":2,"hair_1":100,"makeup_3":0,"helmet_1":-1,"sun_1":0,"sun_2":0,"watches_1":-1,"eyebrows_4":0,"makeup_2":0,"blush_3":0,"chain_2":0,"jaw_2":0.0,"helmet_2":0,"bags_2":0,"neck_thick":0.0,"nose_1":0.24,"beard_4":0,"decals_1":0,"cheeks_3":0.0,"makeup_1":0,"torso_1":76,"hair_color_2":1,"chin_height":0.0,"lipstick_4":0,"nose_3":0.0,"chest_3":0,"chin_hole":0.0,"tshirt_2":0,"eyebrows_1":12,"mask_1":0,"lipstick_2":0,"bags_1":0,"eyebrows_5":0.0,"nose_4":0.0,"lipstick_1":0,"age_1":0,"eyebrows_6":0.0,"chin_width":0.0,"chest_1":0,"bproof_2":0,"tshirt_1":15,"glasses_1":18,"nose_6":0.0,"lipstick_3":0,"makeup_4":0,"bracelets_2":0}'),
+	(5, 'jamaican', 'Chemise noire tshirt blanc', '{"skin":0,"watches_2":0,"blush_1":0,"moles_2":0,"beard_1":3,"cheeks_1":0.0,"torso_1":21,"cheeks_2":0.0,"eyebrows_4":0,"bracelets_1":-1,"arms":8,"decals_2":0,"sex":0,"eyebrows_2":10.0,"eyebrows_3":0,"pants_1":16,"arms_2":0,"ears_2":0,"bproof_1":0,"mask_2":0,"age_2":0,"hair_color_1":0,"glasses_2":0,"mom":6,"age_1":0,"shoes_2":6,"complexion_2":0,"beard_2":10.0,"blemishes_1":0,"watches_1":-1,"bracelets_2":0,"bags_2":0,"ears_1":-1,"eye_open":0.0,"chin_lenght":0.0,"blush_3":0,"blemishes_2":0,"blush_2":0,"makeup_1":0,"pants_2":0,"jaw_2":0.0,"eyebrows_6":0.0,"face":0,"jaw_1":0.0,"makeup_3":0,"bodyb_1":0,"hair_2":0,"chest_2":0,"lips_thick":0.0,"mask_1":0,"beard_3":0,"eye_color":1,"nose_5":0.0,"skin_md_weight":80.00000000000007,"nose_3":0.0,"sun_2":0,"nose_1":0.0,"beard_4":0,"makeup_2":0,"complexion_1":0,"shoes_1":9,"lipstick_2":0,"torso_2":4,"moles_1":0,"neck_thick":0.0,"face_md_weight":51.99999999999997,"dad":2,"helmet_2":0,"chain_1":0,"glasses_1":5,"chain_2":0,"hair_color_2":0,"cheeks_3":0.0,"lipstick_4":0,"chest_1":0,"chest_3":0,"chin_hole":0.0,"tshirt_2":0,"eyebrows_1":12,"nose_2":0.0,"bodyb_2":0,"bags_1":0,"helmet_1":-1,"nose_4":0.0,"lipstick_1":0,"eyebrows_5":0.0,"sun_1":0,"chin_width":0.0,"tshirt_1":0,"bproof_2":0,"makeup_4":0,"chin_height":0.0,"nose_6":0.0,"decals_1":0,"lipstick_3":0,"hair_1":19}'),
+	(6, 'vance', '"OP SOLDADOS"', '{"bracelets_2":0,"glasses_1":0,"nose_6":0.0,"chain_1":0,"jaw_2":0.0,"glasses_2":0,"blush_3":0,"face":44,"eye_open":0.0,"watches_1":-1,"blemishes_2":0,"chin_height":0.0,"hair_2":0,"eyebrows_3":3,"decals_1":0,"cheeks_2":0.0,"nose_3":0.0,"shoes_2":0,"skin_md_weight":0.0,"hair_color_1":3,"nose_5":0.0,"chin_hole":0.0,"nose_4":0.0,"complexion_1":0,"lipstick_2":0,"arms_2":0,"helmet_2":0,"complexion_2":0,"watches_2":0,"face_md_weight":0.0,"bodyb_2":0,"makeup_1":0,"ears_2":0,"decals_2":0,"beard_4":0,"lipstick_1":0,"mask_1":0,"sun_2":0,"bags_1":0,"nose_2":0.0,"makeup_3":0,"torso_1":398,"makeup_2":0,"moles_2":0,"blemishes_1":0,"bags_2":0,"hair_color_2":1,"beard_1":22,"bodyb_1":0,"cheeks_3":0.0,"eyebrows_5":0.0,"age_2":0,"beard_3":3,"eyebrows_2":10.0,"mom":15,"chin_width":0.0,"makeup_4":0,"nose_1":0.0,"pants_2":1,"chest_3":0,"chin_lenght":0.0,"moles_1":0,"bproof_2":2,"arms":17,"sun_1":0,"dad":19,"blush_2":0,"chest_1":0,"skin":3,"tshirt_2":0,"tshirt_1":15,"sex":0,"mask_2":0,"neck_thick":0.0,"ears_1":-1,"eyebrows_1":17,"jaw_1":0.0,"blush_1":0,"bproof_1":24,"lipstick_3":0,"cheeks_1":0.0,"lips_thick":0.0,"helmet_1":-1,"shoes_1":45,"eyebrows_6":0.0,"age_1":0,"hair_1":23,"chain_2":0,"pants_1":159,"eyebrows_4":0,"bracelets_1":-1,"eye_color":29,"lipstick_4":0,"torso_2":3,"beard_2":10.0,"chest_2":0}'),
+	(11, 'vance', '"OP FAROUK"', '{"face_md_weight":0.0,"shoes_2":0,"nose_5":0.0,"cheeks_2":0.0,"complexion_2":0,"sex":0,"hair_color_2":60,"chest_1":0,"makeup_1":0,"bags_2":0,"cheeks_1":0.0,"makeup_2":0,"beard_4":0,"blemishes_1":0,"age_1":0,"ears_2":0,"moles_2":0,"torso_1":43,"chest_3":0,"beard_3":61,"hair_1":23,"decals_2":0,"chain_1":0,"beard_1":10,"tshirt_2":0,"shoes_1":22,"helmet_1":-1,"bags_1":0,"jaw_2":0.0,"pants_2":0,"neck_thick":0.0,"eye_open":0.0,"nose_6":0.0,"nose_3":0.0,"arms_2":0,"eyebrows_3":3,"chin_lenght":0.0,"makeup_4":0,"dad":19,"eyebrows_1":17,"glasses_2":0,"lips_thick":0.0,"blush_2":0,"decals_1":0,"blush_3":0,"eye_color":29,"bproof_1":20,"eyebrows_5":0.0,"nose_2":0.0,"watches_2":0,"lipstick_2":0,"mom":15,"chin_hole":0.0,"complexion_1":0,"watches_1":-1,"moles_1":0,"blemishes_2":0,"lipstick_3":0,"chin_width":0.0,"eyebrows_6":0.0,"face":44,"chain_2":0,"nose_4":0.0,"skin":3,"bodyb_2":0,"bracelets_2":0,"beard_2":10,"makeup_3":0,"arms":1,"chin_height":0.0,"bracelets_1":-1,"hair_color_1":60,"hair_2":0,"blush_1":0,"sun_2":0,"helmet_2":0,"lipstick_4":0,"bproof_2":1,"age_2":0,"mask_1":0,"chest_2":0,"cheeks_3":0.0,"mask_2":0,"tshirt_1":15,"ears_1":-1,"eyebrows_2":10.0,"pants_1":41,"lipstick_1":0,"glasses_1":9,"nose_1":0.0,"sun_1":0,"bodyb_1":0,"skin_md_weight":0.0,"eyebrows_4":0,"torso_2":0,"jaw_1":0.0}');
 
---
--- Structure de la table `owned_properties`
---
-
-CREATE TABLE `owned_properties` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `owned_properties` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `price` double NOT NULL,
   `rented` int(11) NOT NULL,
-  `owner` varchar(60) NOT NULL
+  `owner` varchar(60) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
-
---
--- Structure de la table `owned_rented`
---
-
-CREATE TABLE `owned_rented` (
-  `id` int(11) NOT NULL,
-  `identifier` varchar(255) NOT NULL DEFAULT '0',
-  `plate` varchar(255) CHARACTER SET utf8 NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `owned_vehicles`
---
-
-CREATE TABLE `owned_vehicles` (
+CREATE TABLE IF NOT EXISTS `owned_vehicles` (
   `owner` varchar(60) NOT NULL,
   `state` tinyint(1) NOT NULL DEFAULT '0' COMMENT 'State of the car',
   `plate` varchar(12) NOT NULL,
@@ -680,74 +1010,20 @@ CREATE TABLE `owned_vehicles` (
   `vehicleName` varchar(30) DEFAULT 'Voiture',
   `type` varchar(20) NOT NULL DEFAULT 'car',
   `isShared` varchar(55) DEFAULT 'no',
-  `isBuyed` int(11) NOT NULL DEFAULT '0'
+  `isBuyed` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`plate`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
+CREATE TABLE IF NOT EXISTS `player_masks` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `identifier` varchar(50) DEFAULT NULL,
+  `data` longtext NOT NULL,
+  `label` varchar(50) NOT NULL DEFAULT 'Masque',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=243 DEFAULT CHARSET=latin1;
 
---
--- Structure de la table `phone_app_chat`
---
-
-CREATE TABLE `phone_app_chat` (
-  `id` int(11) NOT NULL,
-  `channel` varchar(20) NOT NULL,
-  `message` varchar(255) NOT NULL,
-  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `phone_calls`
---
-
-CREATE TABLE `phone_calls` (
-  `id` int(11) NOT NULL,
-  `owner` varchar(10) NOT NULL COMMENT 'Num tel proprio',
-  `num` varchar(10) NOT NULL COMMENT 'Num reférence du contact',
-  `incoming` int(11) NOT NULL COMMENT 'Défini si on est à l''origine de l''appels',
-  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `accepts` int(11) NOT NULL COMMENT 'Appels accepter ou pas'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `phone_messages`
---
-
-CREATE TABLE `phone_messages` (
-  `id` int(11) NOT NULL,
-  `transmitter` varchar(10) NOT NULL,
-  `receiver` varchar(10) NOT NULL,
-  `message` varchar(255) NOT NULL DEFAULT '0',
-  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `isRead` int(11) NOT NULL DEFAULT '0',
-  `owner` int(11) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `phone_users_contacts`
---
-
-CREATE TABLE `phone_users_contacts` (
-  `id` int(11) NOT NULL,
-  `identifier` varchar(60) CHARACTER SET utf8mb4 DEFAULT NULL,
-  `number` varchar(10) CHARACTER SET utf8mb4 DEFAULT NULL,
-  `display` varchar(64) CHARACTER SET utf8mb4 NOT NULL DEFAULT '-1'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `properties`
---
-
-CREATE TABLE `properties` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `properties` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL,
   `label` varchar(255) DEFAULT NULL,
   `entering` varchar(255) DEFAULT NULL,
@@ -760,94 +1036,48 @@ CREATE TABLE `properties` (
   `is_room` int(11) DEFAULT NULL,
   `is_gateway` int(11) DEFAULT NULL,
   `room_menu` varchar(255) DEFAULT NULL,
-  `price` int(11) NOT NULL
+  `price` int(11) NOT NULL,
+  `playerCreatorName` varchar(30) NOT NULL DEFAULT 'Server',
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Contenu de la table `properties`
---
-
-INSERT INTO `properties` (`id`, `name`, `label`, `entering`, `exit`, `inside`, `outside`, `ipls`, `gateway`, `is_single`, `is_room`, `is_gateway`, `room_menu`, `price`) VALUES
-(1, 'WhispymoundDrive', '2677 Whispymound Drive', '{\"y\":564.89,\"z\":182.959,\"x\":119.384}', '{\"x\":117.347,\"y\":559.506,\"z\":183.304}', '{\"y\":557.032,\"z\":183.301,\"x\":118.037}', '{\"y\":567.798,\"z\":182.131,\"x\":119.249}', '[]', NULL, 1, 1, 0, '{\"x\":118.748,\"y\":566.573,\"z\":175.697}', 1500000),
-(2, 'NorthConkerAvenue2045', '2045 North Conker Avenue', '{\"x\":372.796,\"y\":428.327,\"z\":144.685}', '{\"x\":373.548,\"y\":422.982,\"z\":144.907},', '{\"y\":420.075,\"z\":145.904,\"x\":372.161}', '{\"x\":372.454,\"y\":432.886,\"z\":143.443}', '[]', NULL, 1, 1, 0, '{\"x\":377.349,\"y\":429.422,\"z\":137.3}', 1500000),
-(3, 'RichardMajesticApt2', 'Richard Majestic, Apt 2', '{\"y\":-379.165,\"z\":37.961,\"x\":-936.363}', '{\"y\":-365.476,\"z\":113.274,\"x\":-913.097}', '{\"y\":-367.637,\"z\":113.274,\"x\":-918.022}', '{\"y\":-382.023,\"z\":37.961,\"x\":-943.626}', '[]', NULL, 1, 1, 0, '{\"x\":-927.554,\"y\":-377.744,\"z\":112.674}', 1700000),
-(4, 'NorthConkerAvenue2044', '2044 North Conker Avenue', '{\"y\":440.8,\"z\":146.702,\"x\":346.964}', '{\"y\":437.456,\"z\":148.394,\"x\":341.683}', '{\"y\":435.626,\"z\":148.394,\"x\":339.595}', '{\"x\":350.535,\"y\":443.329,\"z\":145.764}', '[]', NULL, 1, 1, 0, '{\"x\":337.726,\"y\":436.985,\"z\":140.77}', 1500000),
-(5, 'WildOatsDrive', '3655 Wild Oats Drive', '{\"y\":502.696,\"z\":136.421,\"x\":-176.003}', '{\"y\":497.817,\"z\":136.653,\"x\":-174.349}', '{\"y\":495.069,\"z\":136.666,\"x\":-173.331}', '{\"y\":506.412,\"z\":135.0664,\"x\":-177.927}', '[]', NULL, 1, 1, 0, '{\"x\":-174.725,\"y\":493.095,\"z\":129.043}', 1500000),
-(6, 'HillcrestAvenue2862', '2862 Hillcrest Avenue', '{\"y\":596.58,\"z\":142.641,\"x\":-686.554}', '{\"y\":591.988,\"z\":144.392,\"x\":-681.728}', '{\"y\":590.608,\"z\":144.392,\"x\":-680.124}', '{\"y\":599.019,\"z\":142.059,\"x\":-689.492}', '[]', NULL, 1, 1, 0, '{\"x\":-680.46,\"y\":588.6,\"z\":136.769}', 1500000),
-(7, 'LowEndApartment', 'Appartement de base', '{\"y\":-1078.735,\"z\":28.4031,\"x\":292.528}', '{\"y\":-1007.152,\"z\":-102.002,\"x\":265.845}', '{\"y\":-1002.802,\"z\":-100.008,\"x\":265.307}', '{\"y\":-1078.669,\"z\":28.401,\"x\":296.738}', '[]', NULL, 1, 1, 0, '{\"x\":265.916,\"y\":-999.38,\"z\":-100.008}', 562500),
-(8, 'MadWayneThunder', '2113 Mad Wayne Thunder', '{\"y\":454.955,\"z\":96.462,\"x\":-1294.433}', '{\"x\":-1289.917,\"y\":449.541,\"z\":96.902}', '{\"y\":446.322,\"z\":96.899,\"x\":-1289.642}', '{\"y\":455.453,\"z\":96.517,\"x\":-1298.851}', '[]', NULL, 1, 1, 0, '{\"x\":-1287.306,\"y\":455.901,\"z\":89.294}', 1500000),
-(9, 'HillcrestAvenue2874', '2874 Hillcrest Avenue', '{\"x\":-853.346,\"y\":696.678,\"z\":147.782}', '{\"y\":690.875,\"z\":151.86,\"x\":-859.961}', '{\"y\":688.361,\"z\":151.857,\"x\":-859.395}', '{\"y\":701.628,\"z\":147.773,\"x\":-855.007}', '[]', NULL, 1, 1, 0, '{\"x\":-858.543,\"y\":697.514,\"z\":144.253}', 1500000),
-(10, 'HillcrestAvenue2868', '2868 Hillcrest Avenue', '{\"y\":620.494,\"z\":141.588,\"x\":-752.82}', '{\"y\":618.62,\"z\":143.153,\"x\":-759.317}', '{\"y\":617.629,\"z\":143.153,\"x\":-760.789}', '{\"y\":621.281,\"z\":141.254,\"x\":-750.919}', '[]', NULL, 1, 1, 0, '{\"x\":-762.504,\"y\":618.992,\"z\":135.53}', 1500000),
-(11, 'TinselTowersApt12', 'Tinsel Towers, Apt 42', '{\"y\":37.025,\"z\":42.58,\"x\":-618.299}', '{\"y\":58.898,\"z\":97.2,\"x\":-603.301}', '{\"y\":58.941,\"z\":97.2,\"x\":-608.741}', '{\"y\":30.603,\"z\":42.524,\"x\":-620.017}', '[]', NULL, 1, 1, 0, '{\"x\":-622.173,\"y\":54.585,\"z\":96.599}', 1700000),
-(12, 'MiltonDrive', 'Milton Drive', '{\"x\":-775.17,\"y\":312.01,\"z\":84.658}', NULL, NULL, '{\"x\":-775.346,\"y\":306.776,\"z\":84.7}', '[]', NULL, 0, 0, 1, NULL, 0),
-(13, 'Modern1Apartment', 'Appartement Moderne 1', NULL, '{\"x\":-784.194,\"y\":323.636,\"z\":210.997}', '{\"x\":-779.751,\"y\":323.385,\"z\":210.997}', NULL, '[\"apa_v_mp_h_01_a\"]', 'MiltonDrive', 0, 1, 0, '{\"x\":-766.661,\"y\":327.672,\"z\":210.396}', 1300000),
-(14, 'Modern2Apartment', 'Appartement Moderne 2', NULL, '{\"x\":-786.8663,\"y\":315.764,\"z\":186.913}', '{\"x\":-781.808,\"y\":315.866,\"z\":186.913}', NULL, '[\"apa_v_mp_h_01_c\"]', 'MiltonDrive', 0, 1, 0, '{\"x\":-795.735,\"y\":326.757,\"z\":186.313}', 1300000),
-(15, 'Modern3Apartment', 'Appartement Moderne 3', NULL, '{\"x\":-774.012,\"y\":342.042,\"z\":195.686}', '{\"x\":-779.057,\"y\":342.063,\"z\":195.686}', NULL, '[\"apa_v_mp_h_01_b\"]', 'MiltonDrive', 0, 1, 0, '{\"x\":-765.386,\"y\":330.782,\"z\":195.08}', 1300000),
-(16, 'Mody1Apartment', 'Appartement Mode 1', NULL, '{\"x\":-784.194,\"y\":323.636,\"z\":210.997}', '{\"x\":-779.751,\"y\":323.385,\"z\":210.997}', NULL, '[\"apa_v_mp_h_02_a\"]', 'MiltonDrive', 0, 1, 0, '{\"x\":-766.615,\"y\":327.878,\"z\":210.396}', 1300000),
-(17, 'Mody2Apartment', 'Appartement Mode 2', NULL, '{\"x\":-786.8663,\"y\":315.764,\"z\":186.913}', '{\"x\":-781.808,\"y\":315.866,\"z\":186.913}', NULL, '[\"apa_v_mp_h_02_c\"]', 'MiltonDrive', 0, 1, 0, '{\"x\":-795.297,\"y\":327.092,\"z\":186.313}', 1300000),
-(18, 'Mody3Apartment', 'Appartement Mode 3', NULL, '{\"x\":-774.012,\"y\":342.042,\"z\":195.686}', '{\"x\":-779.057,\"y\":342.063,\"z\":195.686}', NULL, '[\"apa_v_mp_h_02_b\"]', 'MiltonDrive', 0, 1, 0, '{\"x\":-765.303,\"y\":330.932,\"z\":195.085}', 1300000),
-(19, 'Vibrant1Apartment', 'Appartement Vibrant 1', NULL, '{\"x\":-784.194,\"y\":323.636,\"z\":210.997}', '{\"x\":-779.751,\"y\":323.385,\"z\":210.997}', NULL, '[\"apa_v_mp_h_03_a\"]', 'MiltonDrive', 0, 1, 0, '{\"x\":-765.885,\"y\":327.641,\"z\":210.396}', 1300000),
-(20, 'Vibrant2Apartment', 'Appartement Vibrant 2', NULL, '{\"x\":-786.8663,\"y\":315.764,\"z\":186.913}', '{\"x\":-781.808,\"y\":315.866,\"z\":186.913}', NULL, '[\"apa_v_mp_h_03_c\"]', 'MiltonDrive', 0, 1, 0, '{\"x\":-795.607,\"y\":327.344,\"z\":186.313}', 1300000),
-(21, 'Vibrant3Apartment', 'Appartement Vibrant 3', NULL, '{\"x\":-774.012,\"y\":342.042,\"z\":195.686}', '{\"x\":-779.057,\"y\":342.063,\"z\":195.686}', NULL, '[\"apa_v_mp_h_03_b\"]', 'MiltonDrive', 0, 1, 0, '{\"x\":-765.525,\"y\":330.851,\"z\":195.085}', 1300000),
-(22, 'Sharp1Apartment', 'Appartement Persan 1', NULL, '{\"x\":-784.194,\"y\":323.636,\"z\":210.997}', '{\"x\":-779.751,\"y\":323.385,\"z\":210.997}', NULL, '[\"apa_v_mp_h_04_a\"]', 'MiltonDrive', 0, 1, 0, '{\"x\":-766.527,\"y\":327.89,\"z\":210.396}', 1300000),
-(23, 'Sharp2Apartment', 'Appartement Persan 2', NULL, '{\"x\":-786.8663,\"y\":315.764,\"z\":186.913}', '{\"x\":-781.808,\"y\":315.866,\"z\":186.913}', NULL, '[\"apa_v_mp_h_04_c\"]', 'MiltonDrive', 0, 1, 0, '{\"x\":-795.642,\"y\":326.497,\"z\":186.313}', 1300000),
-(24, 'Sharp3Apartment', 'Appartement Persan 3', NULL, '{\"x\":-774.012,\"y\":342.042,\"z\":195.686}', '{\"x\":-779.057,\"y\":342.063,\"z\":195.686}', NULL, '[\"apa_v_mp_h_04_b\"]', 'MiltonDrive', 0, 1, 0, '{\"x\":-765.503,\"y\":331.318,\"z\":195.085}', 1300000),
-(25, 'Monochrome1Apartment', 'Appartement Monochrome 1', NULL, '{\"x\":-784.194,\"y\":323.636,\"z\":210.997}', '{\"x\":-779.751,\"y\":323.385,\"z\":210.997}', NULL, '[\"apa_v_mp_h_05_a\"]', 'MiltonDrive', 0, 1, 0, '{\"x\":-766.289,\"y\":328.086,\"z\":210.396}', 1300000),
-(26, 'Monochrome2Apartment', 'Appartement Monochrome 2', NULL, '{\"x\":-786.8663,\"y\":315.764,\"z\":186.913}', '{\"x\":-781.808,\"y\":315.866,\"z\":186.913}', NULL, '[\"apa_v_mp_h_05_c\"]', 'MiltonDrive', 0, 1, 0, '{\"x\":-795.692,\"y\":326.762,\"z\":186.313}', 1300000),
-(27, 'Monochrome3Apartment', 'Appartement Monochrome 3', NULL, '{\"x\":-774.012,\"y\":342.042,\"z\":195.686}', '{\"x\":-779.057,\"y\":342.063,\"z\":195.686}', NULL, '[\"apa_v_mp_h_05_b\"]', 'MiltonDrive', 0, 1, 0, '{\"x\":-765.094,\"y\":330.976,\"z\":195.085}', 1300000),
-(28, 'Seductive1Apartment', 'Appartement Séduisant 1', NULL, '{\"x\":-784.194,\"y\":323.636,\"z\":210.997}', '{\"x\":-779.751,\"y\":323.385,\"z\":210.997}', NULL, '[\"apa_v_mp_h_06_a\"]', 'MiltonDrive', 0, 1, 0, '{\"x\":-766.263,\"y\":328.104,\"z\":210.396}', 1300000),
-(29, 'Seductive2Apartment', 'Appartement Séduisant 2', NULL, '{\"x\":-786.8663,\"y\":315.764,\"z\":186.913}', '{\"x\":-781.808,\"y\":315.866,\"z\":186.913}', NULL, '[\"apa_v_mp_h_06_c\"]', 'MiltonDrive', 0, 1, 0, '{\"x\":-795.655,\"y\":326.611,\"z\":186.313}', 1300000),
-(30, 'Seductive3Apartment', 'Appartement Séduisant 3', NULL, '{\"x\":-774.012,\"y\":342.042,\"z\":195.686}', '{\"x\":-779.057,\"y\":342.063,\"z\":195.686}', NULL, '[\"apa_v_mp_h_06_b\"]', 'MiltonDrive', 0, 1, 0, '{\"x\":-765.3,\"y\":331.414,\"z\":195.085}', 1300000),
-(31, 'Regal1Apartment', 'Appartement Régal 1', NULL, '{\"x\":-784.194,\"y\":323.636,\"z\":210.997}', '{\"x\":-779.751,\"y\":323.385,\"z\":210.997}', NULL, '[\"apa_v_mp_h_07_a\"]', 'MiltonDrive', 0, 1, 0, '{\"x\":-765.956,\"y\":328.257,\"z\":210.396}', 1300000),
-(32, 'Regal2Apartment', 'Appartement Régal 2', NULL, '{\"x\":-786.8663,\"y\":315.764,\"z\":186.913}', '{\"x\":-781.808,\"y\":315.866,\"z\":186.913}', NULL, '[\"apa_v_mp_h_07_c\"]', 'MiltonDrive', 0, 1, 0, '{\"x\":-795.545,\"y\":326.659,\"z\":186.313}', 1300000),
-(33, 'Regal3Apartment', 'Appartement Régal 3', NULL, '{\"x\":-774.012,\"y\":342.042,\"z\":195.686}', '{\"x\":-779.057,\"y\":342.063,\"z\":195.686}', NULL, '[\"apa_v_mp_h_07_b\"]', 'MiltonDrive', 0, 1, 0, '{\"x\":-765.087,\"y\":331.429,\"z\":195.123}', 1300000),
-(34, 'Aqua1Apartment', 'Appartement Aqua 1', NULL, '{\"x\":-784.194,\"y\":323.636,\"z\":210.997}', '{\"x\":-779.751,\"y\":323.385,\"z\":210.997}', NULL, '[\"apa_v_mp_h_08_a\"]', 'MiltonDrive', 0, 1, 0, '{\"x\":-766.187,\"y\":328.47,\"z\":210.396}', 1300000),
-(35, 'Aqua2Apartment', 'Appartement Aqua 2', NULL, '{\"x\":-786.8663,\"y\":315.764,\"z\":186.913}', '{\"x\":-781.808,\"y\":315.866,\"z\":186.913}', NULL, '[\"apa_v_mp_h_08_c\"]', 'MiltonDrive', 0, 1, 0, '{\"x\":-795.658,\"y\":326.563,\"z\":186.313}', 1300000),
-(36, 'Aqua3Apartment', 'Appartement Aqua 3', NULL, '{\"x\":-774.012,\"y\":342.042,\"z\":195.686}', '{\"x\":-779.057,\"y\":342.063,\"z\":195.686}', NULL, '[\"apa_v_mp_h_08_b\"]', 'MiltonDrive', 0, 1, 0, '{\"x\":-765.287,\"y\":331.084,\"z\":195.086}', 1300000),
-(37, 'IntegrityWay', '4 Integrity Way', '{\"x\":-47.804,\"y\":-585.867,\"z\":36.956}', NULL, NULL, '{\"x\":-54.178,\"y\":-583.762,\"z\":35.798}', '[]', NULL, 0, 0, 1, NULL, 0),
-(38, 'IntegrityWay28', '4 Integrity Way - Apt 28', NULL, '{\"x\":-31.409,\"y\":-594.927,\"z\":79.03}', '{\"x\":-26.098,\"y\":-596.909,\"z\":79.03}', NULL, '[]', 'IntegrityWay', 0, 1, 0, '{\"x\":-11.923,\"y\":-597.083,\"z\":78.43}', 1700000),
-(39, 'IntegrityWay30', '4 Integrity Way - Apt 30', NULL, '{\"x\":-17.702,\"y\":-588.524,\"z\":89.114}', '{\"x\":-16.21,\"y\":-582.569,\"z\":89.114}', NULL, '[]', 'IntegrityWay', 0, 1, 0, '{\"x\":-26.327,\"y\":-588.384,\"z\":89.123}', 1700000),
-(40, 'DellPerroHeights', 'Dell Perro Heights', '{\"x\":-1447.06,\"y\":-538.28,\"z\":33.74}', NULL, NULL, '{\"x\":-1440.022,\"y\":-548.696,\"z\":33.74}', '[]', NULL, 0, 0, 1, NULL, 0),
-(41, 'DellPerroHeightst4', 'Dell Perro Heights - Apt 28', NULL, '{\"x\":-1452.125,\"y\":-540.591,\"z\":73.044}', '{\"x\":-1455.435,\"y\":-535.79,\"z\":73.044}', NULL, '[]', 'DellPerroHeights', 0, 1, 0, '{\"x\":-1467.058,\"y\":-527.571,\"z\":72.443}', 1700000),
-(42, 'DellPerroHeightst7', 'Dell Perro Heights - Apt 30', NULL, '{\"x\":-1451.562,\"y\":-523.535,\"z\":55.928}', '{\"x\":-1456.02,\"y\":-519.209,\"z\":55.929}', NULL, '[]', 'DellPerroHeights', 0, 1, 0, '{\"x\":-1457.026,\"y\":-530.219,\"z\":55.937}', 1700000),
-(667, 'creator', 'Creation de personnage', '{\"x\":-23433.86,\"y\":-233001.328,\"z\":24.959}', NULL, '{\"x\":-235.53,\"y\":-2003.1,\"z\":24.80}', '{\"x\":-235.53,\"y\":-2003.1,\"z\":24.80}', '[]', NULL, 1, 1, 0, NULL, 0);
-
--- --------------------------------------------------------
-
---
--- Structure de la table `rented_vehicles`
---
-
-CREATE TABLE `rented_vehicles` (
+CREATE TABLE IF NOT EXISTS `rented_vehicles` (
   `vehicle` varchar(60) NOT NULL,
   `plate` varchar(12) NOT NULL,
   `player_name` varchar(255) NOT NULL,
   `base_price` int(11) NOT NULL,
   `rent_price` int(11) NOT NULL,
-  `owner` varchar(22) NOT NULL
+  `owner` varchar(22) NOT NULL,
+  PRIMARY KEY (`plate`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
+CREATE TABLE IF NOT EXISTS `sprays` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `x` float(8,4) NOT NULL,
+  `y` float(8,4) NOT NULL,
+  `z` float(8,4) NOT NULL,
+  `rx` float(8,4) NOT NULL,
+  `ry` float(8,4) NOT NULL,
+  `rz` float(8,4) NOT NULL,
+  `scale` float(8,4) NOT NULL,
+  `text` varchar(32) NOT NULL,
+  `font` varchar(32) NOT NULL,
+  `color` int(3) NOT NULL,
+  `interior` int(3) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=207 DEFAULT CHARSET=utf8;
 
---
--- Structure de la table `trunk_inventory`
---
-
-CREATE TABLE `trunk_inventory` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `trunk_inventory` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `plate` varchar(8) NOT NULL,
   `data` text NOT NULL,
-  `owned` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `owned` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=448 DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
-
---
--- Structure de la table `users`
---
-
-CREATE TABLE `users` (
-  `boutique_id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `users` (
+  `boutique_id` int(11) NOT NULL AUTO_INCREMENT,
   `identifier` varchar(50) COLLATE utf8mb4_bin NOT NULL,
   `license` varchar(50) COLLATE utf8mb4_bin DEFAULT NULL,
   `name` varchar(255) COLLATE utf8mb4_bin DEFAULT '',
@@ -861,9 +1091,9 @@ CREATE TABLE `users` (
   `group` varchar(50) COLLATE utf8mb4_bin DEFAULT NULL,
   `firstname` varchar(50) COLLATE utf8mb4_bin DEFAULT '',
   `lastname` varchar(50) COLLATE utf8mb4_bin DEFAULT '',
-  `dateofbirth` varchar(25) COLLATE utf8mb4_bin DEFAULT '',
+  `age` varchar(25) COLLATE utf8mb4_bin DEFAULT '0',
   `sex` varchar(10) COLLATE utf8mb4_bin DEFAULT '',
-  `height` varchar(5) COLLATE utf8mb4_bin DEFAULT '',
+  `height` varchar(10) COLLATE utf8mb4_bin DEFAULT '',
   `last_property` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
   `phone_number` varchar(15) COLLATE utf8mb4_bin DEFAULT 'PasDeNumero',
   `is_dead` tinyint(1) DEFAULT '0',
@@ -871,79 +1101,45 @@ CREATE TABLE `users` (
   `tattoos` longtext COLLATE utf8mb4_bin,
   `accounts` longtext COLLATE utf8mb4_bin,
   `inventory` longtext COLLATE utf8mb4_bin,
-  `origine` varchar(20) CHARACTER SET armscii8 COLLATE armscii8_bin NOT NULL DEFAULT 'Los Santos',
   `pet` varchar(50) COLLATE utf8mb4_bin DEFAULT NULL,
   `PetName` varchar(15) COLLATE utf8mb4_bin NOT NULL DEFAULT 'Roger',
   `roue` int(11) NOT NULL DEFAULT '1',
   `report` int(11) NOT NULL DEFAULT '0',
-  `TimeToWait` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+  `TimeToWait` int(11) NOT NULL DEFAULT '0',
+  `grade` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'AUCUN',
+  `day` int(11) NOT NULL DEFAULT '1',
+  `wins` int(11) NOT NULL DEFAULT '0',
+  `games` int(11) NOT NULL DEFAULT '0',
+  `hotbar` longtext COLLATE utf8mb4_bin,
+  `farm_count` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`identifier`),
+  UNIQUE KEY `boutique_id` (`boutique_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=393 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
--- --------------------------------------------------------
-
---
--- Structure de la table `user_accessories`
---
-
-CREATE TABLE `user_accessories` (
-  `identifier` varchar(255) NOT NULL,
-  `id` int(11) NOT NULL,
-  `mask` varchar(30) NOT NULL,
-  `type` varchar(30) NOT NULL,
-  `label` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `user_licenses`
---
-
-CREATE TABLE `user_licenses` (
-  `id` int(11) NOT NULL,
-  `Voiture` varchar(5) NOT NULL DEFAULT 'NON',
-  `Armes` varchar(10) NOT NULL DEFAULT 'NON',
-  `PPACHECK` int(11) NOT NULL DEFAULT '0',
-  `Chasse` varchar(5) NOT NULL DEFAULT 'NON',
-  `Camion` varchar(5) NOT NULL DEFAULT 'NON',
-  `Moto` varchar(5) DEFAULT 'NON',
-  `taille` varchar(20) DEFAULT NULL,
-  `owner` varchar(60) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `user_lottery`
---
-
-CREATE TABLE `user_lottery` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `user_lottery` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `identifier` varchar(55) NOT NULL,
   `nickname` varchar(20) NOT NULL,
-  `amount` int(11) NOT NULL
+  `amount` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
-
---
--- Structure de la table `user_tenue`
---
-
-CREATE TABLE `user_tenue` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `user_tenue` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `identifier` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
   `tenue` longtext COLLATE utf8mb4_bin NOT NULL,
-  `label` varchar(55) COLLATE utf8mb4_bin DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+  `label` varchar(55) COLLATE utf8mb4_bin DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=1594 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+	
+CREATE TABLE IF NOT EXISTS `user_whitelist` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `identifier` varchar(255) NOT NULL,
+  `whitelisted` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=412 DEFAULT CHARSET=utf8;
 
--- --------------------------------------------------------
-
---
--- Structure de la table `vape_ban`
---
-
-CREATE TABLE `vape_ban` (
+CREATE TABLE IF NOT EXISTS `vape_ban` (
   `license` varchar(50) COLLATE utf8mb4_bin NOT NULL,
   `identifier` varchar(25) COLLATE utf8mb4_bin DEFAULT NULL,
   `liveid` varchar(21) COLLATE utf8mb4_bin DEFAULT NULL,
@@ -955,338 +1151,7 @@ CREATE TABLE `vape_ban` (
   `reason` varchar(255) COLLATE utf8mb4_bin NOT NULL,
   `timeat` varchar(50) COLLATE utf8mb4_bin NOT NULL,
   `expiration` varchar(50) COLLATE utf8mb4_bin NOT NULL,
-  `permanent` int(1) NOT NULL DEFAULT '0'
+  `permanent` int(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`license`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
---
--- Index pour les tables exportées
---
-
---
--- Index pour la table `addon_account`
---
-ALTER TABLE `addon_account`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `addon_account_data`
---
-ALTER TABLE `addon_account_data`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `owner` (`owner`(191)),
-  ADD KEY `account_name` (`account_name`(191)),
-  ADD KEY `id` (`id`);
-
---
--- Index pour la table `addon_inventory`
---
-ALTER TABLE `addon_inventory`
-  ADD PRIMARY KEY (`name`);
-
---
--- Index pour la table `addon_inventory_items`
---
-ALTER TABLE `addon_inventory_items`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `armes`
---
-ALTER TABLE `armes`
-  ADD PRIMARY KEY (`id`) USING BTREE;
-
---
--- Index pour la table `baninfo`
---
-ALTER TABLE `baninfo`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `banlist`
---
-ALTER TABLE `banlist`
-  ADD PRIMARY KEY (`id`) USING BTREE,
-  ADD KEY `identifier` (`identifier`,`license`,`liveid`,`xblid`,`discord`) USING BTREE;
-
---
--- Index pour la table `datastore`
---
-ALTER TABLE `datastore`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `datastore_data`
---
-ALTER TABLE `datastore_data`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `index_datastore_data_name_owner` (`name`,`owner`),
-  ADD KEY `index_datastore_data_name` (`name`);
-
---
--- Index pour la table `eventsPresets`
---
-ALTER TABLE `eventsPresets`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `gangs`
---
-ALTER TABLE `gangs`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `hotel_rooms`
---
-ALTER TABLE `hotel_rooms`
-  ADD PRIMARY KEY (`identifier`);
-
---
--- Index pour la table `items`
---
-ALTER TABLE `items`
-  ADD PRIMARY KEY (`name`);
-
---
--- Index pour la table `jobs`
---
-ALTER TABLE `jobs`
-  ADD PRIMARY KEY (`name`);
-
---
--- Index pour la table `job_grades`
---
-ALTER TABLE `job_grades`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `leboncoin`
---
-ALTER TABLE `leboncoin`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `lottery`
---
-ALTER TABLE `lottery`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `owned_properties`
---
-ALTER TABLE `owned_properties`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `owned_rented`
---
-ALTER TABLE `owned_rented`
-  ADD PRIMARY KEY (`id`) USING BTREE,
-  ADD UNIQUE KEY `plate` (`plate`) USING BTREE,
-  ADD KEY `id` (`id`) USING BTREE;
-
---
--- Index pour la table `owned_vehicles`
---
-ALTER TABLE `owned_vehicles`
-  ADD PRIMARY KEY (`plate`);
-
---
--- Index pour la table `phone_calls`
---
-ALTER TABLE `phone_calls`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `phone_messages`
---
-ALTER TABLE `phone_messages`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `phone_users_contacts`
---
-ALTER TABLE `phone_users_contacts`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `properties`
---
-ALTER TABLE `properties`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `rented_vehicles`
---
-ALTER TABLE `rented_vehicles`
-  ADD PRIMARY KEY (`plate`);
-
---
--- Index pour la table `trunk_inventory`
---
-ALTER TABLE `trunk_inventory`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`identifier`),
-  ADD UNIQUE KEY `boutique_id` (`boutique_id`);
-
---
--- Index pour la table `user_accessories`
---
-ALTER TABLE `user_accessories`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `user_licenses`
---
-ALTER TABLE `user_licenses`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `user_lottery`
---
-ALTER TABLE `user_lottery`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `user_tenue`
---
-ALTER TABLE `user_tenue`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `vape_ban`
---
-ALTER TABLE `vape_ban`
-  ADD PRIMARY KEY (`license`);
-
---
--- AUTO_INCREMENT pour les tables exportées
---
-
---
--- AUTO_INCREMENT pour la table `addon_account_data`
---
-ALTER TABLE `addon_account_data`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7840;
---
--- AUTO_INCREMENT pour la table `addon_inventory_items`
---
-ALTER TABLE `addon_inventory_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
---
--- AUTO_INCREMENT pour la table `armes`
---
-ALTER TABLE `armes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `baninfo`
---
-ALTER TABLE `baninfo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `banlist`
---
-ALTER TABLE `banlist`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
---
--- AUTO_INCREMENT pour la table `datastore`
---
-ALTER TABLE `datastore`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=106;
---
--- AUTO_INCREMENT pour la table `datastore_data`
---
-ALTER TABLE `datastore_data`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `eventsPresets`
---
-ALTER TABLE `eventsPresets`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
---
--- AUTO_INCREMENT pour la table `gangs`
---
-ALTER TABLE `gangs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT pour la table `job_grades`
---
-ALTER TABLE `job_grades`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=615;
---
--- AUTO_INCREMENT pour la table `leboncoin`
---
-ALTER TABLE `leboncoin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `lottery`
---
-ALTER TABLE `lottery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT pour la table `owned_properties`
---
-ALTER TABLE `owned_properties`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `owned_rented`
---
-ALTER TABLE `owned_rented`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `phone_calls`
---
-ALTER TABLE `phone_calls`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `phone_messages`
---
-ALTER TABLE `phone_messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `phone_users_contacts`
---
-ALTER TABLE `phone_users_contacts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `properties`
---
-ALTER TABLE `properties`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=668;
---
--- AUTO_INCREMENT pour la table `trunk_inventory`
---
-ALTER TABLE `trunk_inventory`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `users`
---
-ALTER TABLE `users`
-  MODIFY `boutique_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
---
--- AUTO_INCREMENT pour la table `user_accessories`
---
-ALTER TABLE `user_accessories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `user_licenses`
---
-ALTER TABLE `user_licenses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `user_lottery`
---
-ALTER TABLE `user_lottery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=410;
---
--- AUTO_INCREMENT pour la table `user_tenue`
---
-ALTER TABLE `user_tenue`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
