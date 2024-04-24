@@ -1002,6 +1002,19 @@ CREATE TABLE IF NOT EXISTS `owned_properties` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+CREATE TABLE `owned_rented` (
+  `id` int(11) NOT NULL,
+  `identifier` varchar(255) NOT NULL DEFAULT '0',
+  `plate` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=COMPACT;
+
+CREATE TABLE `player_clothes` (
+  `id` int(11) NOT NULL,
+  `identifier` varchar(100) DEFAULT NULL,
+  `label` longtext DEFAULT NULL,
+  `data` longtext DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 CREATE TABLE IF NOT EXISTS `owned_vehicles` (
   `owner` varchar(60) NOT NULL,
   `state` tinyint(1) NOT NULL DEFAULT '0' COMMENT 'State of the car',
