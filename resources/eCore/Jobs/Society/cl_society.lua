@@ -318,7 +318,7 @@ CreateThread(function()
                             Extasy.ShowHelpNotification(_msg)
                             if IsControlJustReleased(1, 38) then
                                 if not tenue_menu then
-                                    TriggerServerEvent("Extasy:GetTenues")
+                                    TriggerServerEvent("Extasy:GetTenues", token)
                                     TriggerServerEvent("Jobs:getAllWears", playerJob)
                                     while playerSocietyWears == {} do Wait(1) end
                                     RageUI.Visible(RMenu:Get('society_work', 'clothes_menu'), true)
